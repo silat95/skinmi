@@ -310,7 +310,7 @@ p{margin:0}
 .why{--why-bg:var(--wine-deep);--why-ink:var(--ivory);background:var(--wine-deep);color:var(--ivory)}
 .why__pin{position:relative}
 .why__stage{position:relative;display:grid;place-items:center;padding:clamp(80px,12vw,140px) var(--gutter) clamp(40px,6vw,60px);overflow:hidden;background:var(--why-bg)}
-.why__lines{position:relative;z-index:3;transition:color .25s ease;display:grid;gap:18px;text-align:center;max-width:16ch;margin:0 auto;font-family:var(--f-display);font-weight:600;font-size:clamp(2.5rem,6.6vw,5.8rem);font-weight:600;line-height:1.04;letter-spacing:-.02em;color:var(--why-ink);text-shadow:0 2px 28px var(--why-shadow,transparent)}
+.why__lines{position:relative;z-index:3;transition:color .7s ease,text-shadow .7s ease;display:grid;gap:18px;text-align:center;max-width:16ch;margin:0 auto;font-family:var(--f-display);font-weight:600;font-size:clamp(2.5rem,6.6vw,5.8rem);font-weight:600;line-height:1.04;letter-spacing:-.02em;color:var(--why-ink);text-shadow:0 2px 28px var(--why-shadow,transparent)}
 .why__line{display:block}
 .why__final{display:grid;justify-items:center;gap:14px}
 .why__final .kr{font-size:clamp(4rem,13vw,10rem);line-height:1;color:var(--powder)}
@@ -342,7 +342,7 @@ p{margin:0}
 .why.pin .why__pin{height:420vh}
 .why.pin .why__stage{position:sticky;top:0;height:100vh;height:100svh;padding:0 var(--gutter)}
 .why.pin .why__lines{display:block;max-width:none}
-.why.pin .why__line{position:absolute;left:50%;top:50%;width:min(16ch,92vw);transform:translate(-50%,-50%);opacity:0;will-change:transform,opacity,filter}
+.why.pin .why__line{position:absolute;left:50%;top:50%;width:min(16ch,92vw);transform:translate3d(-50%,-50%,0);opacity:0;will-change:transform,opacity;backface-visibility:hidden}
 .why.pin .why__ticks{display:grid}
 .why.pin .why__dew i{animation:rise var(--t,9s) linear var(--d,0s) infinite}
 @keyframes rise{0%{opacity:0;transform:translateY(0)}15%{opacity:.9}100%{opacity:0;transform:translateY(-110vh)}}
@@ -1254,34 +1254,42 @@ addEventListener("scroll",onScroll,{passive:true}); onScroll();
   const A=[240,211,216], B=[76,19,34], INK1=[122,40,57], INK2=[245,237,225];
   const mix=(a,b,t)=>"rgb("+a.map((v,i)=>Math.round(v+(b[i]-v)*t)).join(",")+")";
   const clamp=v=>Math.max(0,Math.min(1,v)), ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
-  const N=lines.length; let tick=false, lastSeg=-1; const drop=document.getElementById("whyDrop");
-  function upd(){
-    tick=false;
-    const r=pin.getBoundingClientRect(), total=r.height-innerHeight;
-    const p=clamp(-r.top/total);
+  const N=lines.length; let lastSeg=-1, raf=0, sp=-1, tp=0, lastT=0, inkDark=null; const drop=document.getElementById("whyDrop");
+  const sstep=(a,b,x)=>{const t=clamp((x-a)/(b-a));return t*t*(3-2*t)};
+  function target(){const r=pin.getBoundingClientRect(), total=r.height-innerHeight; return clamp(-r.top/total)}
+  function render(p){
     const c=ease(clamp((p-.14)/.26));
-    stage.style.setProperty("--why-bg",mix(A,B,c)); stage.style.setProperty("--why-ink",c<.55?(c<.2?"rgb(122,40,57)":"rgb(59,15,27)"):"rgb(245,237,225)");
-    stage.style.setProperty("--ring",c<.5?"rgba(122,40,57,.28)":"rgba(240,211,216,.38)"); stage.style.setProperty("--ring-strong",c<.5?"rgba(122,40,57,.55)":"rgba(255,226,233,.75)");
-    stage.style.setProperty("--why-shadow",c<.55?"rgba(245,237,225,.35)":"rgba(40,8,16,.65)"); stage.style.setProperty("--veil",(.45*c).toFixed(3));
+    stage.style.setProperty("--why-bg",mix(A,B,c));
+    const dark=c<.5; if(dark!==inkDark){inkDark=dark;
+      stage.style.setProperty("--why-ink",dark?"rgb(122,40,57)":"rgb(245,237,225)");
+      stage.style.setProperty("--ring",dark?"rgba(122,40,57,.28)":"rgba(240,211,216,.38)"); stage.style.setProperty("--ring-strong",dark?"rgba(122,40,57,.55)":"rgba(255,226,233,.75)");
+      stage.style.setProperty("--why-shadow",dark?"rgba(245,237,225,.35)":"rgba(40,8,16,.65)");}
+    stage.style.setProperty("--veil",(.45*c).toFixed(3));
     const seg=1/N;
     lines.forEach((l,i)=>{
-      const lp=(p-i*seg)/seg; // 0..1 dans sa fenêtre
-      const last=i===N-1;
-      let o, y, bl, sc;
-      if(lp<0){o=0;y=40;bl=14;sc=.96}
-      else if(lp<.2){const k=ease(lp/.2);o=k;y=40*(1-k);bl=10*(1-k);sc=.96+.04*k}
-      else if(lp<.85||last){o=1;y=0;bl=0;sc=1}
-      else if(lp<1){const k=ease((lp-.85)/.15);o=1-k;y=-40*k;bl=8*k;sc=1+.03*k}
-      else{o=0;y=-40;bl=10;sc=1.03}
+      const lp=(p-i*seg)/seg, last=i===N-1;
+      const inn=sstep(-.07,.3,lp), out=last?0:sstep(.66,.97,lp);
+      const o=inn*(1-out);
+      const y=56*(1-inn)-56*out + (last?0:(.5-clamp(lp))*14);
+      const sc=.965+.035*inn+.025*out;
       l.style.opacity=o.toFixed(3);
-      l.style.transform="translate(-50%,calc(-50% + "+y.toFixed(1)+"px)) scale("+sc.toFixed(3)+")";
-      l.style.filter=bl>.2?"blur("+bl.toFixed(1)+"px)":"none";
+      l.style.visibility=o<.005?"hidden":"visible";
+      l.style.transform="translate3d(-50%,calc(-50% + "+y.toFixed(2)+"px),0) scale("+sc.toFixed(4)+")";
     });
-    const cur=Math.min(N-1,Math.floor(p*N)); ticks.forEach((t,i)=>t.classList.toggle("on",i===cur));
-    if(cur!==lastSeg&&p>0&&p<1){lastSeg=cur;drop.classList.remove("go");void drop.offsetWidth;drop.classList.add("go")}
+    const cur=Math.min(N-1,Math.floor(p*N+.15)); ticks.forEach((t,i)=>t.classList.toggle("on",i===cur));
+    if(cur!==lastSeg&&p>.01&&p<.99){lastSeg=cur;drop.classList.remove("go");void drop.offsetWidth;drop.classList.add("go")}
   }
-  addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
-  addEventListener("resize",upd); upd();
+  function loop(t){
+    const dt=lastT?Math.min(64,t-lastT):16.7; lastT=t;
+    tp=target(); if(sp<0) sp=tp;
+    const k=1-Math.pow(1-.12,dt/16.7); sp+=(tp-sp)*k;
+    if(Math.abs(tp-sp)<.0004) sp=tp;
+    render(sp);
+    if(sp!==tp) raf=requestAnimationFrame(loop); else {raf=0; lastT=0}
+  }
+  const kick=()=>{if(!raf) raf=requestAnimationFrame(loop)};
+  addEventListener("scroll",kick,{passive:true});
+  addEventListener("resize",kick); kick();
 })();
 
 
