@@ -186,6 +186,26 @@ p{margin:0}
 .flow__top .sec__head{margin-bottom:0}
 .flow__img{margin:0;border-radius:var(--r-panel);overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(0,0,0,.7);border:1px solid rgba(245,237,225,.18)}
 .flow__img img{display:block;width:100%;height:100%;object-fit:cover}
+/* Coffret : ouverture douce + reflet + scintillements */
+.incl__top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:clamp(28px,5vw,72px);align-items:center;margin-bottom:clamp(36px,5vw,64px)}
+.incl__top .sec__head{margin-bottom:0}
+.box{position:relative;margin:0;aspect-ratio:1;border-radius:var(--r-panel);overflow:hidden;box-shadow:0 46px 90px -48px rgba(76,19,34,.7);isolation:isolate}
+.box__in{position:absolute;inset:0;overflow:hidden}
+.box__in img{display:block;width:100%;height:100%;object-fit:cover}
+.box.pre .box__in{clip-path:inset(50% 0 50% 0)}
+.box.pre .box__in img{transform:scale(1.12)}
+.box.pre.is-on .box__in{clip-path:inset(0 0 0 0);transition:clip-path 1.3s cubic-bezier(.7,0,.2,1)}
+.box.pre.is-on .box__in img{transform:scale(1);transition:transform 2.6s cubic-bezier(.2,.7,.2,1)}
+.box__sheen{position:absolute;inset:-20%;z-index:2;pointer-events:none;background:linear-gradient(115deg,transparent 40%,rgba(255,246,238,.38) 49%,rgba(255,246,238,.08) 54%,transparent 60%);transform:translateX(-70%);opacity:0;mix-blend-mode:soft-light}
+.box.is-on .box__sheen{animation:boxSheen 7s ease-in-out 1.3s infinite}
+@keyframes boxSheen{0%{transform:translateX(-70%);opacity:1}24%{transform:translateX(70%);opacity:1}25%,100%{transform:translateX(70%);opacity:0}}
+.box__spark{position:absolute;z-index:3;left:var(--x);top:var(--y);width:26px;height:26px;margin:-13px 0 0 -13px;pointer-events:none;opacity:0;background:radial-gradient(circle,#fff 0 12%,rgba(255,240,244,.6) 28%,transparent 60%);clip-path:polygon(50% 0,58% 42%,100% 50%,58% 58%,50% 100%,42% 58%,0 50%,42% 42%)}
+.box__spark--s{width:18px;height:18px;margin:-9px 0 0 -9px}
+.box.is-on .box__spark{animation:spark 4.2s ease-in-out var(--d) infinite}
+@keyframes spark{0%,70%,100%{opacity:0;transform:scale(.3) rotate(0)}80%{opacity:1;transform:scale(1) rotate(45deg)}90%{opacity:0;transform:scale(.6) rotate(90deg)}}
+@media (hover:hover){.box .box__in img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}.box.is-on:hover .box__in img{transform:scale(1.035)}}
+@media (max-width:860px){.incl__top{grid-template-columns:minmax(0,1fr)}.box{max-width:460px;width:100%;justify-self:center}}
+@media (prefers-reduced-motion:reduce){.box__sheen,.box__spark{display:none}}
 /* Diagnostic animé : scan + annotations qui s'écrivent */
 .scan{position:relative}
 .scan__bar{position:absolute;left:0;right:0;top:0;height:22%;pointer-events:none;opacity:0;background:linear-gradient(to bottom,rgba(255,236,242,0),rgba(255,236,242,.16) 70%,rgba(255,246,236,.55) 96%,rgba(255,246,236,0));mix-blend-mode:screen;transform:translateY(-100%)}
@@ -908,9 +928,12 @@ p{margin:0}
 <!-- L'OFFRE -->
 <section class="sec" id="inclus" aria-labelledby="h-incl">
   <div class="wrap">
-    <div class="sec__head">
-      <h2 id="h-incl">Tout ce que vous emportez de cette demi-journée</h2>
-      <p class="lede">Chaque élément de l'atelier a de la valeur à lui seul. Réunis, ils vous donnent ce qu'un soin isolé ne donne jamais : une méthode qui vous appartient.</p>
+    <div class="incl__top">
+      <div class="sec__head">
+        <h2 id="h-incl">Tout ce que vous emportez de cette demi-journée</h2>
+        <p class="lede">Chaque élément de l'atelier a de la valeur à lui seul. Réunis, ils vous donnent ce qu'un soin isolé ne donne jamais : une méthode qui vous appartient.</p>
+      </div>
+      <figure class="box" id="box"><div class="box__in"><img src="img/coffret-skinmi.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Coffret SkinMi rose ouvert avec soins coréens, ruban bordeaux et carte de remerciement"></div><i class="box__sheen" aria-hidden="true"></i><span class="box__spark" style="--x:68.6%;--y:16.2%;--d:1.5s" aria-hidden="true"></span><span class="box__spark box__spark--s" style="--x:76%;--y:51%;--d:2.3s" aria-hidden="true"></span><span class="box__spark box__spark--s" style="--x:85%;--y:59%;--d:3.1s" aria-hidden="true"></span><span class="box__spark box__spark--s" style="--x:46.5%;--y:45%;--d:3.8s" aria-hidden="true"></span></figure>
     </div>
     <div class="incl__grid">
       <article class="stack" aria-label="Le contenu de l'atelier">
@@ -1543,6 +1566,14 @@ addEventListener("scroll",onScroll,{passive:true}); onScroll();
   f.querySelectorAll(".scan__lbl").forEach(l=>{const t=l.textContent;l.textContent="";[...t].forEach((ch,i)=>{const c=document.createElement("span");c.className="c";c.textContent=ch===" "?"\u00a0":ch;c.style.setProperty("--i",i);l.appendChild(c)})});
   if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window)){f.classList.add("is-on");return}
   new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){f.classList.add("is-on");o.disconnect()}},{threshold:.45}).observe(f);
+})();
+
+/* Coffret : déclenchement à l'arrivée */
+(function(){
+  const b=document.getElementById("box"); if(!b) return;
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window)){b.classList.add("is-on");return}
+  b.classList.add("pre");
+  new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){b.classList.add("is-on");o.disconnect()}},{threshold:.35}).observe(b);
 })();
 </script>
 </html>
