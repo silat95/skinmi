@@ -371,6 +371,12 @@ p{margin:0}
 
 /* Guide des marques */
 .brands{background:var(--powder)}
+.brands__top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:clamp(28px,5vw,72px);align-items:center;margin-bottom:clamp(28px,4vw,48px)}
+.brands__top .sec__head{margin-bottom:0}
+.brands__img{margin:0;border-radius:200px 200px var(--r-panel) var(--r-panel);overflow:hidden;aspect-ratio:942/1086;box-shadow:0 40px 80px -46px rgba(76,19,34,.6);border:6px solid var(--ivory-card)}
+.brands__img img{display:block;width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.brands__top{grid-template-columns:minmax(0,1fr)}.brands__img{max-width:460px;aspect-ratio:4/3;border-radius:var(--r-panel)}.brands__img img{object-position:50% 40%}}
+
 .brands__filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
 .bf{appearance:none;border:1.5px solid rgba(122,40,57,.35);background:var(--milk);color:var(--wine);font:500 .98rem/1 var(--f-body);padding:.8em 1.2em;border-radius:999px;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s,transform .2s}
 .bf:hover{border-color:var(--wine);transform:translateY(-1px)}
@@ -956,9 +962,12 @@ p{margin:0}
 <!-- GUIDE DES MARQUES -->
 <section class="sec brands" id="marques" aria-labelledby="h-brands">
   <div class="wrap">
-    <div class="sec__head">
-      <h2 id="h-brands">Quelle marque coréenne pour votre peau ?</h2>
-      <p class="lede">Choisissez votre type de peau : on vous montre en un clic les marques les plus adaptées, d'après le guide SkinMi.</p>
+    <div class="brands__top">
+      <div class="sec__head">
+        <h2 id="h-brands">Quelle marque coréenne pour votre peau ?</h2>
+        <p class="lede">Choisissez votre type de peau : on vous montre en un clic les marques les plus adaptées, d'après le guide SkinMi.</p>
+      </div>
+      <figure class="brands__img"><img src="img/ambiance-produits.webp" width="942" height="1086" loading="lazy" decoding="async" alt="Soins coréens disposés sur une table d'atelier SkinMi, avec fleurs séchées et carton « Votre peau, révélée »"></figure>
     </div>
     <div class="brands__filters" role="group" aria-label="Votre type de peau">
       <button type="button" class="bf is-on" data-f="all">Toutes</button>
