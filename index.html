@@ -853,7 +853,7 @@ html.reading,html.reading body{overflow:hidden}
       <a href="#marques">Les marques</a>
       <a href="#actifs">Les actifs tendance 2026</a>
       <a href="#incontournables">Le guide des actifs</a>
-      <a href="#journal">Le journal</a>
+      <a href="#blog">Le blog</a>
       <a href="#equipe">L'équipe</a>
       <a href="#questions">Questions</a>
       <a class="btn btn--primary js-wa" href="https://wa.me/33759728122?text=Bonjour%20SkinMi%20!%20J%27aimerais%20r%C3%A9server%20ma%20place%20pour%20le%20prochain%20atelier." target="_blank" rel="noopener">Réserver ma place sur WhatsApp</a>
@@ -1253,11 +1253,11 @@ html.reading,html.reading body{overflow:hidden}
 
 
 <!-- EQUIPE -->
-<section class="sec journal" id="journal" aria-labelledby="h-journal">
+<section class="sec journal" id="blog" aria-labelledby="h-journal">
   <div class="wrap">
     <div class="journal__head">
       <div class="sec__head">
-        <h2 id="h-journal">Le journal SkinMi</h2>
+        <h2 id="h-journal">Le blog SkinMi</h2>
         <p class="lede">Nos conseils de peau, expliqués simplement. Les bons gestes, le pourquoi derrière chacun, et ce qu'on vous montre pendant l'atelier.</p>
       </div>
     </div>
@@ -1462,7 +1462,7 @@ html.reading,html.reading body{overflow:hidden}
     <div>
       <a href="mailto:atelierskinmi@gmail.com?subject=Atelier%20SkinMi">atelierskinmi@gmail.com</a>
       <a href="https://www.instagram.com/skinmi/" target="_blank" rel="noopener">@skinmi sur Instagram</a>
-      <a href="#journal">Le journal SkinMi</a>
+      <a href="#blog">Le blog SkinMi</a>
     </div>
     <div><span>SkinMi, ateliers skincare inspirés de la K-Beauty</span></div>
   </div>
@@ -1815,7 +1815,7 @@ addEventListener("scroll",onScroll,{passive:true}); onScroll();
   function shut(fromPop){
     if(R.hidden) return;
     R.hidden=true; document.documentElement.classList.remove("reading");
-    if(!fromPop&&location.hash.startsWith("#article-")) history.pushState({},"",location.pathname+location.search+"#journal");
+    if(!fromPop&&location.hash.startsWith("#article-")) history.pushState({},"",location.pathname+location.search+"#blog");
     if(last) last.focus({preventScroll:true});
   }
   function upd(){const m=sc.scrollHeight-sc.clientHeight; prog.style.transform="scaleX("+(m>0?sc.scrollTop/m:0)+")"}
