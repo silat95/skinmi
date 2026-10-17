@@ -731,6 +731,98 @@ p{margin:0}
   .kb__legend{gap:8px 18px}.kb__count{margin-left:0;width:100%}
 }
 @media (prefers-reduced-motion:reduce){.kb__grid li.in{animation:none}.kbt{transition:none}}
+/* Journal (blog) */
+.journal{background:var(--blush)}
+.jcard{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);background:var(--ivory-card);border:1px solid rgba(122,40,57,.12);border-radius:var(--r-panel);overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 40px 80px -56px rgba(76,19,34,.6);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.jcard:hover{transform:translateY(-4px);box-shadow:0 50px 90px -50px rgba(76,19,34,.65)}
+.jcard:focus-visible{outline:3px solid rgba(122,40,57,.45);outline-offset:4px}
+.jcard__visual{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:340px}
+.jcard__half{display:grid;place-content:center;justify-items:center;gap:6px;text-align:center;padding:24px}
+.jcard__half svg{width:66px;height:66px;margin-bottom:8px;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.jcard__half span{font-family:var(--f-display);font-weight:600;font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1}
+.jcard__half em{font-style:normal;font-size:.9rem;opacity:.8}
+.jcard__half--am{background:var(--powder);color:var(--wine)}
+.jcard__half--pm{background:var(--wine);color:var(--ivory)}
+.jcard:hover .jcard__half--am svg{transform:rotate(45deg)}
+.jcard:hover .jcard__half--pm svg{transform:rotate(-14deg) scale(1.05)}
+.jcard__drop{position:absolute;left:50%;top:50%;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50% 0 50% 50%;transform:rotate(-45deg);background:radial-gradient(circle at 35% 35%,#fff 0 18%,var(--powder) 55%,#D98A9C);box-shadow:0 0 0 6px var(--ivory-card),0 10px 24px rgba(76,19,34,.3)}
+.jcard__body{padding:clamp(26px,3.5vw,48px);display:grid;align-content:center;gap:14px}
+.jcard__meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:.85rem;color:var(--muted)}
+.jtag{display:inline-block;font-size:.76rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;background:var(--wine);color:var(--ivory);padding:.32em .8em;border-radius:999px}
+.jcard h3{font-family:var(--f-display);font-weight:600;font-size:clamp(1.6rem,2.6vw,2.3rem);line-height:1.12;color:var(--wine);margin:0}
+.jcard p{margin:0;color:var(--ink);font-size:1.02rem;line-height:1.6}
+.jcard__cta{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--wine);margin-top:4px}
+.jcard__cta svg{width:16px;height:16px;transition:transform .3s}
+.jcard:hover .jcard__cta svg{transform:translateX(4px)}
+.journal__soon{margin:18px 0 0;font-size:.92rem;color:var(--muted);text-align:center}
+.journal__soon span{color:var(--wine);margin-right:6px}
+@media (max-width:860px){.jcard{grid-template-columns:minmax(0,1fr)}.jcard__visual{min-height:200px}.jcard__half svg{width:48px;height:48px}}
+/* Lecteur d'article */
+.reader{position:fixed;inset:0;z-index:90;background:var(--ivory-card);display:flex;flex-direction:column;animation:readerIn .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes readerIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.reader__bar{height:3px;background:rgba(122,40,57,.1);flex:none}
+.reader__bar i{display:block;height:100%;width:100%;background:var(--wine);transform-origin:left;transform:scaleX(0)}
+.reader__top{flex:none;display:flex;justify-content:space-between;align-items:center;padding:12px var(--gutter);border-bottom:1px solid rgba(122,40,57,.1)}
+.reader__brand{width:96px;color:var(--wine)}
+.reader__close{appearance:none;border:1.5px solid rgba(122,40,57,.3);background:transparent;color:var(--wine);font:500 .95rem/1 var(--f-body);padding:.7em 1.1em;border-radius:999px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.reader__close span{font-size:1.2rem;line-height:.6}
+.reader__close:hover{background:var(--wine);color:var(--ivory);border-color:var(--wine)}
+.reader__scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.post{max-width:760px;margin:0 auto;padding:clamp(32px,6vw,72px) var(--gutter) clamp(56px,8vw,96px)}
+.post__hero{display:grid;gap:16px;padding-bottom:clamp(24px,4vw,40px);border-bottom:1px solid rgba(122,40,57,.14);margin-bottom:clamp(24px,4vw,40px)}
+.post__hero h2{font-family:var(--f-display);font-weight:600;font-size:clamp(2.2rem,5.4vw,3.6rem);line-height:1.04;letter-spacing:-.015em;color:var(--wine);margin:0}
+.post__lede{margin:0;font-size:clamp(1.12rem,1.8vw,1.3rem);line-height:1.55;color:var(--ink)}
+.post__body{font-size:1.06rem;line-height:1.72;color:var(--ink)}
+.post__body>p{margin:0 0 1.1em}
+.post__body strong{color:var(--wine);font-weight:600}
+.post h3{font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem,2.2vw,1.6rem);line-height:1.2;color:var(--wine);margin:0 0 .5em}
+.post h3 small{display:block;font-family:var(--f-body);font-weight:400;font-size:.62em;color:var(--muted);margin-top:4px}
+.post h4{font-family:var(--f-display);font-weight:600;font-size:1.05rem;color:var(--wine);margin:1.4em 0 .6em}
+.dots{list-style:none;margin:.6em 0 0;padding:0;display:grid;gap:.55em}
+.dots li{position:relative;padding-left:1.4em}
+.dots li::before{content:"";position:absolute;left:.2em;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--wine)}
+.ampm{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:clamp(24px,4vw,40px) 0}
+.ampm__card{border-radius:var(--r-tile);padding:24px 22px}
+.ampm__card p{margin:0 0 .4em;font-size:1rem}
+.ampm__card--am{background:var(--powder)}
+.ampm__card--pm{background:var(--wine);color:var(--ivory)}
+.ampm__card--pm h3,.ampm__card--pm strong{color:var(--ivory)}
+.ampm__card--pm .ampm__ico{color:var(--powder)}
+.ampm__ico{width:44px;height:44px;color:var(--wine);margin-bottom:10px}
+.ampm__ico svg{width:100%;height:100%}
+.ampm__card--am .dots li{font-size:.96rem}
+.ampm__steps{display:grid;gap:8px;margin-top:14px}
+.ampm__steps span{display:block;border:1px solid rgba(245,237,225,.35);border-radius:12px;padding:10px 14px;font-weight:500;font-size:.95rem}
+.pstep{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(14px,2.5vw,24px);margin:clamp(28px,4vw,44px) 0}
+.pstep__num{width:52px;height:52px;border-radius:50%;background:var(--wine);color:var(--ivory);display:grid;place-items:center;font-family:var(--f-display);font-weight:600;font-size:1.5rem;position:sticky;top:16px}
+.pstep__k{margin:0 0 4px;font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.pstep__c>p{margin:0 0 .9em}
+.emul{display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--ivory-bg);border-radius:var(--r-tile);padding:18px 16px;margin:1.2em 0}
+.emul>div{display:grid;justify-items:center;gap:8px;text-align:center;flex:1}
+.emul span{font-size:.82rem;line-height:1.3;color:var(--muted)}
+.emul b{color:var(--wine);font-size:1.3rem;font-weight:500}
+.emul i{width:46px;height:46px;border-radius:50%}
+.emul__oil{background:radial-gradient(circle at 35% 30%,#fff7d6,#E7C26A 55%,#C99A3A)}
+.emul__water{background:radial-gradient(circle at 35% 30%,#fff,#CFE5F1 55%,#9EC5DC)}
+.emul__milk{background:radial-gradient(circle at 35% 30%,#fff,#FBF3E8 55%,#E9DCCB);box-shadow:inset 0 0 0 1px rgba(122,40,57,.12)}
+.howto{list-style:none;margin:0;padding:0;counter-reset:h;display:grid;gap:10px}
+.howto li{counter-increment:h;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:baseline}
+.howto li::before{content:counter(h);width:30px;height:30px;border-radius:50%;border:1.5px solid var(--wine);color:var(--wine);display:grid;place-items:center;font-weight:600;font-size:.9rem;transform:translateY(-2px)}
+.pwarn{display:flex;gap:14px;margin-top:1.4em;background:rgba(214,170,90,.12);border:1px solid rgba(176,124,46,.4);border-radius:var(--r-tile);padding:16px 18px;font-size:.98rem;line-height:1.6}
+.pwarn svg{flex:none;width:22px;height:22px;color:#9A6A1F;margin-top:3px}
+.pwarn b{color:#7A5214}
+.pnote{margin-top:1.1em!important;font-size:.98rem;color:var(--muted);border-left:2px solid var(--powder);padding-left:14px}
+.pcheck{background:var(--powder);border-radius:var(--r-panel);padding:clamp(22px,3vw,32px);margin:clamp(28px,4vw,44px) 0}
+.pcheck ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.pcheck li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;align-items:start}
+.pcheck li::before{content:"";width:24px;height:24px;border-radius:50%;background:var(--wine) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 12.5l3.2 3.2L17 9' fill='none' stroke='%23F5EDE1' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat;margin-top:3px}
+.psum{margin:clamp(28px,4vw,44px) 0;background:var(--wine);color:var(--ivory);border-radius:var(--r-panel);padding:clamp(26px,4vw,44px);font-family:var(--f-display);font-weight:500;font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.35}
+.psum span{display:block;font-family:var(--f-body);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--powder);margin-bottom:10px}
+.post__cta{display:grid;justify-items:center;gap:16px;text-align:center;padding-top:clamp(12px,2vw,20px)}
+.post__cta p{margin:0;font-size:1.1rem;color:var(--ink);max-width:36ch}
+@media (max-width:640px){.ampm{grid-template-columns:minmax(0,1fr)}.pstep{grid-template-columns:minmax(0,1fr)}.pstep__num{position:static;width:44px;height:44px;font-size:1.25rem}.emul{padding:14px 8px}.emul i{width:38px;height:38px}.reader__brand{width:80px}}
+html.reading,html.reading body{overflow:hidden}
+@media (prefers-reduced-motion:reduce){.reader{animation:none}.jcard,.jcard__half svg{transition:none}}
 </style>
 
 <header class="nav" id="top">
@@ -761,6 +853,7 @@ p{margin:0}
       <a href="#marques">Les marques</a>
       <a href="#actifs">Les actifs tendance 2026</a>
       <a href="#incontournables">Le guide des actifs</a>
+      <a href="#journal">Le journal</a>
       <a href="#equipe">L'équipe</a>
       <a href="#questions">Questions</a>
       <a class="btn btn--primary js-wa" href="https://wa.me/33759728122?text=Bonjour%20SkinMi%20!%20J%27aimerais%20r%C3%A9server%20ma%20place%20pour%20le%20prochain%20atelier." target="_blank" rel="noopener">Réserver ma place sur WhatsApp</a>
@@ -1160,6 +1253,136 @@ p{margin:0}
 
 
 <!-- EQUIPE -->
+<section class="sec journal" id="journal" aria-labelledby="h-journal">
+  <div class="wrap">
+    <div class="journal__head">
+      <div class="sec__head">
+        <h2 id="h-journal">Le journal SkinMi</h2>
+        <p class="lede">Nos conseils de peau, expliqués simplement. Les bons gestes, le pourquoi derrière chacun, et ce qu'on vous montre pendant l'atelier.</p>
+      </div>
+    </div>
+    <a class="jcard" href="#article-nettoyage" data-post="post-nettoyage">
+      <div class="jcard__visual" aria-hidden="true">
+        <div class="jcard__half jcard__half--am">
+          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="11" fill="none" stroke="currentColor" stroke-width="2"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M32 7v7M32 50v7M7 32h7M50 32h7M14.3 14.3l5 5M44.7 44.7l5 5M14.3 49.7l5-5M44.7 19.3l5-5"/></g></svg>
+          <span>Matin</span><em>un geste doux</em>
+        </div>
+        <div class="jcard__half jcard__half--pm">
+          <svg viewBox="0 0 64 64"><path d="M40 10a22 22 0 1 0 14 34A18 18 0 0 1 40 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M46 18l1.2 3 3 1.2-3 1.2-1.2 3-1.2-3-3-1.2 3-1.2z" fill="currentColor"/></svg>
+          <span>Soir</span><em>le double nettoyage</em>
+        </div>
+        <i class="jcard__drop"></i>
+      </div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 4 min</span></div>
+        <h3>Le nettoyage : la base d'une belle peau</h3>
+        <p>La clarté du teint et l'efficacité de vos soins dépendent d'abord d'une chose : bien nettoyer, sans agresser. Matin, soir, double nettoyage : on vous explique tout.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+    <p class="journal__soon"><span aria-hidden="true">✦</span> D'autres articles arrivent bientôt.</p>
+  </div>
+
+  <div class="reader" id="reader" hidden>
+    <div class="reader__bar"><i id="readerProg"></i></div>
+    <div class="reader__top">
+      <span class="reader__brand logo logo--wm" aria-hidden="true"></span>
+      <button type="button" class="reader__close" id="readerClose" aria-label="Fermer l'article">Fermer <span aria-hidden="true">×</span></button>
+    </div>
+    <div class="reader__scroll" id="readerScroll">
+      <article class="post" id="post-nettoyage" role="dialog" aria-modal="true" aria-labelledby="post-nettoyage-t">
+        <header class="post__hero">
+          <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 4 min</span></div>
+          <h2 id="post-nettoyage-t">Le nettoyage : la base d'une belle peau</h2>
+          <p class="post__lede">La clarté du teint et l'efficacité de vos soins dépendent d'abord d'une chose : bien nettoyer, sans agresser.</p>
+        </header>
+
+        <div class="post__body">
+          <p>Votre peau est protégée par une <strong>barrière cutanée</strong> (céramides, cholestérol, acides gras). L'objectif est de retirer les impuretés <strong>sans retirer ce qui la protège</strong>.</p>
+
+          <div class="ampm">
+            <section class="ampm__card ampm__card--am">
+              <div class="ampm__ico"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="11" fill="none" stroke="currentColor" stroke-width="2.4"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M32 7v7M32 50v7M7 32h7M50 32h7M14.3 14.3l5 5M44.7 44.7l5 5M14.3 49.7l5-5M44.7 19.3l5-5"/></g></svg></div>
+              <h3>Le matin : un nettoyage doux et rapide</h3>
+              <p>Pendant la nuit, la peau n'a reçu que vos soins et un peu de sébum. Inutile de sortir l'artillerie lourde.</p>
+              <ul class="dots">
+                <li>Un nettoyant doux, un rapide passage, puis rinçage à l'eau tiède</li>
+                <li>Pas besoin de masser longtemps : c'est un simple « coup de propre »</li>
+                <li>Peau très sèche ou sensible ? Un rinçage à l'eau peut suffire certains jours</li>
+              </ul>
+            </section>
+            <section class="ampm__card ampm__card--pm">
+              <div class="ampm__ico"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M40 10a22 22 0 1 0 14 34A18 18 0 0 1 40 10z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg></div>
+              <h3>Le soir : le double nettoyage</h3>
+              <p>En fin de journée, la peau porte maquillage, crème solaire, sébum et pollution. Ce sont surtout des <strong>corps gras</strong> : l'eau seule ne les retire pas. D'où deux étapes complémentaires.</p>
+              <div class="ampm__steps"><span>1. Nettoyant huileux</span><span>2. Nettoyant à base d'eau</span></div>
+            </section>
+          </div>
+
+          <section class="pstep">
+            <div class="pstep__num">1</div>
+            <div class="pstep__c">
+              <p class="pstep__k">Étape 1 du soir</p>
+              <h3>Le nettoyant huileux <small>huile, baume ou lait démaquillant</small></h3>
+              <p>Sa phase grasse attire et dissout tout ce qui est gras : filtres solaires, maquillage (même waterproof), sébum, certains polluants.</p>
+              <p>Il contient aussi des <strong>agents émulsifiants</strong> : au contact de l'eau, le produit se transforme en lait et part au rinçage en emportant les impuretés.</p>
+              <div class="emul" aria-label="L'émulsion en trois temps">
+                <div><i class="emul__oil"></i><span>Huile sur peau sèche</span></div>
+                <b aria-hidden="true">+</b>
+                <div><i class="emul__water"></i><span>Un peu d'eau</span></div>
+                <b aria-hidden="true">=</b>
+                <div><i class="emul__milk"></i><span>Texture laiteuse, on rince</span></div>
+              </div>
+              <h4>Comment faire</h4>
+              <ol class="howto">
+                <li>Appliquer sur peau sèche, mains sèches</li>
+                <li>Masser doucement tout le visage (environ 1 minute)</li>
+                <li>Ajouter un peu d'eau : la texture devient laiteuse, c'est l'émulsion</li>
+                <li>Rincer abondamment à l'eau tiède</li>
+              </ol>
+              <aside class="pwarn">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3l8 14H2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8v4M10 14.5v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <div><b>Pourquoi éviter l'huile de coco ou les huiles de cuisine ?</b> Elles retirent bien le maquillage, mais sans émulsifiant, elles ne se rincent pas : un film gras reste sur la peau et peut boucher les pores. Un produit dédié à cette étape est indispensable.</div>
+              </aside>
+            </div>
+          </section>
+
+          <section class="pstep">
+            <div class="pstep__num">2</div>
+            <div class="pstep__c">
+              <p class="pstep__k">Étape 2 du soir</p>
+              <h3>Le nettoyant à base d'eau <small>gel, mousse, crème lavante</small></h3>
+              <p>Il élimine les derniers résidus et nettoie la peau elle-même. Il doit être :</p>
+              <ul class="dots">
+                <li>Formulé avec des <strong>tensioactifs extra-doux</strong>, pour ne pas délipider la peau</li>
+                <li>À <strong>pH légèrement acide</strong> (proche de celui de la peau, autour de 5), pour respecter son équilibre naturel</li>
+              </ul>
+              <p class="pnote">Comme il est doux, il ne pourrait pas tout retirer seul : c'est pour ça que l'étape 1 fait le gros du travail.</p>
+            </div>
+          </section>
+
+          <section class="pcheck">
+            <h3>Les bons repères</h3>
+            <ul>
+              <li>Après le nettoyage, la peau doit être <strong>confortable</strong>. Si elle tiraille, votre nettoyant est trop décapant.</li>
+              <li>Eau tiède, jamais chaude</li>
+              <li>Séchez en tamponnant avec une serviette propre, sans frotter</li>
+              <li>Appliquez vos soins juste après, sur une peau propre et prête à les recevoir</li>
+            </ul>
+          </section>
+
+          <blockquote class="psum"><span>En résumé</span>Douceur le matin, double nettoyage le soir. Une routine simple qui respecte la nature profonde de votre peau et révèle tout son éclat.</blockquote>
+
+          <div class="post__cta">
+            <p>Envie d'apprendre les bons gestes, sur votre peau, avec une professionnelle ?</p>
+            <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur le nettoyage et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="equipe" aria-labelledby="h-team">
   <div class="wrap">
     <div class="sec__head">
@@ -1239,6 +1462,7 @@ p{margin:0}
     <div>
       <a href="mailto:atelierskinmi@gmail.com?subject=Atelier%20SkinMi">atelierskinmi@gmail.com</a>
       <a href="https://www.instagram.com/skinmi/" target="_blank" rel="noopener">@skinmi sur Instagram</a>
+      <a href="#journal">Le journal SkinMi</a>
     </div>
     <div><span>SkinMi, ateliers skincare inspirés de la K-Beauty</span></div>
   </div>
@@ -1574,6 +1798,34 @@ addEventListener("scroll",onScroll,{passive:true}); onScroll();
   if(matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window)){b.classList.add("is-on");return}
   b.classList.add("pre");
   new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){b.classList.add("is-on");o.disconnect()}},{threshold:.35}).observe(b);
+})();
+
+/* Journal : ouverture des articles dans le lecteur */
+(function(){
+  const R=document.getElementById("reader"); if(!R) return;
+  const sc=document.getElementById("readerScroll"), prog=document.getElementById("readerProg"), close=document.getElementById("readerClose");
+  const posts=[...R.querySelectorAll(".post")]; let last=null;
+  function open(id,push){
+    const p=document.getElementById(id); if(!p) return;
+    posts.forEach(x=>x.hidden=x!==p);
+    R.hidden=false; document.documentElement.classList.add("reading"); sc.scrollTop=0; upd();
+    if(push) history.pushState({post:id},"","#article-"+id.replace(/^post-/,""));
+    close.focus({preventScroll:true});
+  }
+  function shut(fromPop){
+    if(R.hidden) return;
+    R.hidden=true; document.documentElement.classList.remove("reading");
+    if(!fromPop&&location.hash.startsWith("#article-")) history.pushState({},"",location.pathname+location.search+"#journal");
+    if(last) last.focus({preventScroll:true});
+  }
+  function upd(){const m=sc.scrollHeight-sc.clientHeight; prog.style.transform="scaleX("+(m>0?sc.scrollTop/m:0)+")"}
+  sc.addEventListener("scroll",upd,{passive:true});
+  document.querySelectorAll("[data-post]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();last=a;open(a.dataset.post,true)}));
+  close.addEventListener("click",()=>shut(false));
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!R.hidden) shut(false)});
+  function fromHash(){const h=location.hash; if(h.startsWith("#article-")) open("post-"+h.slice(9),false); else shut(true)}
+  addEventListener("popstate",fromHash);
+  fromHash();
 })();
 </script>
 </html>
