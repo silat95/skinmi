@@ -1224,6 +1224,17 @@ html.reading,html.reading body{overflow:hidden}
 .plink{color:var(--wine);font-weight:500;text-decoration:underline;text-underline-offset:2px}
 .post .axf + .ph,.post .pwarn + .axf{margin-top:12px}
 @media (max-width:760px){.pick--3 li{grid-template-columns:minmax(0,1fr)}}
+.jcard__visual--pepimg,.post__cover--pep{position:relative}
+.jcard__visual--pepimg img{object-position:50% 30%}
+.post__cover--pep img{object-position:50% 32%}
+.pepl{position:absolute;left:7%;top:50%;transform:translateY(-50%);display:grid;gap:4px;color:var(--wine);pointer-events:none;max-width:46%}
+.pepl small{font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.pepl b{font-family:var(--f-display);font-weight:600;font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.02;letter-spacing:-.01em}
+.pepl em{font-style:normal;font-size:.8rem;font-weight:600;letter-spacing:.08em;justify-self:start;margin-top:6px;padding:.3em .75em;border-radius:999px;background:var(--wine);color:var(--ivory)}
+.post__cover--pep .pepl{left:6%}
+.post__cover--pep .pepl b{font-size:clamp(1.9rem,4.4vw,3rem)}
+.post__cover--pep .pepl small{font-size:.76rem}
+.jcard:hover .pepl{transform:translateY(-50%)}
 </style>
 
 <header class="nav" id="top">
@@ -1749,12 +1760,7 @@ html.reading,html.reading body{overflow:hidden}
       </div>
     </a>
     <a class="jcard" href="#article-peptides" data-post="post-peptides">
-      <div class="jcard__visual jcard__visual--pep" aria-hidden="true">
-        <div class="jpep">
-          <div class="jpep__chain"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <em>Les messagers de votre peau</em>
-        </div>
-      </div>
+      <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--pepimg"><img src="img/peptide-cuivre.webp" width="894" height="894" loading="lazy" decoding="async" alt="Sérum bleu aux peptides de cuivre, texture gel avec des bulles"><span class="pepl" aria-hidden="true"><small>Le peptide star</small><b>Peptide<br>de cuivre</b><em>GHK-Cu</em></span></div>
       <div class="jcard__body">
         <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span><span class="jnew">Nouveau</span></div>
         <h3>Peptides&nbsp;: le guide pour une peau plus ferme</h3>
@@ -2174,6 +2180,7 @@ html.reading,html.reading body{overflow:hidden}
           <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span></div>
           <h2 id="post-peptides-t">Peptides&nbsp;: le guide pour une peau plus ferme</h2>
           <p class="post__lede">Fermeté, rides, rougeurs, barrière fragile… Les peptides sont des actifs doux et bien tolérés. Mais ils ne se valent pas tous, et ils ne remplacent pas le rétinol. Voici comment bien les choisir.</p>
+          <figure class="post__cover post__cover--wide post__cover--pep"><img src="img/peptide-cuivre.webp" width="894" height="894" decoding="async" alt="Sérum bleu aux peptides de cuivre, texture gel avec des bulles"><span class="pepl" aria-hidden="true"><small>Le peptide star</small><b>Peptide<br>de cuivre</b><em>GHK-Cu</em></span></figure>
         </header>
 
         <div class="post__body">
