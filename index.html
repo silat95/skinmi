@@ -1368,6 +1368,21 @@ html.reading,html.reading body{overflow:hidden}
 }
 .jcard__visual--spfimg img{object-position:50% 48%}
 .post__cover--spf img{object-position:50% 50%;aspect-ratio:3/2}
+/* Blog : article toners & essences */
+.jcard__visual--ton{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;background:radial-gradient(circle at 40% 30%,var(--milk),var(--powder) 80%)}
+.jton{display:grid;justify-items:center;gap:16px;padding:22px}
+.jton__drops{position:relative;width:120px;height:90px}
+.jton__drops i{position:absolute;bottom:0;width:58px;height:74px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;clip-path:polygon(50% 0,100% 55%,100% 100%,0 100%,0 55%);background:rgba(122,40,57,.85);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.jton__drops i{border-radius:0;clip-path:none;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 50'%3E%3Cpath d='M20 0C29 12 40 22 40 31a20 19 0 0 1-40 0C0 22 11 12 20 0z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 50'%3E%3Cpath d='M20 0C29 12 40 22 40 31a20 19 0 0 1-40 0C0 22 11 12 20 0z'/%3E%3C/svg%3E") center/contain no-repeat}
+.jton__drops i:nth-child(1){left:0;background:rgba(255,255,255,.85)}
+.jton__drops i:nth-child(2){left:31px;bottom:8px;background:rgba(240,211,216,.95);box-shadow:none}
+.jton__drops i:nth-child(3){left:62px;background:var(--wine)}
+.jcard:hover .jton__drops i:nth-child(1){transform:translateY(-6px)}.jcard:hover .jton__drops i:nth-child(3){transform:translateY(-4px)}
+.jton em{font-style:normal;color:var(--wine);font-size:.92rem}
+.chips--zones small{opacity:.7}
+.dose--wet{background:#E6EEF2}
+.dose__drop{width:56px;height:56px;border-radius:50%;background:var(--milk);display:grid;place-items:center;color:#4F7B93}
+.dose__drop svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 </style>
 
 <header class="nav" id="top">
@@ -1917,9 +1932,23 @@ html.reading,html.reading body{overflow:hidden}
     <a class="jcard" href="#article-spf" data-post="post-spf">
       <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--spfimg"><img src="img/protection-solaire.webp" width="588" height="393" loading="lazy" decoding="async" alt="Soleil dessiné avec de la crème solaire sur le dos d'une femme, à la plage"></div>
       <div class="jcard__body">
-        <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 7 min</span><span class="jnew">Nouveau</span></div>
+        <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 7 min</span></div>
         <h3>Protection solaire&nbsp;: l'actif anti-âge n°1</h3>
         <p>Ce que veut vraiment dire « SPF 50 », pourquoi les UVA comptent toute l'année, la bonne quantité à appliquer… et les erreurs que presque tout le monde fait.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+    <a class="jcard" href="#article-toners" data-post="post-toners">
+      <div class="jcard__visual jcard__visual--ton" aria-hidden="true">
+        <div class="jton">
+          <div class="jton__drops"><i></i><i></i><i></i></div>
+          <em>Hydrater couche après couche</em>
+        </div>
+      </div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span><span class="jnew">Nouveau</span></div>
+        <h3>Toners et essences&nbsp;: à quoi servent-ils vraiment&nbsp;?</h3>
+        <p>Toner, essence, lotion… Les différences, ce qu'ils apportent à votre peau, la bonne façon de les appliquer et comment les associer à vos autres soins.</p>
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </a>
@@ -2827,6 +2856,156 @@ html.reading,html.reading body{overflow:hidden}
           <div class="post__cta">
             <p>Vous ne savez pas quel solaire choisir pour votre peau, ni comment l'intégrer à votre routine ? On en parle pendant l'atelier.</p>
             <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur la protection solaire et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="post-toners" role="dialog" aria-modal="true" aria-labelledby="post-toners-t" hidden>
+        <header class="post__hero">
+          <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span></div>
+          <h2 id="post-toners-t">Toners et essences&nbsp;: à quoi servent-ils vraiment&nbsp;?</h2>
+          <p class="post__lede">Dans la K-Beauty, toners et essences ne sont pas de simples « eaux parfumées ». Ce sont des soins hydratants légers qui préparent la peau à recevoir la suite de la routine. Voici comment bien les choisir et les utiliser.</p>
+        </header>
+
+        <div class="post__body">
+          <div class="tldr">
+            <p class="tldr__k">L'essentiel en 30 secondes</p>
+            <ul>
+              <li><b>Facultatif</b><span>mais très utile si la peau a soif</span></li>
+              <li><b>Peau humide</b><span>juste après le nettoyage</span></li>
+              <li><b>En couches</b><span>si la peau est déshydratée</span></li>
+              <li><b>+ une crème</b><span>il ne la remplace pas</span></li>
+            </ul>
+            <p class="tldr__no">Le duo SkinMi : tonique hydratant le matin, essence le soir.</p>
+          </div>
+
+          <nav class="toc" aria-label="Sommaire de l'article">
+            <p class="toc__k">Au sommaire</p>
+            <ol>
+              <li><a href="#t-toner">Le toner, c'est quoi ?</a></li>
+              <li><a href="#t-essence">Et l'essence ?</a></li>
+              <li><a href="#t-pourquoi">Pourquoi en utiliser</a></li>
+              <li><a href="#t-comment">Comment les appliquer</a></li>
+              <li><a href="#t-asso">Avec quoi les associer</a></li>
+              <li><a href="#t-routine">Votre routine</a></li>
+              <li><a href="#t-err">Les erreurs à éviter</a></li>
+              <li><a href="#t-faq">Vos questions</a></li>
+            </ol>
+          </nav>
+
+          <h3 class="ph" id="t-toner"><span>1</span>Le toner, c'est quoi ?</h3>
+          <p>Un toner (ou tonique) est un soin liquide, souvent à base d'eau, appliqué <strong>juste après le nettoyage</strong>. Son rôle a beaucoup changé :</p>
+          <div class="two two--status">
+            <div class="is-stop"><h4>Avant</h4><ul class="dots"><li>« Tonifier » la peau</li><li>« Resserrer les pores »</li><li>Souvent à base d'alcool</li></ul></div>
+            <div class="is-ok"><h4>Aujourd'hui, en K-Beauty</h4><ul class="dots"><li>Hydrater</li><li>Apaiser</li><li>Préparer la peau aux soins suivants</li></ul></div>
+          </div>
+          <h4>Les 4 grands types de toners</h4>
+          <div class="axf">
+            <div><b>Hydratant</b><p>Pour hydrater et apporter du confort.</p><dl><dt>Pour</dt><dd>toutes les peaux</dd></dl></div>
+            <div><b>Apaisant</b><p>Pour calmer les rougeurs, l'inconfort, soutenir la barrière.</p><dl><dt>Pour</dt><dd>peaux sensibles</dd></dl></div>
+            <div><b>Aux ferments</b><p>Pour l'hydratation, l'éclat et la barrière.</p><dl><dt>Pour</dt><dd>peaux sèches, déshydratées, ternes</dd></dl></div>
+            <div><b>Exfoliant</b><p>Pour la texture, les pores et l'éclat.</p><dl><dt>Pour</dt><dd>peaux normales à mixtes</dd></dl><em class="y">Avec prudence, pas tous les jours</em></div>
+          </div>
+
+          <h3 class="ph" id="t-essence"><span>2</span>Et l'essence ?</h3>
+          <p>L'essence est aussi un soin hydratant léger, mais souvent <strong>plus concentré</strong> qu'un toner. Elle peut contenir des ferments, des peptides ou d'autres actifs ciblés.</p>
+          <aside class="pwarn"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v5M10 6v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><div><b>Toner, essence, lotion…</b> En français, la frontière entre ces noms est souvent floue : ce sont presque toujours des soins à base d'eau et d'humectants (des ingrédients qui retiennent l'eau). Fiez-vous à la liste d'ingrédients plus qu'au nom.</div></aside>
+          <ul class="vs2">
+            <li class="vs2__head" aria-hidden="true"><span></span><span>Toner</span><span>Essence</span></li>
+            <li><b>Texture</b><span data-l="Toner">Très liquide</span><span data-l="Essence">Liquide à un peu plus dense</span></li>
+            <li><b>Concentration</b><span data-l="Toner">Variable</span><span data-l="Essence">Souvent plus élevée</span></li>
+            <li><b>Rôle</b><span data-l="Toner">Hydrater, préparer</span><span data-l="Essence">Hydrater intensément, cibler</span></li>
+            <li><b>Fréquence</b><span data-l="Toner">1 à 2 fois par jour</span><span data-l="Essence">1 à 2 fois par jour</span></li>
+            <li><b>Pour qui ?</b><span data-l="Toner">Toutes les peaux</span><span data-l="Essence">Peaux déshydratées, ternes, matures</span></li>
+          </ul>
+          <h4>Les ingrédients à chercher sur l'étiquette</h4>
+          <ul class="chips chips--zones"><li>Glycérine</li><li>Acide hyaluronique</li><li>Niacinamide</li><li>Panthénol</li><li>Centella asiatica</li><li>Ferments (galactomyces, bifida)</li><li>Extrait de riz</li><li>Sève de bouleau</li><li>Peptides <small>(essences)</small></li></ul>
+
+          <h3 class="ph" id="t-pourquoi"><span>3</span>Pourquoi en utiliser ?</h3>
+          <p>Ils ne sont <strong>pas obligatoires</strong>. Mais ils peuvent vraiment faire la différence, surtout si votre peau manque d'eau.</p>
+          <ul class="bgrid">
+            <li><b>Hydrater</b>en profondeur</li>
+            <li><b>Préparer</b>la peau aux soins suivants</li>
+            <li><b>Assouplir</b>plus de confort</li>
+            <li><b>Mieux tolérer</b>le rétinol et les acides</li>
+            <li><b>Repulper</b>un effet temporaire</li>
+            <li><b>Renforcer</b>la barrière cutanée</li>
+          </ul>
+
+          <h3 class="ph" id="t-comment"><span>4</span>Comment les appliquer ?</h3>
+          <div class="dose dose--wet">
+            <div class="dose__drop" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 4c7 9 11 15 11 21a11 11 0 0 1-22 0c0-6 4-12 11-21z"/><path d="M14 26a6 6 0 0 0 6 6"/></svg></div>
+            <div><h4>Le secret : une peau encore humide</h4><p>Appliqué sur une peau légèrement humide, juste après le nettoyage, le soin hydrate beaucoup mieux.</p></div>
+          </div>
+          <ol class="howto">
+            <li><span>Nettoyez doucement votre visage (voir <a class="plink" href="#article-nettoyage" data-post="post-nettoyage">notre guide du nettoyage</a>)</span></li>
+            <li>Tamponnez légèrement avec une serviette propre, sans frotter</li>
+            <li>Appliquez le toner ou l'essence sur la peau encore humide</li>
+            <li>Avec les mains ou un coton, selon votre préférence</li>
+            <li>Laissez absorber quelques secondes</li>
+            <li>Enchaînez avec votre sérum, votre crème ou votre solaire</li>
+          </ol>
+          <h4>Trois façons de l'appliquer</h4>
+          <div class="ways">
+            <div><b>Avec les mains</b><p>Plus économique, et le produit pénètre mieux en tapotant.</p><small>Toutes les peaux</small></div>
+            <div><b>Avec un coton</b><p>Plus doux, mais une partie du produit reste dans le coton.</p><small>Peaux sensibles</small></div>
+            <div><b>En plusieurs couches</b><p>On applique, on laisse absorber, on recommence : hydratation renforcée.</p><small>Peaux très déshydratées</small></div>
+          </div>
+
+          <h3 class="ph" id="t-asso"><span>5</span>Avec quoi les associer ?</h3>
+          <div class="assoc">
+            <div class="assoc__g is-ok"><p>Excellentes associations</p><ul><li>Niacinamide</li><li>Acide hyaluronique</li><li>Glycérine</li><li>Céramides</li><li>Squalane</li><li>Panthénol</li></ul></div>
+            <div class="assoc__g is-g"><p>Bonne association</p><ul><li>Rétinol, progressivement</li></ul></div>
+            <div class="assoc__g is-y"><p>À espacer selon la formule</p><ul><li>Vitamine C</li><li>AHA / BHA</li><li>Peroxyde de benzoyle</li></ul></div>
+            <div class="assoc__g is-r"><p>À surveiller</p><ul><li>Les toners très parfumés</li><li>Un toner exfoliant tous les jours</li></ul></div>
+          </div>
+          <div class="ixs">
+            <section><h4>Toner ou essence + rétinol</h4><p>Un bon duo : le toner hydrate et prépare, le rétinol agit sur le renouvellement de la peau.</p><ul class="dots"><li>Toner ou essence sur peau humide</li><li>Laissez bien absorber : la peau doit être sèche au toucher avant le rétinol</li><li>Puis une crème hydratante</li><li>À lire : <a class="plink" href="#article-retinol" data-post="post-retinol">notre guide du rétinol</a></li></ul></section>
+            <section><h4>Toner ou essence + acides exfoliants</h4><p>Un toner déjà actif + un acide fort, c'est le risque d'irriter la peau.</p><ul class="dots"><li>Tonique hydratant le matin, essence le soir</li><li>Les acides un autre soir</li><li>Jamais plusieurs acides forts avec un toner exfoliant</li><li>À lire : <a class="plink" href="#article-acides" data-post="post-acides">notre guide des acides</a></li></ul></section>
+          </div>
+
+          <h3 class="ph" id="t-routine"><span>6</span>Votre routine</h3>
+          <div class="ampm">
+            <section class="ampm__card ampm__card--am">
+              <div class="ampm__ico"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="11" fill="none" stroke="currentColor" stroke-width="2.4"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M32 7v7M32 50v7M7 32h7M50 32h7M14.3 14.3l5 5M44.7 44.7l5 5M14.3 49.7l5-5M44.7 19.3l5-5"/></g></svg></div>
+              <h3>Le matin</h3>
+              <ol class="rlist"><li>Nettoyage doux</li><li><strong>Tonique hydratant</strong>, sur peau humide</li><li>Sérum</li><li>Hydratant</li><li>SPF 50+</li></ol>
+            </section>
+            <section class="ampm__card ampm__card--pm">
+              <div class="ampm__ico"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M40 10a22 22 0 1 0 14 34A18 18 0 0 1 40 10z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg></div>
+              <h3>Le soir</h3>
+              <ol class="rlist"><li>Double nettoyage</li><li><strong>Essence</strong>, sur peau humide</li><li>Sérum</li><li>Rétinol ou peptides</li><li>Crème hydratante</li></ol>
+            </section>
+          </div>
+
+          <h3 class="ph" id="t-err"><span>7</span>Les 10 erreurs à éviter</h3>
+          <ol class="errs">
+            <li>Croire que le toner est obligatoire</li>
+            <li>Confondre toner et essence</li>
+            <li>L'appliquer sur une peau sèche</li>
+            <li>Utiliser un toner exfoliant tous les jours</li>
+            <li>Cumuler trop d'actifs en même temps</li>
+            <li>Oublier la crème après</li>
+            <li>Choisir un produit trop parfumé</li>
+            <li>Ne pas adapter la quantité à sa peau</li>
+            <li>Oublier le SPF</li>
+            <li>Attendre des résultats en quelques jours</li>
+          </ol>
+
+          <h3 class="ph" id="t-faq"><span>8</span>Vos questions</h3>
+          <div class="pfaq">
+            <details><summary>Le toner est-il obligatoire ?<i aria-hidden="true"></i></summary><p>Non. Il est utile si votre peau a besoin de plus d'hydratation ou de confort. Une routine simple sans toner peut très bien fonctionner.</p></details>
+            <details><summary>Quelle différence entre toner et essence ?<i aria-hidden="true"></i></summary><p>La frontière est floue. L'essence est souvent plus concentrée et plus hydratante, le toner plus léger.</p></details>
+            <details><summary>Peut-on utiliser un toner et une essence le même jour ?<i aria-hidden="true"></i></summary><p>Oui, si votre peau en a besoin. On peut même superposer plusieurs couches quand la peau est déshydratée.</p></details>
+            <details><summary>Peut-on utiliser une essence avec du rétinol ?<i aria-hidden="true"></i></summary><p>Oui. Appliquez l'essence sur peau humide, laissez bien absorber, puis appliquez le rétinol sur une peau sèche au toucher.</p></details>
+            <details><summary>Les toners exfoliants conviennent-ils à toutes les peaux ?<i aria-hidden="true"></i></summary><p>Non. Ils s'utilisent avec prudence, surtout sur les peaux sensibles, et jamais tous les jours.</p></details>
+          </div>
+
+          <blockquote class="psum"><span>En résumé</span>Facultatifs mais précieux : un tonique hydratant le matin, une essence le soir, toujours sur peau humide. On les associe à la niacinamide, l'acide hyaluronique, les peptides ou les céramides. Ils ne remplacent ni la crème, ni les actifs plus forts, ni le SPF.</blockquote>
+          <p class="pdisc">Cet article est informatif et ne remplace pas un avis dermatologique. Problème de peau, grossesse, allaitement ou traitement médical : demandez conseil à un professionnel de santé.</p>
+
+          <div class="post__cta">
+            <p>Toner, essence, sérum… Vous voulez savoir lesquels conviennent vraiment à votre peau ? On construit votre routine pendant l'atelier.</p>
+            <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les toners et essences et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
           </div>
         </div>
       </article>
