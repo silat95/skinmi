@@ -2948,7 +2948,7 @@ addEventListener("scroll",onScroll,{passive:true}); onScroll();
   function setFam(k){fam=k;[...famEl.children].forEach(b=>{b.classList.toggle("is-on",b.dataset.k===k);b.setAttribute("aria-pressed",b.dataset.k===k)});verdict()}
   function syncChk(k){if(k) setFam(k)}
   famEl.addEventListener("click",e=>{const b=e.target.closest("button");if(b)setFam(b.dataset.k)});
-  withEl.addEventListener("click",e=>{const b=e.target.closest(".bf");if(!b)return;act=b.dataset.k;press(withEl,act);verdict()});
+  withEl.addEventListener("click",e=>{const b=e.target.closest(".bf");if(!b)return;act=b.dataset.k;press(withEl,k=>k===act);verdict()});
   const LBL={ok:["✓","Excellente association"],g:["✓","Bonne association, avec précaution"],y:["!","Avec prudence"],r:["×","À éviter le même soir"],spf:["☀","Indispensable"]};
   function verdict(){
     if(!act){out.innerHTML='<div class="acv acv--idle"><span class="acv__ico">?</span><span>Choisissez un soin ci-dessus pour voir s\'il se marie avec votre acide.</span></div>';return}
