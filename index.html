@@ -1147,6 +1147,66 @@ html.reading,html.reading body{overflow:hidden}
 .jcard__visual--acx2 img{object-position:40% 18%}
 .post__cover--acx img{aspect-ratio:20/13}
 @media (max-width:640px){.post__cover--acx img{aspect-ratio:20/13}}
+
+/* ===== Blocs dépliables ===== */
+:root{interpolate-size:allow-keywords}
+.folds{display:grid;gap:10px;align-items:start}
+.folds--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.folds--fmt{grid-template-columns:repeat(2,minmax(0,1fr))}
+.fold{background:var(--milk);border:1px solid var(--line);border-radius:var(--r-tile);transition:box-shadow .35s,border-color .35s,background-color .35s}
+.fold:hover{border-color:rgba(122,40,57,.28)}
+.fold[open]{border-color:rgba(122,40,57,.28);box-shadow:0 24px 50px -38px rgba(76,19,34,.5)}
+.fold summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:inherit;-webkit-tap-highlight-color:transparent}
+.fold summary::-webkit-details-marker{display:none}
+.fold summary:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+.fold__ic{flex:none;width:42px;height:42px;border-radius:50%;background:var(--powder);color:var(--wine);display:grid;place-items:center;transition:transform .35s cubic-bezier(.2,.8,.2,1),background-color .35s,color .35s}
+.fold__ic svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.fold__ic--n{font-family:var(--f-display);font-weight:600;font-size:1.1rem}
+.fold summary:hover .fold__ic{transform:scale(1.07)}
+.fold[open] .fold__ic{background:var(--wine);color:var(--ivory)}
+.fold__t{flex:1;min-width:0;font-weight:600;color:var(--wine);font-size:1.05rem;line-height:1.3}
+.fold__t small{display:block;font-weight:400;color:var(--muted);font-size:.86rem;line-height:1.35;margin-top:2px}
+.fold__pm{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid rgba(122,40,57,.22);position:relative;transition:transform .35s cubic-bezier(.2,.8,.2,1),background-color .35s,border-color .35s}
+.fold__pm::before,.fold__pm::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--wine);transform:translate(-50%,-50%);transition:background-color .35s}
+.fold__pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.fold[open] .fold__pm{transform:rotate(45deg);background:var(--powder);border-color:var(--powder)}
+.fold__b{padding:0 18px 18px 72px;display:grid;gap:10px}
+.fold__b p{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55;max-width:62ch}
+.fold__b .inci{font-size:.92rem}
+.fold__warn{display:flex;gap:10px;align-items:flex-start}
+.fold__warn span{flex:none;width:20px;height:20px;border-radius:50%;background:var(--powder);color:var(--wine);display:grid;place-items:center;font-weight:600;font-size:.74rem;margin-top:2px}
+.fold::details-content{block-size:0;overflow:hidden;opacity:0;transition:block-size .4s cubic-bezier(.2,.8,.2,1),opacity .3s,content-visibility .4s allow-discrete}
+.fold[open]::details-content{block-size:auto;opacity:1}
+.fold--dark{background:rgba(245,237,225,.06);border-color:rgba(240,211,216,.22)}
+.fold--dark:hover,.fold--dark[open]{border-color:rgba(240,211,216,.45);box-shadow:none}
+.fold--dark[open]{background:rgba(245,237,225,.1)}
+.fold--dark .fold__t{color:var(--powder)}
+.fold--dark .fold__t small{color:rgba(245,237,225,.7)}
+.fold--dark .fold__b p{color:rgba(245,237,225,.86)}
+.fold--dark .fold__pm{border-color:rgba(240,211,216,.4)}
+.fold--dark .fold__pm::before,.fold--dark .fold__pm::after{background:var(--powder)}
+.fold--dark[open] .fold__pm::before,.fold--dark[open] .fold__pm::after{background:var(--wine)}
+.fold--dark[open] .fold__ic{background:var(--powder);color:var(--wine)}
+.foldrow{margin-top:clamp(24px,3.5vw,40px);display:flex;flex-wrap:wrap;gap:14px 24px;align-items:flex-start}
+.foldrow .fold{flex:1 1 440px}
+.foldrow > .btn{margin-top:10px}
+.foldrow--wine{background:var(--wine);border-radius:var(--r-tile);padding:12px;align-items:center}
+.foldrow--wine .fold{background:transparent;border-color:transparent}
+.foldrow--wine > .btn{margin:0 10px 0 0}
+.why__cols{align-items:start}
+.ax__formats .folds{margin-top:4px}
+.fold--rules{margin-top:16px}
+.fold--rules ol{margin:0;padding:0 0 0 1.2em;display:grid;gap:8px;font-size:.96rem;line-height:1.5;color:var(--ink)}
+.fold--rules ol b{color:var(--wine);font-weight:600}
+#cout .folds{margin-top:4px}
+@media (max-width:860px){.folds--3,.folds--fmt{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){
+  .fold__b{padding:0 16px 16px 16px}
+  .fold summary{padding:12px 14px;gap:12px}
+  .fold__ic{width:38px;height:38px}
+  .foldrow > .btn{margin-top:0}
+  .foldrow--wine{padding:8px}.foldrow--wine > .btn{margin:0 6px 8px;width:calc(100% - 12px);justify-content:center}
+}
 </style>
 
 <header class="nav" id="top">
@@ -1334,11 +1394,7 @@ html.reading,html.reading body{overflow:hidden}
       <h2 id="h-cost">Combien votre peau vous a-t-elle déjà coûté ?</h2>
       <p class="lede">Sans diagnostic, on paie pour tester au hasard. Et la peau, elle, ne change pas.</p>
     </div>
-    <ul class="cost__list">
-      <li><span class="cost__x" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><b>Des produits achetés au hasard</b><span>Le sérum vu sur TikTok, la crème conseillée par une amie. Ils finissent au fond du tiroir.</span></li>
-      <li><span class="cost__x" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><b>Des heures de conseils contradictoires</b><span>Dix vidéos, dix routines différentes. Impossible de savoir laquelle est faite pour vous.</span></li>
-      <li><span class="cost__x" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><b>Une routine abandonnée en deux semaines</b><span>Trop d'étapes, aucun résultat visible : on laisse tomber, et on recommence plus tard.</span></li>
-    </ul>
+    <div class="folds folds--3"><details class="fold" name="cout"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 8h13l-1.2 12H6.7z"/><path d="M9 8a3 3 0 0 1 6 0"/><path d="M10 13l4 4M14 13l-4 4"/></svg></span><span class="fold__t">Des produits achetés au hasard</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Le sérum vu sur TikTok, la crème conseillée par une amie. Ils finissent au fond du tiroir.</p></div></details><details class="fold" name="cout"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h11v8H9l-3.5 3v-3H4z"/><path d="M18 9h2v8h-1.5v3L15 17h-4"/></svg></span><span class="fold__t">Des heures de conseils contradictoires</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Dix vidéos, dix routines différentes. Impossible de savoir laquelle est faite pour vous.</p></div></details><details class="fold" name="cout"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4M10 13.5l4 4M14 13.5l-4 4"/></svg></span><span class="fold__t">Une routine abandonnée en deux semaines</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Trop d'étapes, aucun résultat visible : on laisse tomber, et on recommence plus tard.</p></div></details></div>
     <div class="cost__out"><p>L'atelier SkinMi remplace tout ça par une méthode, en une demi-journée.</p><a class="btn btn--light" href="#inclus">Voir ce que vous emportez</a></div>
   </div>
 </section>
@@ -1423,9 +1479,7 @@ html.reading,html.reading body{overflow:hidden}
     </div>
   </div>
   <div class="wrap why__cols">
-    <div><h3>Pas de promesse miracle</h3><p>Chez SkinMi, on vous donne les clés pour comprendre votre peau et agir avec les bons gestes, au bon moment. Le résultat vient de la constance.</p></div>
-    <div><h3>Une routine que vous tenez</h3><p>Une routine pensée pour votre peau et votre emploi du temps, écrite noir sur blanc. C'est ce qui permet de la suivre au-delà de la première semaine.</p></div>
-    <div><h3>Le soin se vit mieux à plusieurs</h3><p>Chaque atelier est aussi l'occasion de rencontrer d'autres femmes, d'échanger et de partager un moment qui sort de l'ordinaire.</p></div>
+    <details class="fold fold--dark" name="why"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v3M21 12v2"/></svg></span><span class="fold__t">Pas de promesse miracle</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Chez SkinMi, on vous donne les clés pour comprendre votre peau et agir avec les bons gestes, au bon moment. Le résultat vient de la constance.</p></div></details><details class="fold fold--dark" name="why"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10"/><path d="M3.5 6l1.3 1.3L7.5 4.8M3.5 12l1.3 1.3 2.7-2.5M3.5 18l1.3 1.3 2.7-2.5"/></svg></span><span class="fold__t">Une routine que vous tenez</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Une routine pensée pour votre peau et votre emploi du temps, écrite noir sur blanc. C'est ce qui permet de la suivre au-delà de la première semaine.</p></div></details><details class="fold fold--dark" name="why"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15.5 14.5c3 0 5.5 2 5.5 5"/></svg></span><span class="fold__t">Le soin se vit mieux à plusieurs</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Chaque atelier est aussi l'occasion de rencontrer d'autres femmes, d'échanger et de partager un moment qui sort de l'ordinaire.</p></div></details>
   </div>
 </section>
 
@@ -1454,10 +1508,7 @@ html.reading,html.reading body{overflow:hidden}
     <p class="brands__count" id="brandsCount" aria-live="polite"></p>
     <ul class="brands__grid" id="brandsGrid"></ul>
     <div class="brands__more"><button type="button" class="btn btn--light" id="brandsMore">Voir toutes les marques</button></div>
-    <div class="brands__note">
-      <p><b>Un point de départ, pas un diagnostic.</b> La tolérance dépend du produit précis, de sa formule et de l'état de votre peau. Vérifiez la liste des ingrédients, introduisez un seul nouvel actif à la fois et appliquez un SPF chaque jour. En cas d'acné sévère, de rosacée, d'eczéma, d'irritation durable ou de lésion suspecte, consultez un dermatologue.<br><a class="inci" href="https://inkeedecoder.com/" target="_blank" rel="noopener">Décoder une liste d'ingrédients avec INKEEDecoder <span>(nouvel onglet)</span></a></p>
-      <a class="btn btn--primary js-wa" href="https://wa.me/33759728122?text=Bonjour%20SkinMi%20!%20J%27aimerais%20r%C3%A9server%20ma%20place%20pour%20le%20prochain%20atelier." target="_blank" rel="noopener">Trouver mes produits à l'atelier</a>
-    </div>
+    <div class="foldrow"><details class="fold"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.2"/></svg></span><span class="fold__t">Un point de départ, pas un diagnostic<small>À lire avant de choisir une marque</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>La tolérance dépend du produit précis, de sa formule et de l'état de votre peau. Vérifiez la liste des ingrédients, introduisez un seul nouvel actif à la fois et appliquez un SPF chaque jour. En cas d'acné sévère, de rosacée, d'eczéma, d'irritation durable ou de lésion suspecte, consultez un dermatologue.</p><p><a class="inci" href="https://inkeedecoder.com/" target="_blank" rel="noopener">Décoder une liste d'ingrédients avec INKEEDecoder <span>(nouvel onglet)</span></a></p></div></details><a class="btn btn--primary js-wa" href="https://wa.me/33759728122?text=Bonjour%20SkinMi%20!%20J%27aimerais%20r%C3%A9server%20ma%20place%20pour%20le%20prochain%20atelier." target="_blank" rel="noopener">Trouver mes produits à l'atelier</a></div>
   </div>
   <div class="bm" id="brandModal" hidden>
     <div class="bm__back" data-close></div>
@@ -1497,12 +1548,9 @@ html.reading,html.reading body{overflow:hidden}
     <article class="axd" id="axDetail" aria-live="polite"></article>
     <div class="ax__formats">
       <h3>Les formats qui montent</h3>
-      <ul><li><b>Spicules / Reedle Shot</b><p>Picotement, texture, routine avancée</p><small><span aria-hidden="true">!</span>Pas de superposition au début avec acides ou rétinoïdes.</small></li><li><b>Encapsulation / liposomes</b><p>Stabilité, délivrance et tolérance améliorée</p><small><span aria-hidden="true">!</span>Ne garantit pas, à elle seule, un meilleur résultat.</small></li><li><b>Capsules actives</b><p>Actif protégé jusqu'à l'application</p><small><span aria-hidden="true">!</span>Regarder la formule entière.</small></li><li><b>Masques hydrogel</b><p>Hydratation, effet repulpé temporaire</p><small><span aria-hidden="true">!</span>Un complément, pas une obligation quotidienne.</small></li><li><b>Toner pads</b><p>Format pratique d'exfoliation ou d'hydratation</p><small><span aria-hidden="true">!</span>Ne pas frotter, ne pas surutiliser.</small></li></ul>
+      <div class="folds folds--fmt"><details class="fold" name="fmt"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M9 20l10-10M4 15L14 5"/></svg></span><span class="fold__t">Spicules / Reedle Shot<small>Picotement, texture, routine avancée</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p class="fold__warn"><span aria-hidden="true">!</span>Pas de superposition au début avec acides ou rétinoïdes.</p></div></details><details class="fold" name="fmt"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/></svg></span><span class="fold__t">Encapsulation / liposomes<small>Stabilité, délivrance et tolérance améliorée</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p class="fold__warn"><span aria-hidden="true">!</span>Ne garantit pas, à elle seule, un meilleur résultat.</p></div></details><details class="fold" name="fmt"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.3 19.7a4.2 4.2 0 0 1-5.9-5.9l7.4-7.4a4.2 4.2 0 0 1 5.9 5.9z"/><path d="M6.1 10.1l5.9 5.9"/></svg></span><span class="fold__t">Capsules actives<small>Actif protégé jusqu'à l'application</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p class="fold__warn"><span aria-hidden="true">!</span>Regarder la formule entière.</p></div></details><details class="fold" name="fmt"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c5 0 7 4 7 9s-3 9-7 9-7-4-7-9 2-9 7-9z"/><path d="M9 10.5h.01M15 10.5h.01M10 15.5q2 1.4 4 0"/></svg></span><span class="fold__t">Masques hydrogel<small>Hydratation, effet repulpé temporaire</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p class="fold__warn"><span aria-hidden="true">!</span>Un complément, pas une obligation quotidienne.</p></div></details><details class="fold" name="fmt"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="9" rx="8" ry="3"/><path d="M4 9v6c0 1.7 3.6 3 8 3s8-1.3 8-3V9"/></svg></span><span class="fold__t">Toner pads<small>Format pratique d'exfoliation ou d'hydratation</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p class="fold__warn"><span aria-hidden="true">!</span>Ne pas frotter, ne pas surutiliser.</p></div></details></div>
     </div>
-    <div class="ax__note">
-      <p>Informations éducatives et cosmétiques, sans promesse médicale. La formule entière compte plus que la tendance : introduisez un seul nouvel actif à la fois.<br><a class="inci" href="https://inkeedecoder.com/" target="_blank" rel="noopener">Décoder une liste d'ingrédients avec INKEEDecoder <span>(nouvel onglet)</span></a></p>
-      <a class="btn btn--primary js-wa" href="https://wa.me/33759728122?text=Bonjour%20SkinMi%20!%20J%27aimerais%20r%C3%A9server%20ma%20place%20pour%20le%20prochain%20atelier." target="_blank" rel="noopener">Choisir mes actifs avec une pro</a>
-    </div>
+    <div class="foldrow"><details class="fold"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.2"/></svg></span><span class="fold__t">À savoir avant d'adopter un actif<small>Une règle simple : un nouvel actif à la fois</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Informations éducatives et cosmétiques, sans promesse médicale. La formule entière compte plus que la tendance : introduisez un seul nouvel actif à la fois.</p><p><a class="inci" href="https://inkeedecoder.com/" target="_blank" rel="noopener">Décoder une liste d'ingrédients avec INKEEDecoder <span>(nouvel onglet)</span></a></p></div></details><a class="btn btn--primary js-wa" href="https://wa.me/33759728122?text=Bonjour%20SkinMi%20!%20J%27aimerais%20r%C3%A9server%20ma%20place%20pour%20le%20prochain%20atelier." target="_blank" rel="noopener">Choisir mes actifs avec une pro</a></div>
   </div>
 </section>
 
@@ -1540,19 +1588,9 @@ html.reading,html.reading body{overflow:hidden}
     <div class="kb__morewrap" id="kbMoreWrap"><button type="button" class="btn btn--light" id="kbMore">Voir les 40 actifs</button></div>
     <div class="kb__rules">
       <h3>Les 6 règles d'or SkinMi</h3>
-      <ol>
-        <li><b>Un nouvel actif à la fois</b><span>Introduisez-le sur 2 semaines pour repérer une éventuelle réaction.</span></li>
-        <li><b>Commencer doucement</b><span>Faible fréquence, faible concentration, puis on augmente.</span></li>
-        <li><b>Hydrater systématiquement</b><span>Glycérine, acide hyaluronique, céramides ou squalane autour des actifs forts.</span></li>
-        <li><b>Protéger chaque matin</b><span>Écran solaire indispensable avec rétinoïdes, vitamine C, AHA et BHA.</span></li>
-        <li><b>Alterner plutôt que cumuler</b><span>Rétinol et exfoliants jamais le même soir quand on débute.</span></li>
-        <li><b>Écouter sa peau</b><span>Picotements, rougeurs ou brûlure qui durent : on espace et on simplifie.</span></li>
-      </ol>
+      <div class="folds folds--3"><details class="fold" name="regles"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">1</span><span class="fold__t">Un nouvel actif à la fois</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Introduisez-le sur 2 semaines pour repérer une éventuelle réaction.</p></div></details><details class="fold" name="regles"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">2</span><span class="fold__t">Commencer doucement</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Faible fréquence, faible concentration, puis on augmente.</p></div></details><details class="fold" name="regles"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">3</span><span class="fold__t">Hydrater systématiquement</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Glycérine, acide hyaluronique, céramides ou squalane autour des actifs forts.</p></div></details><details class="fold" name="regles"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">4</span><span class="fold__t">Protéger chaque matin</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Écran solaire indispensable avec rétinoïdes, vitamine C, AHA et BHA.</p></div></details><details class="fold" name="regles"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">5</span><span class="fold__t">Alterner plutôt que cumuler</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Rétinol et exfoliants jamais le même soir quand on débute.</p></div></details><details class="fold" name="regles"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">6</span><span class="fold__t">Écouter sa peau</span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>Picotements, rougeurs ou brûlure qui durent : on espace et on simplifie.</p></div></details></div>
     </div>
-    <div class="kb__note">
-      <p><b>Notre parti pris :</b> la K-Beauty excelle pour les textures, l'hydratation, l'apaisement et le plaisir d'usage. Pour les rides, les taches ou l'acné, les actifs les plus étudiés restent prioritaires. Pendant l'atelier, on vous aide à faire le tri pour votre peau.</p>
-      <a class="btn btn--light js-wa" href="https://wa.me/33759728122?text=Bonjour%20SkinMi%20!%20J%27aimerais%20r%C3%A9server%20ma%20place%20pour%20le%20prochain%20atelier." target="_blank" rel="noopener">Réserver ma place</a>
-    </div>
+    <div class="foldrow foldrow--wine"><details class="fold fold--dark"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.3a4.2 4.2 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z"/></svg></span><span class="fold__t">Notre parti pris<small>K-Beauty ou actifs classiques : ce qu'on en pense</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><p>la K-Beauty excelle pour les textures, l'hydratation, l'apaisement et le plaisir d'usage. Pour les rides, les taches ou l'acné, les actifs les plus étudiés restent prioritaires. Pendant l'atelier, on vous aide à faire le tri pour votre peau.</p></div></details><a class="btn btn--light js-wa" href="https://wa.me/33759728122?text=Bonjour%20SkinMi%20!%20J%27aimerais%20r%C3%A9server%20ma%20place%20pour%20le%20prochain%20atelier." target="_blank" rel="noopener">Réserver ma place</a></div>
     <p class="kb__disc">Informations éducatives, qui ne remplacent pas l'avis d'un médecin ou d'un dermatologue. Peau réactive, maladie de peau, grossesse, allaitement ou traitement en cours : demandez conseil à un professionnel de santé.</p>
   </div>
   <div class="bm kbm" id="kbModal" hidden>
@@ -1616,8 +1654,9 @@ html.reading,html.reading body{overflow:hidden}
       <div class="acfam__grid" id="acFamGrid"></div>
     </div>
 
-    <details class="acrules">
-      <summary>Les 10 règles SkinMi pour les acides <i aria-hidden="true"></i></summary>
+    <details class="fold fold--rules">
+      <summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10"/><path d="M3.5 6l1.3 1.3L7.5 4.8M3.5 12l1.3 1.3 2.7-2.5M3.5 18l1.3 1.3 2.7-2.5"/></svg></span><span class="fold__t">Les 10 règles SkinMi pour les acides<small>À garder en tête avant chaque exfoliation</small></span><i class="fold__pm" aria-hidden="true"></i></summary>
+      <div class="fold__b">
       <ol>
         <li><b>Un seul exfoliant à la fois au début.</b></li>
         <li><b>Commencer à faible fréquence</b> : 1 fois par semaine pendant 2 à 4 semaines.</li>
@@ -1630,6 +1669,7 @@ html.reading,html.reading body{overflow:hidden}
         <li><b>Ne pas exfolier une peau irritée</b> : attendre le retour à une barrière stable.</li>
         <li><b>Privilégier la régularité douce</b> : une exfoliation légère et régulière vaut mieux qu'un produit très fort utilisé rarement.</li>
       </ol>
+      </div>
     </details>
     <p class="kb__disc">« Acide » ne veut pas dire « agressif » : tout dépend de la famille, de la concentration, du pH et de l'état de votre peau. Rosacée, eczéma, peau très réactive, grossesse, allaitement ou traitement dermatologique : demandez l'avis d'un médecin avant d'utiliser un exfoliant.</p>
   </div>
