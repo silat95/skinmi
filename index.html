@@ -1389,6 +1389,38 @@ html.reading,html.reading body{overflow:hidden}
 .jlist .jcard__visual--pepimg .pepl{top:56%}
 .jcard__visual--tonimg img{object-position:50% 50%}
 .post__cover--ton img{object-position:50% 50%;aspect-ratio:4/3}
+/* Blog : article masques */
+.jcard__visual--msk{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;background:radial-gradient(circle at 50% 35%,var(--milk),var(--powder) 80%)}
+.jmsk{display:grid;justify-items:center;gap:12px;padding:20px}
+.jmsk__face{width:84px;height:98px;fill:rgba(255,255,255,.92);stroke:rgba(122,40,57,.55);stroke-width:2;stroke-linecap:round;filter:drop-shadow(0 10px 16px rgba(76,19,34,.18));transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.jmsk__face ellipse{fill:var(--powder)}
+.jcard:hover .jmsk__face{transform:translateY(-6px) rotate(-3deg)}
+.jmsk em{font-style:normal;color:var(--wine);font-size:.92rem}
+.mtypes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:1.2em 0}
+.mtypes section{background:var(--ivory-bg);border-radius:var(--r-tile);padding:14px 16px;display:grid;gap:4px;align-content:start;position:relative}
+.mtypes b{font-family:var(--f-display);font-weight:600;color:var(--wine);font-size:1.08rem}
+.mtypes small{font-size:.76rem;color:var(--muted)}
+.mtypes p{margin:4px 0 0!important;font-size:.92rem;line-height:1.4}
+.mt__who{font-size:.8rem;color:var(--muted)}
+.mtypes em{justify-self:start;margin-top:6px;font-style:normal;font-size:.74rem;font-weight:600;padding:.3em .7em;border-radius:999px;background:var(--wine);color:var(--ivory)}
+.mtypes .is-care em{background:#F1E1C4;color:#7A5214}
+.folds--post{margin:1em 0 1.4em}
+.post .fold__b{padding-left:72px}
+.mpl{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mpl__k{margin:0 0 4px!important;font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.mpl__k.is-ok{color:#3F6247}.mpl__k.is-no{color:var(--wine)}
+.post .fold .dots li{font-size:.92rem}
+.proto{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:1em 0}
+.proto section{background:var(--powder);border-radius:var(--r-tile);padding:16px;display:grid;gap:6px;align-content:start}
+.proto section.is-night{background:var(--wine);color:var(--ivory)}
+.proto__k{margin:0!important;font-family:var(--f-display);font-weight:600;font-size:1.08rem;color:var(--wine)}
+.proto .is-night .proto__k{color:var(--powder)}
+.proto__t{justify-self:start;font-style:normal;font-size:.74rem;font-weight:600;padding:.3em .7em;border-radius:999px;background:var(--milk);color:var(--wine)}
+.proto ol{margin:4px 0 0;padding-left:1.2em;display:grid;gap:.35em;font-size:.9rem;line-height:1.4}
+@media (max-width:760px){
+  .mtypes{grid-template-columns:1fr 1fr}.proto,.mpl{grid-template-columns:minmax(0,1fr)}
+  .post .fold__b{padding-left:16px}
+}
 </style>
 
 <header class="nav" id="top">
@@ -1897,7 +1929,7 @@ html.reading,html.reading body{overflow:hidden}
     <a class="jcard" href="#article-toners" data-post="post-toners">
       <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--tonimg"><span class="jstep"><b>2</b>Préparer</span><img src="img/toner-essence.webp" width="1000" height="1000" loading="lazy" decoding="async" alt="Flacon d'essence au ginseng posé sur une texture dorée avec des bulles"></div>
       <div class="jcard__body">
-        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span><span class="jnew">Nouveau</span></div>
+        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span></div>
         <h3>Toners et essences&nbsp;: à quoi servent-ils vraiment&nbsp;?</h3>
         <p>Toner, essence, lotion… Les différences, ce qu'ils apportent à votre peau, la bonne façon de les appliquer et comment les associer à vos autres soins.</p>
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -1930,8 +1962,22 @@ html.reading,html.reading body{overflow:hidden}
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </a>
+    <a class="jcard" href="#article-masques" data-post="post-masques">
+      <div class="jcard__visual jcard__visual--msk" aria-hidden="true"><span class="jstep"><b>6</b>Masque</span>
+        <div class="jmsk">
+          <svg class="jmsk__face" viewBox="0 0 120 140"><path d="M60 6c30 0 46 22 46 56 0 38-22 72-46 72S14 100 14 62C14 28 30 6 60 6z"/><ellipse cx="42" cy="60" rx="10" ry="6"/><ellipse cx="78" cy="60" rx="10" ry="6"/><path d="M60 70v14"/><path d="M47 102q13 7 26 0"/></svg>
+          <em>Un boost, une à trois fois par semaine</em>
+        </div>
+      </div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 7 min</span><span class="jnew">Nouveau</span></div>
+        <h3>Masques&nbsp;: lequel choisir, et comment bien l'utiliser</h3>
+        <p>Tissu, argile, crème, gel, sleeping pack… Ce que fait chaque masque, pour quelle peau, combien de temps le laisser poser et à quelle fréquence.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
     <a class="jcard" href="#article-cernes" data-post="post-cernes">
-      <div class="jcard__visual jcard__visual--cer" aria-hidden="true"><span class="jstep"><b>6</b>Contour des yeux</span>
+      <div class="jcard__visual jcard__visual--cer" aria-hidden="true"><span class="jstep"><b>7</b>Contour des yeux</span>
         <div class="jcer">
           <div class="jcer__sw"><span class="s1"><i></i>Bruns</span><span class="s2"><i></i>Bleus</span><span class="s3"><i></i>Creux</span></div>
           <em>Quel est votre cerne ?</em>
@@ -1945,7 +1991,7 @@ html.reading,html.reading body{overflow:hidden}
       </div>
     </a>
     <a class="jcard" href="#article-spf" data-post="post-spf">
-      <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--spfimg"><span class="jstep"><b>7</b>Protéger</span><img src="img/protection-solaire.webp" width="588" height="393" loading="lazy" decoding="async" alt="Soleil dessiné avec de la crème solaire sur le dos d'une femme, à la plage"></div>
+      <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--spfimg"><span class="jstep"><b>8</b>Protéger</span><img src="img/protection-solaire.webp" width="588" height="393" loading="lazy" decoding="async" alt="Soleil dessiné avec de la crème solaire sur le dos d'une femme, à la plage"></div>
       <div class="jcard__body">
         <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 7 min</span></div>
         <h3>Protection solaire&nbsp;: l'actif anti-âge n°1</h3>
@@ -3008,6 +3054,121 @@ html.reading,html.reading body{overflow:hidden}
           <div class="post__cta">
             <p>Toner, essence, sérum… Vous voulez savoir lesquels conviennent vraiment à votre peau ? On construit votre routine pendant l'atelier.</p>
             <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les toners et essences et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="post-masques" role="dialog" aria-modal="true" aria-labelledby="post-masques-t" hidden>
+        <header class="post__hero">
+          <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 7 min</span></div>
+          <h2 id="post-masques-t">Masques&nbsp;: lequel choisir, et comment bien l'utiliser</h2>
+          <p class="post__lede">Hydrater, apaiser, purifier, illuminer… Les masques ne sont pas obligatoires, mais ils offrent un vrai coup de pouce à la peau. En K-Beauty, ils existent sous plein de formes : voici comment choisir le bon.</p>
+        </header>
+
+        <div class="post__body">
+          <div class="tldr">
+            <p class="tldr__k">L'essentiel en 30 secondes</p>
+            <ul>
+              <li><b>Un bonus</b><span>pas une étape obligatoire</span></li>
+              <li><b>Tissu</b><span>20 à 30 min, pour hydrater</span></li>
+              <li><b>Argile</b><span>3 à 5 min, pour purifier</span></li>
+              <li><b>+ une crème</b><span>toujours après le masque</span></li>
+            </ul>
+            <p class="tldr__no">Le masque complète votre routine, il ne la remplace pas.</p>
+          </div>
+
+          <nav class="toc" aria-label="Sommaire de l'article">
+            <p class="toc__k">Au sommaire</p>
+            <ol>
+              <li><a href="#m-pourquoi">Pourquoi un masque ?</a></li>
+              <li><a href="#m-types">Les 6 types de masques</a></li>
+              <li><a href="#m-zoom">Chaque masque en détail</a></li>
+              <li><a href="#m-comment">Comment l'utiliser</a></li>
+              <li><a href="#m-peau">Lequel pour votre peau ?</a></li>
+              <li><a href="#m-err">Les erreurs à éviter</a></li>
+              <li><a href="#m-faq">Vos questions</a></li>
+            </ol>
+          </nav>
+
+          <h3 class="ph" id="m-pourquoi"><span>1</span>Pourquoi un masque ?</h3>
+          <p>Un masque n'est <strong>pas indispensable</strong>. Mais utilisé de temps en temps ou chaque semaine, il complète très bien une routine.</p>
+          <ul class="bgrid">
+            <li><b>Hydrater</b>intensément</li>
+            <li><b>Apaiser</b>rougeurs et irritations</li>
+            <li><b>Purifier</b>les peaux grasses</li>
+            <li><b>Illuminer</b>éclat et texture</li>
+            <li><b>Repulper</b>un effet immédiat</li>
+            <li><b>Se poser</b>un vrai moment pour soi</li>
+          </ul>
+
+          <h3 class="ph" id="m-types"><span>2</span>Les 6 types de masques</h3>
+          <div class="mtypes">
+            <section><b>En tissu</b><small>Tissu imbibé de sérum</small><p>Hydratation, apaisement, éclat</p><span class="mt__who">Toutes les peaux</span><em>20 à 30 min</em></section>
+            <section><b>À l'argile</b><small>Pâte ou crème</small><p>Purifie, pores, sébum</p><span class="mt__who">Peaux grasses, mixtes</span><em>3 à 5 min</em></section>
+            <section><b>Crème</b><small>Crème riche</small><p>Nutrition, barrière, confort</p><span class="mt__who">Peaux sèches, matures</span><em>Selon le produit</em></section>
+            <section><b>Gel</b><small>Gel frais</small><p>Apaise, rafraîchit, décongestionne</p><span class="mt__who">Peaux sensibles, à rougeurs</span><em>Selon le produit</em></section>
+            <section><b>Sleeping pack</b><small>Gel ou crème légère</small><p>Hydratation de nuit, barrière</p><span class="mt__who">Peaux sèches, déshydratées</span><em>Toute la nuit</em></section>
+            <section class="is-care"><b>Exfoliant</b><small>Gel, pâte ou acides</small><p>Texture, pores, éclat</p><span class="mt__who">Peaux normales à mixtes</span><em>Avec prudence</em></section>
+          </div>
+          <p class="pnote">Un masque exfoliant contient souvent des acides : mêmes règles que dans <a class="plink" href="#article-acides" data-post="post-acides">notre guide des acides</a>, jamais le même soir qu'un autre exfoliant ou que le rétinol.</p>
+
+          <h3 class="ph" id="m-zoom"><span>3</span>Chaque masque en détail</h3>
+          <p>Cliquez sur un masque pour voir ses avantages, ses limites et les ingrédients à chercher.</p>
+          <div class="folds folds--post">
+            <details class="fold" name="masques"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c5 0 7.5 3.6 7.5 8.5S16 21 12 21s-7.5-4.6-7.5-9.5S7 3 12 3z"/><path d="M8.5 10.5h1.5M14 10.5h1.5M10 16q2 1.3 4 0"/></svg></span><span class="fold__t">En tissu (sheet mask)<small>Le boost d'hydratation immédiat · 20 à 30 min</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Hydratation intense et immédiate</li><li>Effet repulpant</li><li>Très facile à utiliser</li><li>Un vrai moment de détente</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Effet souvent temporaire</li><li>Ne remplace pas la routine du quotidien</li><li>Certains contiennent parfum ou huiles essentielles</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Acide hyaluronique</li><li>Glycérine</li><li>Niacinamide</li><li>Centella asiatica</li><li>Panthénol</li><li>Céramides</li></ul></div></details>
+            <details class="fold" name="masques"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 11h16l-1.5 7a3 3 0 0 1-3 2.5h-7a3 3 0 0 1-3-2.5z"/><path d="M8 11c0-2 1.8-3.5 4-3.5s4 1.5 4 3.5"/><path d="M15 5l2-2"/></svg></span><span class="fold__t">À l'argile<small>Pour purifier les peaux grasses · 3 à 5 min</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Absorbe l'excès de sébum</li><li>Aide à purifier les pores</li><li>Peut affiner la texture</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Peut dessécher</li><li>Ne convient pas à toutes les peaux</li><li>À utiliser avec modération</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Kaolin</li><li>Argile blanche ou verte</li><li>Charbon</li><li>Zinc</li><li>Niacinamide</li><li>Squalane, céramides (contre le dessèchement)</li></ul></div></details>
+            <details class="fold" name="masques"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="9" width="14" height="11" rx="2.5"/><path d="M6 9V7.5A1.5 1.5 0 0 1 7.5 6h9A1.5 1.5 0 0 1 18 7.5V9"/><path d="M9 14h6"/></svg></span><span class="fold__t">Masque crème<small>Pour nourrir les peaux sèches et matures</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Nourrit intensément</li><li>Soutient la barrière cutanée</li><li>Apporte du confort aux peaux sèches</li><li>Peut s'utiliser en masque de nuit</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Trop riche pour les peaux grasses</li><li>Pas toujours adapté aux peaux acnéiques</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Céramides</li><li>Squalane</li><li>Glycérine</li><li>Acide hyaluronique</li><li>Beurres végétaux</li><li>Extrait de riz</li></ul></div></details>
+            <details class="fold" name="masques"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c3.5 5 6 8.5 6 11.5a6 6 0 0 1-12 0C6 11.5 8.5 8 12 3z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></svg></span><span class="fold__t">Masque gel<small>Pour apaiser et rafraîchir les peaux sensibles</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Apaise les rougeurs</li><li>Décongestionne</li><li>Sensation de fraîcheur</li><li>Convient aux peaux sensibles</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Effet souvent temporaire</li><li>Attention à l'alcool et au parfum dans la formule</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Avoine colloïdale</li><li>Centella asiatica</li><li>Panthénol</li><li>Allantoïne</li><li>Acide hyaluronique</li></ul></div></details>
+            <details class="fold" name="masques"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 4a8 8 0 1 0 5 13A6.5 6.5 0 0 1 15 4z"/><path d="M18 4.5h2.5L18 7h2.5"/></svg></span><span class="fold__t">Sleeping pack<small>Le masque de nuit · toute la nuit</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Hydrate pendant la nuit</li><li>Soutient la barrière cutanée</li><li>Peau repulpée au réveil</li><li>Idéal pour les peaux sèches ou déshydratées</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Peut être trop riche pour certaines peaux grasses</li><li>À utiliser avec modération</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Céramides</li><li>Glycérine</li><li>Acide hyaluronique</li><li>Squalane</li><li>Panthénol</li><li>Niacinamide</li></ul></div></details>
+          </div>
+
+          <h3 class="ph" id="m-comment"><span>4</span>Comment l'utiliser ?</h3>
+          <p>Suivez toujours les indications du produit. Voici les repères pour les trois masques les plus courants.</p>
+          <div class="proto">
+            <section><p class="proto__k">Masque en tissu</p><em class="proto__t">20 à 30 min</em><ol><li>Nettoyez doucement votre visage</li><li>Posez le masque sur une peau propre et sèche</li><li>Laissez poser 20 à 30 minutes, pas plus</li><li>Retirez-le</li><li>Faites pénétrer l'excédent en massant</li><li>Appliquez votre crème</li></ol></section>
+            <section><p class="proto__k">Masque à l'argile</p><em class="proto__t">3 à 5 min</em><ol><li>Nettoyez doucement votre visage</li><li>Appliquez une fine couche</li><li>Laissez poser 3 à 5 minutes</li><li>Rincez à l'eau tiède</li><li>Enchaînez avec un masque hydratant ou une crème</li></ol></section>
+            <section class="is-night"><p class="proto__k">Sleeping pack</p><em class="proto__t">Toute la nuit</em><ol><li>Nettoyez doucement votre visage</li><li>Appliquez votre sérum ou votre crème habituelle</li><li>Ajoutez une fine couche de sleeping pack</li><li>Laissez poser toute la nuit (2 heures minimum)</li><li>Nettoyez votre visage le matin</li></ol></section>
+          </div>
+
+          <h3 class="ph" id="m-peau"><span>5</span>Lequel pour votre peau ?</h3>
+          <ul class="pick pick--3">
+            <li class="pick__head" aria-hidden="true"><span>Votre peau</span><span>Le masque</span><span>Rythme</span></li>
+            <li><b>Normale</b><span data-l="Masque">Tissu hydratant</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Sèche</b><span data-l="Masque">Crème ou sleeping pack</span><span data-l="Rythme">2 à 3 fois / sem.</span></li>
+            <li><b>Grasse</b><span data-l="Masque">Argile, puis un masque hydratant</span><span data-l="Rythme">1 fois / sem.</span></li>
+            <li><b>Mixte</b><span data-l="Masque">Tissu, ou argile sur la zone T seulement</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Sensible</b><span data-l="Masque">Gel apaisant, ou tissu sans parfum</span><span data-l="Rythme">1 fois / sem.</span></li>
+            <li><b>Mature</b><span data-l="Masque">Crème ou sleeping pack</span><span data-l="Rythme">2 à 3 fois / sem.</span></li>
+          </ul>
+
+          <h3 class="ph" id="m-err"><span>6</span>Les 10 erreurs à éviter</h3>
+          <ol class="errs">
+            <li>Croire que le masque est obligatoire</li>
+            <li>Utiliser un masque à l'argile trop souvent</li>
+            <li>Garder un masque en tissu trop longtemps</li>
+            <li>Cumuler trop d'actifs en même temps</li>
+            <li>Oublier la crème après</li>
+            <li>Choisir un masque très parfumé</li>
+            <li>Ne pas adapter la quantité</li>
+            <li>Oublier le SPF le lendemain</li>
+            <li>Attendre des miracles en quelques jours</li>
+            <li>S'en servir comme d'un traitement médical</li>
+          </ol>
+
+          <h3 class="ph" id="m-faq"><span>7</span>Vos questions</h3>
+          <div class="pfaq">
+            <details><summary>Les masques en tissu sont-ils efficaces ?<i aria-hidden="true"></i></summary><p>Oui, pour un boost d'hydratation immédiat : ils gardent un sérum hydratant au contact de la peau pendant 20 à 30 minutes. L'effet reste temporaire, d'où l'intérêt d'une bonne routine au quotidien.</p></details>
+            <details><summary>Le masque à l'argile convient-il à toutes les peaux ?<i aria-hidden="true"></i></summary><p>Non. Il est surtout adapté aux peaux grasses ou mixtes. Sur une peau mixte, appliquez-le seulement sur la zone T.</p></details>
+            <details><summary>Les sleeping packs conviennent-ils aux peaux grasses ?<i aria-hidden="true"></i></summary><p>Pas toujours : ils peuvent être trop riches. Préférez alors une texture gel, ou un masque en tissu.</p></details>
+            <details><summary>Un masque peut-il remplacer ma crème ?<i aria-hidden="true"></i></summary><p>Non. Il complète la routine mais ne remplace pas une crème hydratante au quotidien. Appliquez toujours une crème après votre masque.</p></details>
+            <details><summary>Et les masques LED ?<i aria-hidden="true"></i></summary><p>Ils peuvent être intéressants, mais leur efficacité dépend beaucoup de la technologie de l'appareil et d'une utilisation régulière.</p></details>
+          </div>
+
+          <blockquote class="psum"><span>En résumé</span>Tissu pour hydrater et illuminer, argile pour purifier, crème pour nourrir, gel pour apaiser, sleeping pack pour la nuit. Un masque est un complément : on garde sa routine, sa crème et son SPF.</blockquote>
+          <p class="pdisc">Cet article est informatif et ne remplace pas un avis dermatologique. Problème de peau, grossesse, allaitement ou traitement médical : demandez conseil à un professionnel de santé.</p>
+
+          <div class="post__cta">
+            <p>Pendant l'atelier, un masque vous est offert et appliqué pendant votre soin du visage. L'occasion de découvrir celui qui convient à votre peau.</p>
+            <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les masques et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
           </div>
         </div>
       </article>
