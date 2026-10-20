@@ -1383,6 +1383,10 @@ html.reading,html.reading body{overflow:hidden}
 .dose--wet{background:#E6EEF2}
 .dose__drop{width:56px;height:56px;border-radius:50%;background:var(--milk);display:grid;place-items:center;color:#4F7B93}
 .dose__drop svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.jcard__visual{position:relative}
+.jstep{position:absolute;right:14px;top:14px;z-index:2;display:inline-flex;align-items:center;gap:8px;padding:5px 12px 5px 5px;border-radius:999px;background:rgba(255,249,249,.92);color:var(--wine);font-size:.76rem;font-weight:600;letter-spacing:.02em;box-shadow:0 6px 18px -10px rgba(76,19,34,.5);backdrop-filter:blur(4px)}
+.jstep b{width:22px;height:22px;border-radius:50%;background:var(--wine);color:var(--ivory);display:grid;place-items:center;font-size:.74rem}
+.jlist .jcard__visual--pepimg .pepl{top:56%}
 </style>
 
 <header class="nav" id="top">
@@ -1875,12 +1879,12 @@ html.reading,html.reading body{overflow:hidden}
     <div class="journal__head">
       <div class="sec__head">
         <h2 id="h-journal">Le blog SkinMi</h2>
-        <p class="lede">Nos conseils de peau, expliqués simplement. Les bons gestes, le pourquoi derrière chacun, et ce qu'on vous montre pendant l'atelier.</p>
+        <p class="lede">Nos conseils de peau, expliqués simplement. Les articles suivent l'ordre de votre routine, étape par étape : les bons gestes, le pourquoi derrière chacun, et ce qu'on vous montre pendant l'atelier.</p>
       </div>
     </div>
     <div class="jlist">
     <a class="jcard" href="#article-nettoyage" data-post="post-nettoyage">
-      <div class="jcard__visual jcard__visual--photo jcard__visual--cover"><img src="img/double-nettoyage.webp" width="1000" height="563" loading="lazy" decoding="async" alt="Jeune femme coréenne tenant une mousse nettoyante et une huile démaquillante à la centella"></div>
+      <div class="jcard__visual jcard__visual--photo jcard__visual--cover"><span class="jstep"><b>1</b>Nettoyer</span><img src="img/double-nettoyage.webp" width="1000" height="563" loading="lazy" decoding="async" alt="Jeune femme coréenne tenant une mousse nettoyante et une huile démaquillante à la centella"></div>
       <div class="jcard__body">
         <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 4 min</span></div>
         <h3>Le nettoyage : la base d'une belle peau</h3>
@@ -1889,7 +1893,7 @@ html.reading,html.reading body{overflow:hidden}
       </div>
     </a>
     <a class="jcard" href="#article-toners" data-post="post-toners">
-      <div class="jcard__visual jcard__visual--ton" aria-hidden="true">
+      <div class="jcard__visual jcard__visual--ton" aria-hidden="true"><span class="jstep"><b>2</b>Préparer</span>
         <div class="jton">
           <div class="jton__drops"><i></i><i></i><i></i></div>
           <em>Hydrater couche après couche</em>
@@ -1902,17 +1906,8 @@ html.reading,html.reading body{overflow:hidden}
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </a>
-    <a class="jcard" href="#article-retinol" data-post="post-retinol">
-      <div class="jcard__visual jcard__visual--photo"><img src="img/retinal-shot-celimax.webp" width="900" height="900" loading="lazy" decoding="async" alt="Tube de soin au rétinal et noisette de crème jaune pâle"></div>
-      <div class="jcard__body">
-        <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 9 min</span></div>
-        <h3>Rétinol&nbsp;: le guide pour bien débuter</h3>
-        <p>Ce qu'il fait vraiment, pour qui, comment l'introduire sans irriter sa peau, avec quoi l'associer… et un programme pas à pas sur 8 semaines.</p>
-        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </div>
-    </a>
     <a class="jcard" href="#article-acides" data-post="post-acides">
-      <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--acx2"><img src="img/acides-exfoliants.webp" width="1000" height="650" loading="lazy" decoding="async" alt="Jeune femme souriante, mains sur le visage, entourée de bulles et du mot AHA-BHA-PHA"></div>
+      <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--acx2"><span class="jstep"><b>3</b>Exfolier</span><img src="img/acides-exfoliants.webp" width="1000" height="650" loading="lazy" decoding="async" alt="Jeune femme souriante, mains sur le visage, entourée de bulles et du mot AHA-BHA-PHA"></div>
       <div class="jcard__body">
         <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span></div>
         <h3>Acides exfoliants&nbsp;: bien les choisir, bien les utiliser</h3>
@@ -1921,7 +1916,7 @@ html.reading,html.reading body{overflow:hidden}
       </div>
     </a>
     <a class="jcard" href="#article-peptides" data-post="post-peptides">
-      <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--pepimg"><img src="img/peptide-cuivre.webp" width="894" height="894" loading="lazy" decoding="async" alt="Sérum bleu aux peptides de cuivre, texture gel avec des bulles"><span class="pepl" aria-hidden="true"><small>Le peptide star</small><b>Peptide<br>de cuivre</b><em>GHK-Cu</em></span></div>
+      <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--pepimg"><span class="jstep"><b>4</b>Sérum</span><img src="img/peptide-cuivre.webp" width="894" height="894" loading="lazy" decoding="async" alt="Sérum bleu aux peptides de cuivre, texture gel avec des bulles"><span class="pepl" aria-hidden="true"><small>Le peptide star</small><b>Peptide<br>de cuivre</b><em>GHK-Cu</em></span></div>
       <div class="jcard__body">
         <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span></div>
         <h3>Peptides&nbsp;: le guide pour une peau plus ferme</h3>
@@ -1929,8 +1924,17 @@ html.reading,html.reading body{overflow:hidden}
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </a>
+    <a class="jcard" href="#article-retinol" data-post="post-retinol">
+      <div class="jcard__visual jcard__visual--photo"><span class="jstep"><b>5</b>Sérum du soir</span><img src="img/retinal-shot-celimax.webp" width="900" height="900" loading="lazy" decoding="async" alt="Tube de soin au rétinal et noisette de crème jaune pâle"></div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 9 min</span></div>
+        <h3>Rétinol&nbsp;: le guide pour bien débuter</h3>
+        <p>Ce qu'il fait vraiment, pour qui, comment l'introduire sans irriter sa peau, avec quoi l'associer… et un programme pas à pas sur 8 semaines.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
     <a class="jcard" href="#article-cernes" data-post="post-cernes">
-      <div class="jcard__visual jcard__visual--cer" aria-hidden="true">
+      <div class="jcard__visual jcard__visual--cer" aria-hidden="true"><span class="jstep"><b>6</b>Contour des yeux</span>
         <div class="jcer">
           <div class="jcer__sw"><span class="s1"><i></i>Bruns</span><span class="s2"><i></i>Bleus</span><span class="s3"><i></i>Creux</span></div>
           <em>Quel est votre cerne ?</em>
@@ -1944,7 +1948,7 @@ html.reading,html.reading body{overflow:hidden}
       </div>
     </a>
     <a class="jcard" href="#article-spf" data-post="post-spf">
-      <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--spfimg"><img src="img/protection-solaire.webp" width="588" height="393" loading="lazy" decoding="async" alt="Soleil dessiné avec de la crème solaire sur le dos d'une femme, à la plage"></div>
+      <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--spfimg"><span class="jstep"><b>7</b>Protéger</span><img src="img/protection-solaire.webp" width="588" height="393" loading="lazy" decoding="async" alt="Soleil dessiné avec de la crème solaire sur le dos d'une femme, à la plage"></div>
       <div class="jcard__body">
         <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 7 min</span></div>
         <h3>Protection solaire&nbsp;: l'actif anti-âge n°1</h3>
