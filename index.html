@@ -1464,6 +1464,8 @@ html.reading,html.reading body{overflow:hidden}
 .post:not([hidden]) .post__cover img{animation:coverIn 1.4s cubic-bezier(.2,.8,.2,1) both}
 @media (prefers-reduced-motion:reduce){.post:not([hidden]) .post__cover img{animation:none}}
 .post__cover{overflow:hidden;border-radius:var(--r-panel)}
+.jcard__visual--cerimg img{object-position:50% 60%}
+.post__cover--cer img{object-position:50% 58%;aspect-ratio:4/3}
 </style>
 
 <header class="nav" id="top">
@@ -2024,12 +2026,7 @@ html.reading,html.reading body{overflow:hidden}
       </div>
     </a>
     <a class="jcard" href="#article-cernes" data-post="post-cernes">
-      <div class="jcard__visual jcard__visual--cer" aria-hidden="true"><span class="jstep"><b>6</b>Contour des yeux</span>
-        <div class="jcer">
-          <div class="jcer__sw"><span class="s1"><i></i>Bruns</span><span class="s2"><i></i>Bleus</span><span class="s3"><i></i>Creux</span></div>
-          <em>Quel est votre cerne ?</em>
-        </div>
-      </div>
+      <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--cerimg"><span class="jstep"><b>6</b>Contour des yeux</span><img src="img/cernes.webp" width="800" height="800" loading="lazy" decoding="async" alt="Gros plan d'un œil marron avec un cerne foncé en dessous"></div>
       <div class="jcard__body">
         <div class="jcard__meta"><span class="jtag">Les problématiques</span><span>Lecture 7 min</span></div>
         <h3>Cernes&nbsp;: trouver leur origine pour choisir la bonne solution</h3>
@@ -2645,6 +2642,7 @@ html.reading,html.reading body{overflow:hidden}
           <div class="jcard__meta"><span class="jtag">Les problématiques</span><span>Lecture 7 min</span></div>
           <h2 id="post-cernes-t">Cernes&nbsp;: trouver leur origine pour choisir la bonne solution</h2>
           <p class="post__lede">Bruns, bleus ou creux… Tous les cernes ne se ressemblent pas, et ils ne se traitent pas de la même façon. Reconnaître le vôtre, c'est la première étape pour arrêter d'acheter au hasard.</p>
+          <figure class="post__cover post__cover--wide post__cover--cer"><img src="img/cernes.webp" width="800" height="800" decoding="async" alt="Gros plan d'un œil marron avec un cerne foncé en dessous"></figure>
         </header>
 
         <div class="post__body">
