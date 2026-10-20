@@ -1055,6 +1055,70 @@ html.reading,html.reading body{overflow:hidden}
   .rtypes{grid-template-columns:minmax(0,1fr)}
   .prog li{grid-template-columns:minmax(0,1fr);gap:2px}
 }
+/* Blog : 3 cartes + article acides */
+@media (min-width:1000px){.jlist{grid-template-columns:repeat(3,minmax(0,1fr))}.jlist .jcard__visual{min-height:210px}}
+@media (max-width:999px){.jlist{grid-template-columns:minmax(0,1fr)}}
+.jcard__visual--acx{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;background:radial-gradient(circle at 70% 25%,var(--milk),var(--powder) 70%)}
+.jacx{display:grid;justify-items:center;gap:14px;padding:20px}
+.jacx__mol{display:flex;align-items:center;gap:12px}
+.jacx__mol span{display:grid;place-items:center;border-radius:50%;font-weight:600;letter-spacing:.04em;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.jacx__mol .s1{width:52px;height:52px;font-size:.8rem;background:var(--wine);color:var(--ivory)}
+.jacx__mol .s2{width:70px;height:70px;font-size:.92rem;background:var(--ivory-card);color:var(--wine);border:1.5px solid var(--wine)}
+.jacx__mol .s3{width:92px;height:92px;font-size:1.02rem;background:rgba(255,255,255,.55);color:var(--wine);box-shadow:inset 0 0 0 8px rgba(122,40,57,.06)}
+.jcard:hover .jacx__mol .s1{transform:translateY(-6px)}.jcard:hover .jacx__mol .s2{transform:translateY(4px)}.jcard:hover .jacx__mol .s3{transform:scale(1.05)}
+.jacx em{font-style:normal;color:var(--wine);font-size:.92rem}
+.bgrid--plain li{background:var(--ivory-bg)}
+.fams{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:1.2em 0}
+.fams section{background:var(--ivory-bg);border-radius:var(--r-tile);padding:16px;display:grid;gap:8px;align-content:start}
+.fams section:nth-child(2){background:var(--powder)}
+.fams__k{margin:0;font-family:var(--f-display);font-weight:600;font-size:1.6rem;color:var(--wine);line-height:1}
+.fams h4{margin:0!important;font-size:1rem!important}
+.fams dl{margin:0;display:grid;gap:2px}
+.fams dt{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:6px}
+.fams dd{margin:0;font-size:.92rem;line-height:1.4}
+.fams__ex{margin:4px 0 0;padding-top:10px;border-top:1px solid rgba(122,40,57,.14);font-size:.85rem;color:var(--wine)}
+.axf__h{margin:1.4em 0 .6em!important;font-size:.8rem!important;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)!important}
+.axf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.axf>div{border:1px solid rgba(122,40,57,.14);border-radius:14px;padding:14px 16px;display:grid;gap:6px;align-content:start;background:var(--ivory-card)}
+.axf>div:last-child:nth-child(odd){grid-column:1/-1}
+.axf>div.is-star{grid-column:1/-1;background:var(--powder);border-color:transparent}
+.axf b{font-family:var(--f-display);font-weight:600;color:var(--wine);font-size:1.08rem}
+.axf small{font-size:.75rem;color:var(--muted);margin-top:-4px}
+.axf p{margin:0;font-size:.93rem;line-height:1.45}
+.axf dl{margin:2px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 10px}
+.axf dt{font-size:.78rem;font-weight:600;color:var(--muted)}
+.axf dd{margin:0;font-size:.88rem;line-height:1.4}
+.axf em{font-style:normal;font-size:.8rem;line-height:1.35;border-radius:10px;padding:.45em .7em;margin-top:2px}
+.axf em.r{background:rgba(122,40,57,.09);color:var(--wine)}
+.axf em.y{background:#F6EAD2;color:#6B4A12}
+.pick{list-style:none;margin:1em 0;padding:0;display:grid;gap:6px}
+.pick li{display:grid;grid-template-columns:120px 1.3fr 1.1fr 110px;gap:12px;align-items:center;background:var(--ivory-bg);border-radius:12px;padding:10px 14px;font-size:.9rem;line-height:1.35}
+.pick li b{color:var(--wine);font-weight:600}
+.pick li span:nth-of-type(2){color:var(--muted)}
+.pick li span:nth-of-type(3){font-weight:500}
+.pick .pick__head{background:none;padding:0 14px;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.pick .pick__head span{color:var(--muted)!important;font-weight:600!important}
+.pick li.is-stop{background:var(--wine);color:var(--ivory)}
+.pick li.is-stop b,.pick li.is-stop span{color:var(--ivory)!important}
+.pgo{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;background:var(--powder);border-radius:var(--r-tile);padding:16px 18px;margin:1em 0}
+.pgo p{margin:0;flex:1 1 300px;font-size:.95rem}
+.week{list-style:none;margin:1em 0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.week li{border-radius:12px;padding:10px 4px;text-align:center;background:var(--ivory-bg);display:grid;gap:3px}
+.week b{font-size:.82rem;font-weight:600;color:var(--wine)}
+.week span{font-size:.72rem;color:var(--muted)}
+.week li.is-acid{background:var(--powder)}
+.week li.is-ret{background:var(--wine)}.week li.is-ret b,.week li.is-ret span{color:var(--ivory)}
+.week li.is-acid span,.week li.is-ret span{font-weight:600;font-size:.8rem}
+.errs--rules li::before{background:var(--wine);color:var(--ivory)}
+@media (max-width:760px){
+  .fams,.axf{grid-template-columns:minmax(0,1fr)}
+  .pick .pick__head{display:none}
+  .pick li{grid-template-columns:minmax(0,1fr);gap:4px;padding:12px 14px}
+  .pick li span::before{content:attr(data-l)" : ";font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .pick li.is-stop span::before{color:var(--powder)}
+  .pick li span:nth-of-type(2),.pick li span:nth-of-type(3){color:inherit;font-weight:400}
+  .week{grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}.week li{padding:8px 1px}.week span{font-size:.6rem}.week li.is-acid span,.week li.is-ret span{font-size:.64rem}
+}
 </style>
 
 <header class="nav" id="top">
@@ -1600,9 +1664,23 @@ html.reading,html.reading body{overflow:hidden}
         </div>
       </div>
       <div class="jcard__body">
-        <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 9 min</span><span class="jnew">Nouveau</span></div>
-        <h3>Rétinol : le guide pour bien débuter</h3>
+        <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 9 min</span></div>
+        <h3>Rétinol&nbsp;: le guide pour bien débuter</h3>
         <p>Ce qu'il fait vraiment, pour qui, comment l'introduire sans irriter sa peau, avec quoi l'associer… et un programme pas à pas sur 8 semaines.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+    <a class="jcard" href="#article-acides" data-post="post-acides">
+      <div class="jcard__visual jcard__visual--acx" aria-hidden="true">
+        <div class="jacx">
+          <div class="jacx__mol"><span class="s1">AHA</span><span class="s2">BHA</span><span class="s3">PHA</span></div>
+          <em>Lequel pour votre peau ?</em>
+        </div>
+      </div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span><span class="jnew">Nouveau</span></div>
+        <h3>Acides exfoliants&nbsp;: bien les choisir, bien les utiliser</h3>
+        <p>AHA, BHA, PHA… Ce que fait chaque acide, lequel choisir selon votre peau, comment débuter et ce qu'il ne faut jamais associer.</p>
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </a>
@@ -1620,7 +1698,7 @@ html.reading,html.reading body{overflow:hidden}
       <article class="post" id="post-retinol" role="dialog" aria-modal="true" aria-labelledby="post-retinol-t" hidden>
         <header class="post__hero">
           <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 9 min</span></div>
-          <h2 id="post-retinol-t">Rétinol : le guide pour bien débuter</h2>
+          <h2 id="post-retinol-t">Rétinol&nbsp;: le guide pour bien débuter</h2>
           <p class="post__lede">C'est l'un des actifs anti-âge les plus étudiés. Il améliore la texture, les rides, les taches, les pores et certaines imperfections… à condition de l'introduire doucement, de bien hydrater et de se protéger du soleil.</p>
         </header>
 
@@ -1815,6 +1893,199 @@ html.reading,html.reading body{overflow:hidden}
           <div class="post__cta">
             <p>Vous voulez savoir si le rétinol est fait pour votre peau, et comment l'intégrer à votre routine ?</p>
             <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur le rétinol et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="post-acides" role="dialog" aria-modal="true" aria-labelledby="post-acides-t" hidden>
+        <header class="post__hero">
+          <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span></div>
+          <h2 id="post-acides-t">Acides exfoliants&nbsp;: bien les choisir, bien les utiliser</h2>
+          <p class="post__lede">Éclat, texture, pores, taches… Les acides exfoliants font partie des actifs les plus efficaces. Mais il en existe beaucoup, et ils ne conviennent pas tous aux mêmes peaux. Voici comment s'y retrouver.</p>
+        </header>
+
+        <div class="post__body">
+          <div class="tldr">
+            <p class="tldr__k">L'essentiel en 30 secondes</p>
+            <ul>
+              <li><b>1 seul acide</b><span>à la fois pour commencer</span></li>
+              <li><b>1 fois</b><span>par semaine, pendant 2 à 4 semaines</span></li>
+              <li><b>Hydrater</b><span>avant et après l'acide</span></li>
+              <li><b>SPF 50+</b><span>le lendemain matin, sans exception</span></li>
+            </ul>
+            <p class="tldr__no">Peau irritée ou qui tire : pas d'acide tant qu'elle n'est pas apaisée.</p>
+          </div>
+
+          <nav class="toc" aria-label="Sommaire de l'article">
+            <p class="toc__k">Au sommaire</p>
+            <ol>
+              <li><a href="#a-quoi">C'est quoi, un acide exfoliant ?</a></li>
+              <li><a href="#a-fam">Les 3 grandes familles</a></li>
+              <li><a href="#a-un">Les acides un par un</a></li>
+              <li><a href="#a-peau">Quel acide pour ma peau ?</a></li>
+              <li><a href="#a-comment">Comment l'utiliser</a></li>
+              <li><a href="#a-stop">Quand faire une pause</a></li>
+              <li><a href="#a-asso">Avec quoi l'associer</a></li>
+              <li><a href="#a-regles">Les 10 règles SkinMi</a></li>
+              <li><a href="#a-faq">Vos questions</a></li>
+            </ol>
+          </nav>
+
+          <h3 class="ph" id="a-quoi"><span>1</span>C'est quoi, un acide exfoliant ?</h3>
+          <p>Un acide exfoliant aide la peau à se débarrasser des <strong>cellules mortes</strong> accumulées à sa surface. Résultat : un teint plus lumineux, un grain de peau plus lisse, des pores moins visibles.</p>
+          <p>Bonne nouvelle : <strong>« acide » ne veut pas dire « agressif »</strong>. L'effet d'un acide dépend de plusieurs choses :</p>
+          <ul class="bgrid bgrid--plain">
+            <li><b>Sa famille</b>AHA, BHA ou PHA</li>
+            <li><b>La taille de la molécule</b>petite = pénètre plus vite</li>
+            <li><b>La concentration</b>le pourcentage</li>
+            <li><b>Le pH</b>l'acidité de la formule</li>
+            <li><b>La fréquence</b>combien de fois par semaine</li>
+            <li><b>L'état de votre peau</b>une barrière solide ou fragilisée</li>
+          </ul>
+
+          <h3 class="ph" id="a-fam"><span>2</span>Les 3 grandes familles</h3>
+          <p>Retenez juste ceci : les <strong>AHA</strong> travaillent en surface, les <strong>BHA</strong> vont jusque dans les pores, les <strong>PHA</strong> sont les plus doux.</p>
+          <div class="fams">
+            <section>
+              <p class="fams__k">AHA</p>
+              <h4>Les acides de surface</h4>
+              <dl><dt>Ils agissent</dt><dd>à la surface de la peau</dd><dt>Pour</dt><dd>peaux normales, sèches, ternes, grain irrégulier</dd><dt>Objectif</dt><dd>éclat, texture, taches, signes de l'âge</dd></dl>
+              <p class="fams__ex">Glycolique, lactique, mandélique, malique, tartrique, citrique</p>
+            </section>
+            <section>
+              <p class="fams__k">BHA</p>
+              <h4>L'acide des pores</h4>
+              <dl><dt>Il agit</dt><dd>en surface et dans les pores, car il se mélange au sébum</dd><dt>Pour</dt><dd>peaux grasses, mixtes, acnéiques</dd><dt>Objectif</dt><dd>pores bouchés, points noirs, imperfections</dd></dl>
+              <p class="fams__ex">Salicylique</p>
+            </section>
+            <section>
+              <p class="fams__k">PHA</p>
+              <h4>Les acides tout doux</h4>
+              <dl><dt>Ils agissent</dt><dd>très en surface, lentement (grosses molécules)</dd><dt>Pour</dt><dd>peaux sensibles, déshydratées, fragilisées</dd><dt>Objectif</dt><dd>exfoliation douce, hydratation</dd></dl>
+              <p class="fams__ex">Gluconolactone, lactobionique, maltobionique</p>
+            </section>
+          </div>
+          <p class="pnote">Il existe aussi des <strong>acides « complémentaires »</strong> (azélaïque, tranexamique, férulique, phytique). On les range souvent avec les exfoliants, mais leur rôle principal est ailleurs : anti-taches, apaisement, protection antioxydante.</p>
+
+          <h3 class="ph" id="a-un"><span>3</span>Les acides un par un</h3>
+          <p>Les fiches essentielles pour comprendre les étiquettes. La « dose » indique la concentration habituelle en cosmétique, et « Débuter » la fréquence conseillée au départ.</p>
+          <h4 class="axf__h">AHA</h4>
+          <div class="axf">
+            <div><b>Glycolique</b><small>Glycolic Acid</small><p>La plus petite molécule : la plus efficace, mais aussi celle qui pénètre le plus.</p><dl><dt>Pour</dt><dd>peaux normales, mixtes, grasses, épaisses</dd><dt>Dose</dt><dd>5 à 10 %</dd><dt>Débuter</dt><dd>1 soir par semaine</dd></dl><em class="r">Peau sensible : préférez lactique ou mandélique</em></div>
+            <div><b>Lactique</b><small>Lactic Acid</small><p>Exfolie tout en hydratant. Adoucit les zones rugueuses.</p><dl><dt>Pour</dt><dd>peaux sèches, déshydratées, normales, sensibles modérées</dd><dt>Dose</dt><dd>5 à 10 %</dd><dt>Débuter</dt><dd>1 à 2 soirs par semaine</dd></dl></div>
+            <div><b>Mandélique</b><small>Mandelic Acid</small><p>Grande molécule : une exfoliation plus progressive, souvent mieux tolérée.</p><dl><dt>Pour</dt><dd>peaux sensibles, mixtes, grasses, taches après les boutons</dd><dt>Dose</dt><dd>5 à 10 %</dd><dt>Débuter</dt><dd>1 à 2 soirs par semaine</dd></dl></div>
+            <div><b>Malique et tartrique</b><small>Malic Acid · Tartaric Acid</small><p>Des acides « d'appoint », souvent ajoutés à d'autres AHA dans une formule.</p><dl><dt>Pour</dt><dd>peaux normales, mixtes, ternes</dd><dt>Dose</dt><dd>variable</dd></dl><em class="y">Attention à ne pas les ajouter à un autre exfoliant fort</em></div>
+            <div><b>Citrique</b><small>Citric Acid</small><p>À faible dose, il sert surtout à ajuster le pH d'une formule. À plus forte dose, il exfolie.</p><dl><dt>Pour</dt><dd>peaux normales à mixtes</dd><dt>Dose</dt><dd>souvent faible</dd></dl><em class="r">Peut irriter les peaux sensibles</em></div>
+          </div>
+          <h4 class="axf__h">BHA</h4>
+          <div class="axf">
+            <div class="is-star"><b>Salicylique</b><small>Salicylic Acid</small><p>Le spécialiste des pores : il les désincruste de l'intérieur et réduit les points noirs.</p><dl><dt>Pour</dt><dd>peaux grasses, mixtes, acnéiques</dd><dt>Dose</dt><dd>0,5 à 2 %</dd><dt>Débuter</dt><dd>1 à 2 fois par semaine</dd></dl><em class="y">Peau sèche : avec une hydratation renforcée</em></div>
+          </div>
+          <h4 class="axf__h">PHA</h4>
+          <div class="axf">
+            <div><b>Gluconolactone</b><small>Gluconolactone</small><p>Exfoliation très douce et hydratante. Idéal pour découvrir les acides.</p><dl><dt>Pour</dt><dd>peaux sensibles, sèches, déshydratées, débutantes</dd><dt>Dose</dt><dd>4 à 10 %</dd><dt>Débuter</dt><dd>2 à 3 fois par semaine, matin ou soir</dd></dl></div>
+            <div><b>Lactobionique</b><small>Lactobionic Acid</small><p>Très douce, hydratante et antioxydante. Apporte du confort.</p><dl><dt>Pour</dt><dd>peaux sensibles, sèches, matures</dd><dt>Moment</dt><dd>matin ou soir</dd></dl></div>
+            <div><b>Maltobionique</b><small>Maltobionic Acid</small><p>Douce et hydratante, elle améliore la souplesse de la peau.</p><dl><dt>Pour</dt><dd>peaux sensibles, sèches, qui ne tolèrent pas les AHA</dd><dt>Moment</dt><dd>matin ou soir</dd></dl></div>
+          </div>
+          <h4 class="axf__h">Les complémentaires</h4>
+          <div class="axf">
+            <div><b>Azélaïque</b><small>Azelaic Acid</small><p>Imperfections, taches après les boutons, rougeurs. Un très bon choix pour les peaux sensibles.</p><dl><dt>Pour</dt><dd>toutes, surtout sensibles et acnéiques</dd><dt>Dose</dt><dd>10 % en cosmétique</dd></dl><em class="y">Légers picotements possibles au début</em></div>
+            <div><b>Tranexamique</b><small>Tranexamic Acid</small><p>Atténue les taches et unifie le teint. Généralement bien toléré.</p><dl><dt>Pour</dt><dd>toutes, surtout sujettes aux taches</dd><dt>Dose</dt><dd>2 à 5 %</dd></dl><em class="y">Sans SPF, les résultats restent limités</em></div>
+            <div><b>Férulique</b><small>Ferulic Acid</small><p>Un antioxydant qui stabilise et renforce la vitamine C. Ce n'est pas un exfoliant.</p><dl><dt>Pour</dt><dd>toutes les peaux</dd><dt>Dose</dt><dd>0,5 à 1 %</dd></dl></div>
+            <div><b>Phytique</b><small>Phytic Acid</small><p>Exfoliation très douce et action antioxydante, pour l'éclat.</p><dl><dt>Pour</dt><dd>peaux sensibles, ternes</dd><dt>Dose</dt><dd>variable</dd></dl><em class="y">Ne remplace pas un AHA ou un BHA pour les pores</em></div>
+          </div>
+
+          <h3 class="ph" id="a-peau"><span>4</span>Quel acide pour ma peau ?</h3>
+          <ul class="pick">
+            <li class="pick__head" aria-hidden="true"><span>Votre peau</span><span>À privilégier</span><span>À éviter au début</span><span>Rythme</span></li>
+            <li><b>Normale</b><span data-l="À privilégier">Glycolique ou lactique</span><span data-l="À éviter au début">Cumuler plusieurs acides</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Sèche</b><span data-l="À privilégier">Lactique, lactobionique, gluconolactone</span><span data-l="À éviter au début">Glycolique fort</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Déshydratée</b><span data-l="À privilégier">Gluconolactone ou lactique</span><span data-l="À éviter au début">BHA fort</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Grasse</b><span data-l="À privilégier">Salicylique, mandélique ou glycolique</span><span data-l="À éviter au début">AHA + BHA ensemble</span><span data-l="Rythme">1 à 3 fois / sem.</span></li>
+            <li><b>Mixte</b><span data-l="À privilégier">Mandélique, lactique, ou salicylique sur la zone T</span><span data-l="À éviter au début">Glycolique fort sur les zones sèches</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Acnéique</b><span data-l="À privilégier">Salicylique, azélaïque, mandélique</span><span data-l="À éviter au début">Peroxyde de benzoyle + acide le même soir</span><span data-l="Rythme">1 à 3 fois / sem.</span></li>
+            <li><b>Sensible</b><span data-l="À privilégier">Gluconolactone, lactobionique ou mandélique</span><span data-l="À éviter au début">Glycolique, salicylique fort</span><span data-l="Rythme">1 fois / sem.</span></li>
+            <li><b>Avec taches</b><span data-l="À privilégier">Mandélique, glycolique, azélaïque, tranexamique</span><span data-l="À éviter au début">Cumuler les exfoliants</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Mature</b><span data-l="À privilégier">Glycolique, lactique ou mandélique</span><span data-l="À éviter au début">Trop exfolier</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li class="is-stop"><b>Barrière abîmée</b><span data-l="À privilégier">Aucun acide pour l'instant</span><span data-l="À éviter au début">Tous les exfoliants</span><span data-l="Rythme">Reprendre une fois la peau apaisée</span></li>
+          </ul>
+          <div class="pgo">
+            <p>Peau mixte et sensible, mature et sèche… Plusieurs cases vous concernent ? Notre sélecteur combine vos critères en quelques clics.</p>
+            <a class="btn btn--primary" href="#acides" data-goto="acides">Ouvrir le sélecteur d'acides</a>
+          </div>
+
+          <h3 class="ph" id="a-comment"><span>5</span>Comment l'utiliser ?</h3>
+          <p class="pbig">La règle d'or : <strong>un seul acide, peu souvent, sur une peau bien hydratée</strong>. On augmente seulement si la peau reste confortable.</p>
+          <h4>Pas à pas</h4>
+          <ol class="howto">
+            <li>Choisissez un seul acide, adapté à votre peau</li>
+            <li>Appliquez-le plutôt le soir, sur une peau propre et sèche (sauf formule prévue pour le matin, comme certains PHA)</li>
+            <li>Commencez à 1 fois par semaine pendant 2 à 4 semaines</li>
+            <li>Hydratez avant et après : glycérine, acide hyaluronique, céramides, squalane ou panthénol</li>
+            <li>Augmentez la fréquence progressivement, seulement si tout va bien</li>
+            <li>Adaptez selon les zones : un acide peut convenir à la zone T mais irriter des joues sèches</li>
+            <li>Le lendemain matin, un SPF 50+ (30 au minimum), même sans soleil direct</li>
+          </ol>
+          <h4>Vous utilisez aussi du rétinol ?</h4>
+          <p>Ne les mettez jamais le même soir au début : <strong>alternez</strong>. Et si vous débutez le rétinol, attendez 4 à 8 semaines avant d'ajouter un acide. Voici un exemple de semaine, pour une peau qui tolère déjà bien les deux :</p>
+          <ol class="week">
+            <li><b>Lun</b><span>Hydratation</span></li>
+            <li class="is-acid"><b>Mar</b><span>Acide</span></li>
+            <li><b>Mer</b><span>Hydratation</span></li>
+            <li><b>Jeu</b><span>Hydratation</span></li>
+            <li class="is-ret"><b>Ven</b><span>Rétinol</span></li>
+            <li><b>Sam</b><span>Hydratation</span></li>
+            <li><b>Dim</b><span>Hydratation</span></li>
+          </ol>
+
+          <h3 class="ph" id="a-stop"><span>6</span>Quand faire une pause</h3>
+          <div class="two two--status">
+            <div class="is-stop"><h4>Arrêtez l'acide si vous avez</h4><ul class="dots"><li>Des picotements qui durent</li><li>Une sensation de brûlure</li><li>Des rougeurs qui persistent</li><li>La peau qui pèle beaucoup</li><li>La peau qui tire</li></ul></div>
+            <div class="is-ok"><h4>Ce qu'il faut faire</h4><ul class="dots"><li>Ne plus exfolier une peau irritée</li><li>Revenir à une routine simple et hydratante</li><li>Attendre que la peau soit de nouveau confortable</li><li>Reprendre plus doucement, moins souvent</li></ul></div>
+          </div>
+
+          <h3 class="ph" id="a-asso"><span>7</span>Avec quoi l'associer ?</h3>
+          <div class="assoc">
+            <div class="assoc__g is-ok"><p>Excellentes avec tous les acides</p><ul><li>Niacinamide</li><li>Céramides</li><li>Acide hyaluronique</li><li>Squalane</li><li>Panthénol</li></ul></div>
+            <div class="assoc__g is-g"><p>Indispensable</p><ul><li>Écran solaire, chaque matin</li></ul></div>
+            <div class="assoc__g is-y"><p>Avec prudence</p><ul><li>Rétinol</li><li>Vitamine C pure</li><li>Un autre acide</li></ul></div>
+            <div class="assoc__g is-r"><p>Jamais le même soir</p><ul><li>Peroxyde de benzoyle</li></ul></div>
+          </div>
+          <div class="ixs">
+            <section><h4>Acide + rétinol</h4><p>Ensemble, ils augmentent le risque de rougeurs et de peau fragilisée.</p><ul class="dots"><li>AHA ou BHA : alternez les soirées, ne débutez pas les deux en même temps</li><li>PHA : plus doux, mais espacez quand même au début</li></ul></section>
+            <section><h4>Acide + vitamine C pure</h4><p>Deux actifs acides : la peau sensible peut picoter.</p><ul class="dots"><li>Vitamine C le matin, acide le soir, ou des jours différents</li><li>Si ça picote : espacez</li></ul></section>
+            <section><h4>Acide + peroxyde de benzoyle</h4><p>Un cumul très desséchant et irritant.</p><ul class="dots"><li>AHA ou BHA : jamais le même soir</li><li>PHA : sur des jours différents</li></ul></section>
+            <section><h4>Plusieurs acides ensemble</h4><p>AHA + BHA, ou AHA + BHA + PHA : c'est le risque de trop exfolier.</p><ul class="dots"><li>Pas pour débuter</li><li>Méfiez-vous des produits multi-acides ajoutés à un autre exfoliant</li></ul></section>
+          </div>
+
+          <h3 class="ph" id="a-regles"><span>8</span>Les 10 règles SkinMi</h3>
+          <ol class="errs errs--rules">
+            <li>Un seul exfoliant à la fois au début</li>
+            <li>1 fois par semaine pendant 2 à 4 semaines</li>
+            <li>Ne pas cumuler AHA, BHA et PHA le même soir</li>
+            <li>Hydrater avant et après</li>
+            <li>Alterner avec le rétinol (acide le mardi, rétinol le vendredi)</li>
+            <li>SPF le lendemain, idéalement 50+</li>
+            <li>Arrêter dès que la peau pique, brûle ou tire</li>
+            <li>Adapter à chaque zone du visage</li>
+            <li>Ne jamais exfolier une peau irritée</li>
+            <li>Préférer la douceur régulière à un produit très fort utilisé rarement</li>
+          </ol>
+
+          <h3 class="ph" id="a-faq"><span>9</span>Vos questions</h3>
+          <div class="pfaq">
+            <details><summary>J'ai la peau sensible : puis-je utiliser un acide ?<i aria-hidden="true"></i></summary><p>Oui, en choisissant bien. Les PHA (gluconolactone, lactobionique) et l'acide mandélique sont les plus doux. L'acide azélaïque est aussi un bon choix. Commencez à une fois par semaine, et évitez le glycolique et le citrique.</p></details>
+            <details><summary>Peut-on utiliser un acide le matin ?<i aria-hidden="true"></i></summary><p>Les AHA et le BHA s'utilisent plutôt le soir, sauf si la formule est conçue pour le matin. Les PHA et l'acide azélaïque peuvent s'appliquer matin ou soir. Dans tous les cas : SPF le matin.</p></details>
+            <details><summary>AHA et BHA, on peut les mélanger ?<i aria-hidden="true"></i></summary><p>Pas quand on débute. Certaines routines expertes les combinent, mais le risque de trop exfolier est réel. Commencez par un seul acide, et apprenez à connaître votre peau.</p></details>
+            <details><summary>Il y a de l'acide citrique dans ma crème : est-ce un exfoliant ?<i aria-hidden="true"></i></summary><p>Pas forcément. À faible dose, l'acide citrique sert surtout à ajuster le pH de la formule. Sa présence dans la liste des ingrédients ne fait pas de votre crème un soin exfoliant.</p></details>
+            <details><summary>Pourquoi le SPF est-il si important ?<i aria-hidden="true"></i></summary><p>Une peau qui vient d'être exfoliée est plus vulnérable au soleil. Sans protection, vous risquez d'aggraver les taches que vous cherchiez justement à atténuer. Un SPF 50+ chaque matin, même par temps gris.</p></details>
+          </div>
+
+          <blockquote class="psum"><span>En résumé</span>Un bon acide, c'est d'abord un acide adapté à votre peau : AHA pour l'éclat et la texture, BHA pour les pores, PHA pour les peaux sensibles. Un seul à la fois, peu souvent, beaucoup d'hydratation et un SPF chaque matin.</blockquote>
+          <p class="pdisc">Cet article est informatif et ne remplace pas un avis dermatologique. Rosacée, eczéma, dermatite, peau très réactive, grossesse, allaitement ou traitement dermatologique en cours : demandez conseil à un professionnel de santé.</p>
+
+          <div class="post__cta">
+            <p>Vous ne savez pas quel acide choisir pour votre peau ? On en parle ensemble pendant l'atelier.</p>
+            <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les acides exfoliants et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
           </div>
         </div>
       </article>
@@ -2453,5 +2724,8 @@ addEventListener("scroll",onScroll,{passive:true}); onScroll();
 
 /* Blog : sommaire cliquable dans le lecteur */
 document.addEventListener("click",e=>{const a=e.target.closest(".toc a");if(!a)return;e.preventDefault();const t=document.getElementById(a.getAttribute("href").slice(1));if(t)t.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})});
+
+/* Blog : liens vers une section du site depuis un article */
+document.addEventListener("click",e=>{const a=e.target.closest("[data-goto]");if(!a)return;e.preventDefault();const c=document.getElementById("readerClose");if(c)c.click();setTimeout(()=>{const t=document.getElementById(a.dataset.goto);if(t)t.scrollIntoView({behavior:"smooth",block:"start"})},120)});
 </script>
 </html>
