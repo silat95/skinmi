@@ -1301,6 +1301,71 @@ html.reading,html.reading body{overflow:hidden}
   .sol li{grid-template-columns:minmax(0,1fr);gap:2px}
   .ph__tag{display:none}
 }
+/* Blog : article protection solaire */
+.jcard__visual--spf{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;background:radial-gradient(circle at 50% 40%,#FCEFD9,var(--blush) 75%)}
+.jspf{display:grid;justify-items:center;gap:14px;padding:20px}
+.jspf__sun{position:relative;width:96px;height:96px;display:grid;place-items:center}
+.jspf__sun i{position:absolute;inset:-18px;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(122,40,57,.5) 0 3deg,transparent 3deg 22.5deg);-webkit-mask:radial-gradient(circle,transparent 58px,#000 59px,#000 66px,transparent 67px);mask:radial-gradient(circle,transparent 58px,#000 59px,#000 66px,transparent 67px);transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.jcard:hover .jspf__sun i{transform:rotate(45deg)}
+.jspf__sun b{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--wine);color:var(--ivory);font-family:var(--f-display);font-weight:600;font-size:1.05rem;line-height:1.05;box-shadow:0 0 0 8px rgba(122,40,57,.08)}
+.jspf em{font-style:normal;color:var(--wine);font-size:.92rem}
+.uv{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1.2em 0}
+.uv section{border-radius:var(--r-tile);padding:16px 18px}
+.uv__b{background:var(--powder)}
+.uv__a{background:var(--wine);color:var(--ivory)}
+.uv__a h4,.uv__a .dots li{color:var(--ivory)!important}
+.uv__k{margin:0 0 4px!important;font-family:var(--f-display);font-weight:600;font-size:1.9rem;line-height:1;color:var(--wine)}
+.uv__a .uv__k{color:var(--powder)}
+.uv h4{margin:0 0 .3em!important}
+.uvbar{background:var(--ivory-bg);border-radius:var(--r-tile);padding:16px 18px;margin:1.2em 0;display:grid;gap:10px}
+.uvbar__k{margin:0!important;font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.uvbar__row{display:grid;grid-template-columns:64px minmax(0,1fr) 64px;gap:12px;align-items:center}
+.uvbar__row b{color:var(--wine);font-weight:600;font-size:.92rem}
+.uvbar__row em{font-style:normal;font-size:.86rem;color:var(--muted);text-align:right}
+.uvbar__track{height:12px;border-radius:6px;background:rgba(122,40,57,.08);overflow:hidden}
+.uvbar__track i{display:block;height:100%;width:var(--w);border-radius:6px;background:linear-gradient(90deg,#E9B54A,#D9822B)}
+.uvbar__note{margin:4px 0 0!important;font-size:.92rem}
+.vs2{list-style:none;margin:1em 0;padding:0;display:grid;gap:6px}
+.vs2 li{display:grid;grid-template-columns:150px 1fr 1fr;gap:12px;align-items:center;background:var(--ivory-bg);border-radius:12px;padding:10px 14px;font-size:.92rem}
+.vs2 li b{color:var(--wine);font-weight:600}
+.vs2 li span:last-child{font-weight:600;color:var(--wine)}
+.vs2 .vs2__head{background:none;padding:0 14px;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.vs2 .vs2__head span:last-child{background:var(--wine);color:var(--ivory);border-radius:999px;padding:.25em .8em;justify-self:start}
+.uvalogo{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;background:var(--ivory-bg);border-radius:var(--r-tile);padding:18px;margin:1em 0}
+.uvalogo__ico{width:78px;height:78px;border-radius:50%;border:3px solid var(--wine);display:grid;place-items:center;font-family:var(--f-display);font-weight:700;font-size:1.3rem;color:var(--wine);letter-spacing:.02em}
+.uvalogo p{margin:0 0 10px!important}
+.uvalogo__t{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.uvalogo__t li{display:grid;background:var(--milk);border:1px solid rgba(122,40,57,.14);border-radius:12px;padding:6px 12px}
+.uvalogo__t b{color:var(--wine);font-size:.9rem}
+.uvalogo__t span{font-size:.82rem;color:var(--muted)}
+.dose{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center;background:var(--powder);border-radius:var(--r-tile);padding:16px 18px;margin:1em 0}
+.dose__ico{display:flex;gap:6px;align-items:flex-end;height:70px}
+.dose__ico i{width:16px;border-radius:8px 8px 6px 6px;background:var(--milk);border:2px solid var(--wine);position:relative}
+.dose__ico i:first-child{height:62px}.dose__ico i:last-child{height:70px}
+.dose__ico i::after{content:"";position:absolute;left:3px;right:3px;top:6px;bottom:22px;border-radius:4px;background:#F2E6C9}
+.dose h4{margin:0 0 .3em!important}
+.dose p{margin:0;font-size:.95rem}
+.chips--zones li{background:var(--powder);border-color:transparent;color:var(--wine);font-weight:500}
+.renew{list-style:none;margin:1em 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.renew li{background:var(--ivory-bg);border-radius:14px;padding:14px 8px;display:grid;justify-items:center;gap:8px;text-align:center;font-size:.86rem;line-height:1.3}
+.renew span{width:42px;height:42px;border-radius:50%;background:var(--powder);color:var(--wine);display:grid;place-items:center}
+.renew svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.day3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:1em 0 1.4em}
+.day3 section{border-radius:var(--r-tile);padding:16px;background:var(--powder)}
+.day3 section.is-day{background:#F6EAD2}
+.day3 section.is-night{background:var(--wine);color:var(--ivory)}
+.day3 .is-night .day3__k,.day3 .is-night .rlist{color:var(--ivory)}
+.day3__k{margin:0 0 6px!important;font-family:var(--f-display);font-weight:600;font-size:1.15rem;color:var(--wine)}
+@media (max-width:760px){
+  .uv,.day3{grid-template-columns:minmax(0,1fr)}
+  .uvbar__row{grid-template-columns:56px minmax(0,1fr) 56px;gap:8px}
+  .vs2 .vs2__head{display:none}
+  .vs2 li{grid-template-columns:minmax(0,1fr) minmax(0,1fr);row-gap:4px}
+  .vs2 li b{grid-column:1/-1}
+  .vs2 li span::before{content:attr(data-l)" : ";display:block;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .uvalogo{grid-template-columns:minmax(0,1fr)}.uvalogo__ico{justify-self:start}
+  .renew{grid-template-columns:repeat(2,minmax(0,1fr))}.renew li:last-child{grid-column:1/-1}
+}
 </style>
 
 <header class="nav" id="top">
@@ -1841,9 +1906,23 @@ html.reading,html.reading body{overflow:hidden}
         </div>
       </div>
       <div class="jcard__body">
-        <div class="jcard__meta"><span class="jtag">Les problématiques</span><span>Lecture 7 min</span><span class="jnew">Nouveau</span></div>
+        <div class="jcard__meta"><span class="jtag">Les problématiques</span><span>Lecture 7 min</span></div>
         <h3>Cernes&nbsp;: trouver leur origine pour choisir la bonne solution</h3>
         <p>Bruns, bleus ou creux : chaque cerne a sa cause, et sa solution. Apprenez à reconnaître le vôtre avant d'acheter un énième soin contour des yeux.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+    <a class="jcard" href="#article-spf" data-post="post-spf">
+      <div class="jcard__visual jcard__visual--spf" aria-hidden="true">
+        <div class="jspf">
+          <div class="jspf__sun"><i></i><b>SPF<br>50+</b></div>
+          <em>Tous les jours, toute l'année</em>
+        </div>
+      </div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 7 min</span><span class="jnew">Nouveau</span></div>
+        <h3>Protection solaire&nbsp;: l'actif anti-âge n°1</h3>
+        <p>Ce que veut vraiment dire « SPF 50 », pourquoi les UVA comptent toute l'année, la bonne quantité à appliquer… et les erreurs que presque tout le monde fait.</p>
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </a>
@@ -2595,6 +2674,161 @@ html.reading,html.reading body{overflow:hidden}
           <div class="post__cta">
             <p>Vous ne savez pas quel type de cerne vous avez ? On regarde ensemble pendant l'atelier.</p>
             <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les cernes et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="post-spf" role="dialog" aria-modal="true" aria-labelledby="post-spf-t" hidden>
+        <header class="post__hero">
+          <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 7 min</span></div>
+          <h2 id="post-spf-t">Protection solaire&nbsp;: l'actif anti-âge n°1</h2>
+          <p class="post__lede">Rides, taches, perte de fermeté… Une grande partie du vieillissement de la peau vient des UV. La protection solaire n'est donc pas une option : c'est la base de toute routine efficace.</p>
+        </header>
+
+        <div class="post__body">
+          <div class="tldr">
+            <p class="tldr__k">L'essentiel en 30 secondes</p>
+            <ul>
+              <li><b>SPF 50+</b><span>tous les jours, dès qu'il fait jour</span></li>
+              <li><b>2 doigts</b><span>de produit pour le visage</span></li>
+              <li><b>Toutes les 2&nbsp;h</b><span>on en remet si on est au soleil</span></li>
+              <li><b>Logo UVA</b><span>pour vous protéger toute l'année</span></li>
+            </ul>
+            <p class="tldr__no">Un SPF 30 ne protège pas « 30 minutes » : le SPF n'est pas une durée.</p>
+          </div>
+
+          <nav class="toc" aria-label="Sommaire de l'article">
+            <p class="toc__k">Au sommaire</p>
+            <ol>
+              <li><a href="#s-uv">UVA, UVB : la différence</a></li>
+              <li><a href="#s-spf">Ce que veut dire « SPF »</a></li>
+              <li><a href="#s-50">Pourquoi un SPF 50+</a></li>
+              <li><a href="#s-uva">Le logo UVA</a></li>
+              <li><a href="#s-appli">Bien l'appliquer</a></li>
+              <li><a href="#s-renouv">Quand en remettre</a></li>
+              <li><a href="#s-routine">Votre routine</a></li>
+              <li><a href="#s-err">Les erreurs à éviter</a></li>
+              <li><a href="#s-faq">Vos questions</a></li>
+            </ol>
+          </nav>
+
+          <h3 class="ph" id="s-uv"><span>1</span>UVA, UVB : la différence</h3>
+          <p>Les UV ne sont pas dangereux seulement pendant les vacances. C'est aussi <strong>l'accumulation de petites doses</strong>, jour après jour, qui abîme la peau.</p>
+          <div class="uv">
+            <section class="uv__b">
+              <p class="uv__k">UVB</p>
+              <h4>B comme « brûlure »</h4>
+              <ul class="dots"><li>Coups de soleil</li><li>Rougeurs, brûlures</li><li>Dommages immédiats</li></ul>
+            </section>
+            <section class="uv__a">
+              <p class="uv__k">UVA</p>
+              <h4>A comme « âge »</h4>
+              <ul class="dots"><li>Rides et perte d'élasticité</li><li>Taches pigmentaires</li><li>Présents toute l'année, même en hiver</li></ul>
+            </section>
+          </div>
+
+          <h3 class="ph" id="s-spf"><span>2</span>Ce que veut vraiment dire « SPF »</h3>
+          <p>Le SPF (<em>Sun Protection Factor</em>) est une <strong>mesure faite en laboratoire</strong> : elle indique à quel point un produit protège des UVB quand il est appliqué dans des conditions précises.</p>
+          <div class="two two--status">
+            <div class="is-stop"><h4>Ce que ce n'est pas</h4><ul class="dots"><li>Un SPF 30 ne protège pas 30 minutes</li><li>Un SPF 50 ne protège pas 50 minutes</li><li>Il ne mesure pas directement les UVA</li><li>Il ne remplace pas une bonne application</li></ul></div>
+            <div class="is-ok"><h4>Ce que c'est</h4><ul class="dots"><li>La capacité à protéger des UVB</li><li>Plus le chiffre est haut, plus la protection UVB est forte</li><li>Ce n'est pas proportionnel : il faut regarder ce qui passe</li></ul></div>
+          </div>
+          <div class="uvbar" aria-label="Part des UVB qui traversent la protection, mesurée en laboratoire">
+            <p class="uvbar__k">Part des UVB qui passent à travers, en laboratoire</p>
+            <div class="uvbar__row"><b>SPF 30</b><span class="uvbar__track"><i style="--w:100%"></i></span><em>≈ 3,3 %</em></div>
+            <div class="uvbar__row"><b>SPF 50</b><span class="uvbar__track"><i style="--w:60%"></i></span><em>≈ 2 %</em></div>
+            <div class="uvbar__row"><b>SPF 60</b><span class="uvbar__track"><i style="--w:50%"></i></span><em>≈ 1,7 %</em></div>
+            <p class="uvbar__note">Un SPF 30 laisse passer environ <strong>deux fois plus</strong> d'UVB qu'un SPF 60.</p>
+          </div>
+
+          <h3 class="ph" id="s-50"><span>3</span>Pourquoi un SPF 50+ ?</h3>
+          <p>Notre conseil : un <strong>SPF 50+ tous les jours</strong>, dès que vous êtes exposée à la lumière du jour.</p>
+          <ul class="vs2">
+            <li class="vs2__head" aria-hidden="true"><span></span><span>SPF 30</span><span>SPF 50+</span></li>
+            <li><b>Protection UVB</b><span data-l="SPF 30">Bonne</span><span data-l="SPF 50+">Meilleure</span></li>
+            <li><b>Protection UVA</b><span data-l="SPF 30">Variable selon la formule</span><span data-l="SPF 50+">Généralement meilleure</span></li>
+            <li><b>UVB qui passent</b><span data-l="SPF 30">Plus</span><span data-l="SPF 50+">Moins</span></li>
+            <li><b>Anti-âge</b><span data-l="SPF 30">Modéré</span><span data-l="SPF 50+">Meilleur</span></li>
+            <li><b>Anti-taches</b><span data-l="SPF 30">Modéré</span><span data-l="SPF 50+">Meilleur</span></li>
+          </ul>
+
+          <h3 class="ph" id="s-uva"><span>4</span>Le logo UVA, à vérifier</h3>
+          <div class="uvalogo">
+            <span class="uvalogo__ico" aria-hidden="true">UVA</span>
+            <div>
+              <p>Les UVA font vieillir la peau et provoquent des taches. Or le SPF ne les mesure pas. En Europe, un solaire qui affiche le <strong>logo UVA entouré d'un cercle</strong> garantit une protection UVA d'au moins <strong>un tiers de son SPF</strong>.</p>
+              <ul class="uvalogo__t"><li><b>SPF 30</b><span>UVA ≈ 10 minimum</span></li><li><b>SPF 50</b><span>UVA ≈ 16 à 17 minimum</span></li><li><b>SPF 60</b><span>UVA ≈ 20 minimum</span></li></ul>
+            </div>
+          </div>
+
+          <h3 class="ph" id="s-appli"><span>5</span>Bien l'appliquer</h3>
+          <p class="pbig">La façon d'appliquer compte autant que le produit. Et la plupart d'entre nous <strong>n'en mettent pas assez</strong>.</p>
+          <div class="dose">
+            <div class="dose__ico" aria-hidden="true"><i></i><i></i></div>
+            <div><h4>La bonne quantité : 2 doigts</h4><p>Tracez deux lignes de produit sur la longueur de l'index et du majeur : c'est la dose pour le visage (environ 2 mg par cm², la quantité utilisée pour mesurer le SPF).</p></div>
+          </div>
+          <ol class="howto">
+            <li>Appliquez le solaire en dernière étape du matin, après la crème hydratante</li>
+            <li>Déposez le produit en petites touches sur tout le visage</li>
+            <li>Répartissez délicatement, sans trop étirer ni frotter comme une crème</li>
+            <li>Formez un film homogène, sans oublier les zones ci-dessous</li>
+          </ol>
+          <h4>Les zones qu'on oublie souvent</h4>
+          <ul class="chips chips--zones"><li>Tempes</li><li>Oreilles</li><li>Nuque</li><li>Paupières</li><li>Lèvres</li><li>Cou</li></ul>
+
+          <h3 class="ph" id="s-renouv"><span>6</span>Quand en remettre ?</h3>
+          <p>La protection diminue au fur et à mesure que le film de produit s'abîme. En cas d'exposition au soleil, <strong>renouvelez toutes les 2 heures</strong>, et plus souvent dans ces situations :</p>
+          <ul class="renew">
+            <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg></span>Exposition prolongée</li>
+            <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2.5 16c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 3-1.5M2.5 20c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 3-1.5"/><circle cx="13" cy="6" r="2"/><path d="M8 12l3-3 3 2 3-2"/></svg></span>Baignade</li>
+            <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c3 4.5 5 7.3 5 10a5 5 0 0 1-10 0c0-2.7 2-5.5 5-10z"/></svg></span>Forte transpiration</li>
+            <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 10h16M8 6v12"/></svg></span>Après s'être essuyée</li>
+            <li><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="14" cy="4.5" r="2"/><path d="M8 21l3-6 3 2v4M6 11l4-3 4 1 3 3M11 15l1-6"/></svg></span>Sport intense</li>
+          </ul>
+
+          <h3 class="ph" id="s-routine"><span>7</span>Votre routine</h3>
+          <div class="day3">
+            <section><p class="day3__k">Le matin</p><ol class="rlist"><li>Nettoyage doux</li><li>Sérum : vitamine C, niacinamide ou peptides</li><li>Hydratant</li><li><strong>SPF 50+</strong>, toujours en dernier</li></ol></section>
+            <section class="is-day"><p class="day3__k">La journée</p><ol class="rlist"><li>Renouvelez toutes les 2 heures si vous êtes exposée</li><li>Et après baignade, sport ou transpiration</li></ol></section>
+            <section class="is-night"><p class="day3__k">Le soir</p><ol class="rlist"><li>Double nettoyage, pour bien retirer le solaire</li><li>Soins ciblés : rétinol, peptides, hydratation</li></ol></section>
+          </div>
+          <h4>Les actifs qui complètent le solaire</h4>
+          <div class="assoc">
+            <div class="assoc__g is-ok"><p>Bons compléments le matin</p><ul><li>Vitamine C</li><li>Niacinamide</li><li>Peptides</li><li>Acide hyaluronique</li></ul></div>
+            <div class="assoc__g is-g"><p>Le soir</p><ul><li>Rétinol</li></ul></div>
+            <div class="assoc__g is-y"><p>À espacer si irritation</p><ul><li>AHA / BHA</li></ul></div>
+            <div class="assoc__g is-r"><p>Le saviez-vous ?</p><ul><li>Le solaire reste le meilleur anti-taches</li></ul></div>
+          </div>
+          <p class="pnote">Rétinol, acides, actifs anti-taches : sans solaire, leurs résultats sont limités. Voir nos guides du <a class="plink" href="#article-retinol" data-post="post-retinol">rétinol</a> et des <a class="plink" href="#article-acides" data-post="post-acides">acides exfoliants</a>.</p>
+
+          <h3 class="ph" id="s-err"><span>8</span>Les 10 erreurs à éviter</h3>
+          <ol class="errs">
+            <li>Croire que le SPF est une durée de protection</li>
+            <li>Oublier les UVA</li>
+            <li>Mettre trop peu de produit</li>
+            <li>Oublier les tempes, oreilles, nuque, paupières, lèvres, cou</li>
+            <li>Ne pas en remettre</li>
+            <li>Compter uniquement sur une crème hydratante « avec SPF »</li>
+            <li>Arrêter le solaire en hiver</li>
+            <li>Ne pas protéger ses lèvres</li>
+            <li>Choisir un SPF trop faible</li>
+            <li>Oublier les enfants</li>
+          </ol>
+
+          <h3 class="ph" id="s-faq"><span>9</span>Vos questions</h3>
+          <div class="pfaq">
+            <details><summary>Un SPF 30 suffit-il ?<i aria-hidden="true"></i></summary><p>Nous conseillons un SPF 50+ tous les jours, dès que vous êtes exposée à la lumière du jour. Un SPF 30 laisse passer environ deux fois plus d'UVB qu'un SPF 60.</p></details>
+            <details><summary>Faut-il un solaire en hiver ?<i aria-hidden="true"></i></summary><p>Oui. Les UVA, ceux qui font vieillir la peau et provoquent les taches, sont présents de façon assez constante toute l'année.</p></details>
+            <details><summary>Une crème hydratante avec SPF suffit-elle ?<i aria-hidden="true"></i></summary><p>Pas toujours. Elle n'est pas forcément formulée comme un vrai solaire, et on en met souvent trop peu. Préférez un SPF 50+ avec une haute protection UVA.</p></details>
+            <details><summary>Faut-il vraiment en remettre toutes les 2 heures ?<i aria-hidden="true"></i></summary><p>Oui, quand vous êtes exposée au soleil. Et plus souvent après une baignade, une forte transpiration ou après vous être essuyée.</p></details>
+            <details><summary>Les lèvres ont-elles besoin de protection ?<i aria-hidden="true"></i></summary><p>Oui, elles sont elles aussi exposées aux UV. Pensez à un baume à lèvres avec SPF.</p></details>
+          </div>
+
+          <blockquote class="psum"><span>En résumé</span>SPF 50+ tous les jours, avec le logo UVA. Deux doigts de produit pour le visage, sans oublier tempes, oreilles et cou. On en remet toutes les 2 heures au soleil. Et on complète avec vitamine C, niacinamide ou peptides selon ses besoins.</blockquote>
+          <p class="pdisc">Cet article est informatif et ne remplace pas un avis dermatologique. Coup de soleil sévère, cloques, fièvre ou doute : consultez un professionnel de santé.</p>
+
+          <div class="post__cta">
+            <p>Vous ne savez pas quel solaire choisir pour votre peau, ni comment l'intégrer à votre routine ? On en parle pendant l'atelier.</p>
+            <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur la protection solaire et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
           </div>
         </div>
       </article>
