@@ -1119,6 +1119,20 @@ html.reading,html.reading body{overflow:hidden}
   .pick li span:nth-of-type(2),.pick li span:nth-of-type(3){color:inherit;font-weight:400}
   .week{grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}.week li{padding:8px 1px}.week span{font-size:.6rem}.week li.is-acid span,.week li.is-ret span{font-size:.64rem}
 }
+.rfig{margin:1.6em 0;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(16px,3vw,28px);align-items:center;background:var(--ivory-bg);border-radius:var(--r-panel);padding:clamp(14px,2.4vw,22px)}
+.rfig__img{background:#fff;border-radius:calc(var(--r-panel) - 10px);overflow:hidden;aspect-ratio:1}
+.rfig__img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.rfig:hover .rfig__img img{transform:scale(1.04) rotate(-1deg)}
+.rfig figcaption{display:grid;gap:10px}
+.rfig__k{margin:0;font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.rfig h4{margin:0!important}
+.rfig ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.rfig li{display:grid;gap:1px;padding-left:14px;border-left:2px solid var(--powder)}
+.rfig li b{font-weight:600;color:var(--wine);font-size:.95rem}
+.rfig li span{font-size:.9rem;line-height:1.4}
+.rfig__note{margin:2px 0 0;font-size:.88rem;line-height:1.45;background:#F6EAD2;color:#6B4A12;border-radius:12px;padding:.6em .8em}
+.rfig__note strong{color:inherit}
+@media (max-width:640px){.rfig{grid-template-columns:minmax(0,1fr)}.rfig__img{max-width:320px;width:100%;justify-self:center}}
 </style>
 
 <header class="nav" id="top">
@@ -1843,6 +1857,19 @@ html.reading,html.reading body{overflow:hidden}
             <p><b>Trétinoïne</b> (acide rétinoïque), <b>tazarotène</b> et <b>trifarotène</b> sont des médicaments, sur prescription en France. L'<b>adapalène</b> a un statut qui varie selon le pays et la concentration. Ce ne sont pas des « rétinols plus forts » : <strong>à utiliser uniquement selon les indications et les consignes d'un professionnel de santé.</strong></p>
           </aside>
           </div>
+          <figure class="rfig">
+            <div class="rfig__img"><img src="img/retinal-shot-celimax.webp" width="900" height="900" loading="lazy" decoding="async" alt="Tube Retinal Shot Tightening Booster de Celimax, avec une noisette de crème jaune pâle"></div>
+            <figcaption>
+              <p class="rfig__k">Apprendre à lire une étiquette</p>
+              <h4>Exemple : un soin au rétinal</h4>
+              <ul>
+                <li><b>Retinal 0,1 %</b><span>La forme de vitamine A et sa concentration sont affichées : bon signe.</span></li>
+                <li><b>Panthenol 1 %</b><span>Un actif apaisant, qui aide la peau à mieux tolérer le rétinal.</span></li>
+                <li><b>Matrixyl 3000, 3 %</b><span>Des peptides, une « bonne association » avec les rétinoïdes.</span></li>
+              </ul>
+              <p class="rfig__note">Avec 0,1 % de rétinal, ce soin s'adresse aux peaux <strong>déjà habituées au rétinol</strong>. Ce n'est pas un premier produit.</p>
+            </figcaption>
+          </figure>
           <h4>Notre conseil selon votre objectif</h4>
           <ul class="prof prof--obj">
             <li><b>Première fois</b><span>Rétinol 0,2–0,3 % ou rétinol encapsulé, 2 à 3 soirs par semaine</span></li>
