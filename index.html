@@ -926,6 +926,135 @@ html.reading,html.reading body{overflow:hidden}
 }
 @media (max-width:520px){.acfam__grid{grid-template-columns:minmax(0,1fr)}}
 @media (prefers-reduced-motion:reduce){.acc,.acv{animation:none}.acf__bar i{transition:none;width:var(--w)}}
+/* Blog : grille de cartes + article rétinol */
+.jlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.jlist .jcard{grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr}
+.jlist .jcard__visual{min-height:230px}
+.jlist .jcard__body{align-content:start;padding:clamp(22px,3vw,34px)}
+.jlist .jcard h3{font-size:clamp(1.4rem,2.2vw,1.85rem)}
+.jcard__visual--ret{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;background:radial-gradient(circle at 30% 20%,#9A3A50,var(--wine) 55%,var(--wine-deep));color:var(--ivory)}
+.jret{display:grid;justify-items:center;gap:12px;text-align:center;padding:20px}
+.jret__a{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-weight:600;font-size:2.5rem;background:var(--powder);color:var(--wine);box-shadow:0 0 0 8px rgba(240,211,216,.18),0 0 0 18px rgba(240,211,216,.08);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.jcard:hover .jret__a{transform:scale(1.08)}
+.jret__chain{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;font-size:.82rem}
+.jret__chain i{font-style:normal;border:1px solid rgba(245,237,225,.35);border-radius:999px;padding:.3em .7em}
+.jret__chain b{color:var(--powder);font-weight:400}
+.jret em{font-style:normal;font-size:.9rem;opacity:.85}
+.jnew{font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--wine);background:var(--powder);padding:.3em .7em;border-radius:999px}
+@media (max-width:860px){.jlist{grid-template-columns:minmax(0,1fr)}}
+.tldr{background:var(--wine);color:var(--ivory);border-radius:var(--r-panel);padding:clamp(20px,3vw,30px);margin:0 0 clamp(24px,4vw,36px)}
+.tldr__k{margin:0 0 14px;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--powder)}
+.tldr ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.tldr li{background:rgba(245,237,225,.08);border:1px solid rgba(245,237,225,.16);border-radius:14px;padding:12px;display:grid;gap:2px}
+.tldr li b{font-family:var(--f-display);font-weight:600;font-size:1.2rem;color:var(--ivory)}
+.tldr li span{font-size:.86rem;line-height:1.35;color:rgba(245,237,225,.82)}
+.tldr__no{margin:14px 0 0;font-size:.9rem;color:var(--powder)}
+.toc{border:1px solid rgba(122,40,57,.14);border-radius:var(--r-tile);padding:18px 20px;margin:0 0 clamp(28px,4vw,44px)}
+.toc__k{margin:0 0 10px;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.toc ol{margin:0;padding:0;list-style:none;counter-reset:t;display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
+.toc li{counter-increment:t}
+.toc a{display:flex;gap:10px;align-items:baseline;color:var(--wine);text-decoration:none;font-size:.96rem;padding:3px 0}
+.toc a::before{content:counter(t);font-size:.8rem;font-weight:600;color:var(--muted);min-width:1.4em}
+.toc a:hover{text-decoration:underline}
+.ph{display:flex;align-items:center;gap:12px;margin:clamp(36px,5vw,56px) 0 .7em!important;font-size:clamp(1.45rem,2.6vw,1.9rem)!important;scroll-margin-top:20px}
+.ph span{flex:none;width:36px;height:36px;border-radius:50%;background:var(--wine);color:var(--ivory);display:grid;place-items:center;font-size:1rem}
+.pbig{font-size:1.15rem}
+.chain{display:flex;align-items:stretch;gap:8px;margin:1.2em 0}
+.chain>div{flex:1;background:var(--ivory-bg);border-radius:var(--r-tile);padding:14px 12px;display:grid;justify-items:center;text-align:center;gap:4px}
+.chain>div.is-on{background:var(--wine);color:var(--ivory)}
+.chain>div.is-on span{color:rgba(245,237,225,.8)}
+.chain i{font-style:normal;width:24px;height:24px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;font-size:.75rem;font-weight:600;opacity:.7}
+.chain b{font-family:var(--f-display);font-weight:600;font-size:1.05rem}
+.chain span{font-size:.8rem;color:var(--muted);line-height:1.3}
+.chain em{align-self:center;font-style:normal;color:var(--wine);font-size:1.2rem}
+.bgrid{list-style:none;margin:1.2em 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.bgrid li{background:var(--powder);border-radius:14px;padding:14px;font-size:.9rem;line-height:1.35;color:var(--muted);display:grid;gap:2px}
+.bgrid b{font-family:var(--f-display);font-weight:600;font-size:1.05rem;color:var(--wine)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2em 0}
+.two>div{background:var(--ivory-bg);border-radius:var(--r-tile);padding:16px 18px}
+.two h4{margin:0 0 .4em!important}
+.two p{margin:0;font-size:.97rem}
+.two--status .is-ok{background:#EEF2E8}.two--status .is-ok h4{color:#3F5532}
+.two--status .is-stop{background:rgba(122,40,57,.08)}
+.two--status .dots li{font-size:.95rem}
+.prof{list-style:none;margin:1em 0;padding:0;display:grid;gap:8px}
+.prof li{display:grid;grid-template-columns:auto 150px minmax(0,1fr);gap:12px;align-items:center;background:var(--ivory-bg);border-radius:14px;padding:11px 14px}
+.prof em{font-style:normal;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:.3em .65em;border-radius:999px;white-space:nowrap;min-width:88px;text-align:center}
+.prof em.ok{background:#E1EADF;color:#3F6247}.prof em.y{background:#F1E1C4;color:#7A5214}.prof em.r{background:var(--wine);color:var(--ivory)}
+.prof b{font-weight:600;color:var(--wine);font-size:.97rem}
+.prof span{font-size:.93rem;line-height:1.4}
+.prof--obj li{grid-template-columns:170px minmax(0,1fr)}
+.ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:.6em 0 1.2em}
+.ways>div{border:1px solid rgba(122,40,57,.15);border-radius:var(--r-tile);padding:16px;display:grid;gap:6px;align-content:start}
+.ways b{font-family:var(--f-display);font-weight:600;color:var(--wine);font-size:1.05rem}
+.ways p{margin:0;font-size:.92rem;line-height:1.45}
+.ways small{font-size:.8rem;color:var(--muted)}
+.ways__lvl{display:flex;gap:4px}
+.ways__lvl i{width:18px;height:6px;border-radius:3px;background:rgba(122,40,57,.15)}
+.ways__lvl[style*="--n:1"] i:nth-child(-n+1),.ways__lvl[style*="--n:2"] i:nth-child(-n+2),.ways__lvl[style*="--n:3"] i{background:var(--wine)}
+.rlist{margin:.4em 0 0;padding-left:1.2em;display:grid;gap:.35em;font-size:.95rem}
+.ampm__card--pm .rlist strong{color:var(--powder)}
+.assoc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:1em 0}
+.assoc__g{border-radius:var(--r-tile);padding:14px 16px}
+.assoc__g p{margin:0 0 8px;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.assoc__g ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.assoc__g li{font-size:.88rem;padding:.35em .8em;border-radius:999px;background:rgba(255,255,255,.65)}
+.assoc__g.is-ok{background:#E4EDE2}.assoc__g.is-ok p{color:#2F5238}
+.assoc__g.is-g{background:#EEF2E8}.assoc__g.is-g p{color:#3F5532}
+.assoc__g.is-y{background:#F6EAD2}.assoc__g.is-y p{color:#6B4A12}
+.assoc__g.is-r{background:rgba(122,40,57,.1)}.assoc__g.is-r p{color:var(--wine)}
+.ixs{display:grid;gap:10px;margin:1.2em 0}
+.ixs section{border-left:3px solid var(--wine);background:var(--ivory-bg);border-radius:0 14px 14px 0;padding:14px 16px}
+.ixs h4{margin:0 0 .3em!important}
+.ixs p{margin:0 0 .4em;font-size:.95rem}
+.ixs .dots li{font-size:.93rem}
+.scale{display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--muted);margin:1em 0 .6em}
+.scale i{flex:1;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--powder),var(--wine))}
+.rtypes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.rtypes>div{background:var(--ivory-bg);border-radius:14px;padding:12px;display:grid;gap:6px;align-content:start}
+.rtypes>div.is-ref{background:var(--wine);color:var(--ivory)}
+.rtypes>div.is-ref b,.rtypes>div.is-ref small,.rtypes>div.is-ref p,.rtypes>div.is-ref dt{color:var(--ivory)}
+.rtypes b{font-family:var(--f-display);font-weight:600;color:var(--wine);font-size:.98rem;line-height:1.2}
+.rtypes small{font-size:.72rem;color:var(--muted);line-height:1.3}
+.rtypes dl{margin:4px 0;display:grid;grid-template-columns:auto 1fr;gap:4px 8px;align-items:center}
+.rtypes dt{font-size:.72rem;color:var(--muted)}
+.rtypes dd{margin:0}
+.rtypes .m{display:block;height:5px;border-radius:3px;background:rgba(122,40,57,.14);position:relative;overflow:hidden}
+.rtypes .m::after{content:"";position:absolute;inset:0;width:calc(var(--v) / 3 * 100%);background:var(--wine);border-radius:3px}
+.rtypes .is-ref .m{background:rgba(245,237,225,.25)}.rtypes .is-ref .m::after{background:var(--ivory)}
+.rtypes p{margin:0;font-size:.88rem;line-height:1.45}
+.rmed{margin:0;border:1.5px solid var(--wine);border-radius:14px;padding:12px 14px}.rtypes+h4{margin-top:1.4em!important}
+.rmed h4{margin:0 0 .4em!important;font-size:1rem!important;line-height:1.25!important}
+.rmed p{margin:0;font-size:.88rem;line-height:1.45}
+.prog{list-style:none;margin:1em 0;padding:0 0 0 22px;position:relative;display:grid;gap:12px}
+.prog::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--powder),var(--wine))}
+.prog li{position:relative;display:grid;grid-template-columns:150px 150px minmax(0,1fr);gap:10px;align-items:baseline;background:var(--ivory-bg);border-radius:14px;padding:12px 14px}
+.prog li::before{content:"";position:absolute;left:-21px;top:16px;width:14px;height:14px;border-radius:50%;background:var(--ivory-card);border:3px solid var(--wine)}
+.prog b{color:var(--wine);font-weight:600}
+.prog em{font-style:normal;font-weight:500;font-size:.92rem}
+.prog span{font-size:.93rem;line-height:1.4}
+.errs{list-style:none;margin:1em 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;counter-reset:e}
+.errs li{counter-increment:e;display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:center;font-size:.95rem;background:var(--ivory-bg);border-radius:12px;padding:10px 12px}
+.errs li::before{content:counter(e);width:28px;height:28px;border-radius:50%;background:rgba(122,40,57,.1);color:var(--wine);display:grid;place-items:center;font-weight:600;font-size:.82rem}
+.pfaq details{border-top:1px solid rgba(122,40,57,.14)}
+.pfaq details:last-child{border-bottom:1px solid rgba(122,40,57,.14)}
+.pfaq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 0;font-weight:500;color:var(--ink)}
+.pfaq summary::-webkit-details-marker{display:none}
+.pfaq summary i{flex:none;width:26px;height:26px;border-radius:50%;background:var(--powder);position:relative;transition:transform .25s}
+.pfaq summary i::before,.pfaq summary i::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.5px;background:var(--wine);transform:translate(-50%,-50%)}
+.pfaq summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.pfaq details[open] summary i{transform:rotate(45deg)}
+.pfaq details p{margin:0 0 16px;font-size:.97rem;color:var(--muted)}
+.pdisc{font-size:.85rem;color:var(--muted);margin:0 0 1.5em!important}
+@media (max-width:760px){
+  .tldr ul{grid-template-columns:1fr 1fr}.toc ol{grid-template-columns:minmax(0,1fr)}
+  .chain{flex-direction:column}.chain em{transform:rotate(90deg)}
+  .bgrid{grid-template-columns:1fr 1fr}.two,.ways,.assoc,.errs{grid-template-columns:minmax(0,1fr)}
+  .prof li{grid-template-columns:auto minmax(0,1fr);row-gap:4px}.prof li span{grid-column:1/-1}
+  .prof--obj li{grid-template-columns:minmax(0,1fr)}
+  .rtypes{grid-template-columns:minmax(0,1fr)}
+  .prog li{grid-template-columns:minmax(0,1fr);gap:2px}
+}
 </style>
 
 <header class="nav" id="top">
@@ -1442,6 +1571,22 @@ html.reading,html.reading body{overflow:hidden}
         <p class="lede">Nos conseils de peau, expliqués simplement. Les bons gestes, le pourquoi derrière chacun, et ce qu'on vous montre pendant l'atelier.</p>
       </div>
     </div>
+    <div class="jlist">
+    <a class="jcard" href="#article-retinol" data-post="post-retinol">
+      <div class="jcard__visual jcard__visual--ret" aria-hidden="true">
+        <div class="jret">
+          <span class="jret__a">A</span>
+          <span class="jret__chain"><i>Rétinol</i><b>→</b><i>Rétinal</i><b>→</b><i>Acide rétinoïque</i></span>
+          <em>La vitamine A, le soir</em>
+        </div>
+      </div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 9 min</span><span class="jnew">Nouveau</span></div>
+        <h3>Rétinol : le guide pour bien débuter</h3>
+        <p>Ce qu'il fait vraiment, pour qui, comment l'introduire sans irriter sa peau, avec quoi l'associer… et un programme pas à pas sur 8 semaines.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
     <a class="jcard" href="#article-nettoyage" data-post="post-nettoyage">
       <div class="jcard__visual" aria-hidden="true">
         <div class="jcard__half jcard__half--am">
@@ -1461,6 +1606,7 @@ html.reading,html.reading body{overflow:hidden}
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </a>
+    </div>
     <p class="journal__soon"><span aria-hidden="true">✦</span> D'autres articles arrivent bientôt.</p>
   </div>
 
@@ -1471,6 +1617,207 @@ html.reading,html.reading body{overflow:hidden}
       <button type="button" class="reader__close" id="readerClose" aria-label="Fermer l'article">Fermer <span aria-hidden="true">×</span></button>
     </div>
     <div class="reader__scroll" id="readerScroll">
+      <article class="post" id="post-retinol" role="dialog" aria-modal="true" aria-labelledby="post-retinol-t" hidden>
+        <header class="post__hero">
+          <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 9 min</span></div>
+          <h2 id="post-retinol-t">Rétinol : le guide pour bien débuter</h2>
+          <p class="post__lede">C'est l'un des actifs anti-âge les plus étudiés. Il améliore la texture, les rides, les taches, les pores et certaines imperfections… à condition de l'introduire doucement, de bien hydrater et de se protéger du soleil.</p>
+        </header>
+
+        <div class="post__body">
+          <div class="tldr">
+            <p class="tldr__k">L'essentiel en 30 secondes</p>
+            <ul>
+              <li><b>0,2 à 0,3 %</b><span>pour commencer, pas plus</span></li>
+              <li><b>2 à 3 soirs</b><span>par semaine au début</span></li>
+              <li><b>Hydrater</b><span>avec une bonne crème après</span></li>
+              <li><b>SPF 50+</b><span>chaque matin, sans exception</span></li>
+            </ul>
+            <p class="tldr__no">Pas de rétinol pendant la grossesse ou l'allaitement.</p>
+          </div>
+
+          <nav class="toc" aria-label="Sommaire de l'article">
+            <p class="toc__k">Au sommaire</p>
+            <ol>
+              <li><a href="#r-quoi">C'est quoi ?</a></li>
+              <li><a href="#r-sert">À quoi ça sert ?</a></li>
+              <li><a href="#r-qui">Est-ce pour moi ?</a></li>
+              <li><a href="#r-comment">Comment l'utiliser</a></li>
+              <li><a href="#r-debut">Les premières semaines</a></li>
+              <li><a href="#r-asso">Avec quoi l'associer</a></li>
+              <li><a href="#r-types">Rétinol, rétinal… lequel choisir ?</a></li>
+              <li><a href="#r-prog">Le programme 8 semaines</a></li>
+              <li><a href="#r-err">Les erreurs à éviter</a></li>
+              <li><a href="#r-faq">Vos questions</a></li>
+            </ol>
+          </nav>
+
+          <h3 class="ph" id="r-quoi"><span>1</span>C'est quoi, le rétinol ?</h3>
+          <p>Le rétinol est une forme de <strong>vitamine A</strong>. Il fait partie d'une grande famille, les <strong>rétinoïdes</strong>, qui compte des actifs cosmétiques (rétinol, rétinal…) et des médicaments prescrits par les dermatologues.</p>
+          <p>Il se dissout dans les corps gras, pas dans l'eau : c'est pour ça qu'on le trouve surtout dans des crèmes ou des sérums huileux.</p>
+          <div class="chain" aria-label="Comment le rétinol devient actif dans la peau">
+            <div><i>1</i><b>Rétinol</b><span>appliqué sur la peau</span></div>
+            <em aria-hidden="true">→</em>
+            <div><i>2</i><b>Rétinal</b><span>première transformation</span></div>
+            <em aria-hidden="true">→</em>
+            <div class="is-on"><i>3</i><b>Acide rétinoïque</b><span>la forme qui agit</span></div>
+          </div>
+          <p class="pnote">Dans la peau, le rétinol est transformé deux fois. C'est la forme finale, l'acide rétinoïque, qui « réveille » les cellules et déclenche ses bienfaits.</p>
+
+          <h3 class="ph" id="r-sert"><span>2</span>À quoi ça sert ?</h3>
+          <p>Le rétinol agit en surface (l'épiderme) et en profondeur (le derme, là où se trouvent le collagène et l'élastine). C'est un actif <strong>polyvalent</strong> : il ne sert pas qu'aux rides.</p>
+          <ul class="bgrid">
+            <li><b>Texture</b>plus lisse et plus fine</li>
+            <li><b>Rides et ridules</b>moins marquées</li>
+            <li><b>Éclat</b>un teint plus lumineux</li>
+            <li><b>Taches</b>certaines s'atténuent</li>
+            <li><b>Pores</b>moins visibles</li>
+            <li><b>Imperfections</b>il peut aider</li>
+          </ul>
+          <div class="two">
+            <div><h4>En surface</h4><p>Il soutient le renouvellement des cellules : la peau devient plus lisse et plus lumineuse.</p></div>
+            <div><h4>En profondeur</h4><p>Il soutient le collagène, l'élastine et l'acide hyaluronique, qui font la fermeté et l'élasticité.</p></div>
+          </div>
+          <aside class="pwarn"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3l8 14H2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8v4M10 14.5v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><div><b>La concentration compte.</b> Un rétinol à 1 % n'est pas équivalent à un rétinol à 0,3 %. Méfiez-vous des produits qui n'affichent pas leur concentration : impossible de savoir ce qu'ils valent vraiment. Et une formule stable utilisée régulièrement vaut mieux qu'un produit très dosé mal formulé.</div></aside>
+
+          <h3 class="ph" id="r-qui"><span>3</span>Est-ce pour moi ?</h3>
+          <p>Le rétinol convient à la plupart des adultes, mais pas à tous au même rythme.</p>
+          <ul class="prof">
+            <li><em class="ok">Oui</em><b>Peau normale</b><span>Commencer à 0,2–0,3 %, 2 à 3 soirs par semaine</span></li>
+            <li><em class="ok">Oui</em><b>Peau sèche</b><span>Avec une formule douce et une hydratation renforcée</span></li>
+            <li><em class="ok">Oui</em><b>Peau grasse</b><span>Progressivement, surtout si vous utilisez déjà un BHA</span></li>
+            <li><em class="ok">Oui</em><b>Peau mixte</b><span>Adapter la fréquence selon les zones sèches</span></li>
+            <li><em class="ok">Oui</em><b>Peau mature</b><span>Idéal pour la texture, la fermeté et les signes de l'âge</span></li>
+            <li><em class="ok">Oui</em><b>Peau avec taches</b><span>Toujours avec un SPF 50+ chaque jour</span></li>
+            <li><em class="ok">Possible</em><b>Peau acnéique</b><span>Très doucement, sans le cumuler avec des exfoliants</span></li>
+            <li><em class="y">Prudence</em><b>Peau sensible</b><span>Très faible dose, mélangé à la crème, applications espacées</span></li>
+            <li><em class="r">Pas maintenant</em><b>Barrière abîmée</b><span>Réparer d'abord la peau, puis reprendre</span></li>
+            <li><em class="r">À éviter</em><b>Grossesse, allaitement</b><span>Demandez l'avis d'un professionnel de santé</span></li>
+          </ul>
+
+          <h3 class="ph" id="r-comment"><span>4</span>Comment l'utiliser ?</h3>
+          <p class="pbig">La règle d'or : <strong>commencer lentement, hydrater beaucoup</strong>, et augmenter seulement si la peau suit.</p>
+          <h4>Le protocole de démarrage</h4>
+          <ol class="howto">
+            <li>Choisissez une concentration faible : 0,2 % ou 0,3 %</li>
+            <li>Appliquez-le le soir, sur une peau propre et bien sèche</li>
+            <li>Une petite quantité suffit : l'équivalent d'un petit pois pour tout le visage</li>
+            <li>Au début, évitez le contour des yeux, les coins des lèvres et les ailes du nez</li>
+            <li>Appliquez ensuite une crème riche en céramides, glycérine, squalane ou acide hyaluronique</li>
+            <li>Commencez 2 à 3 soirs par semaine, à jours fixes (par exemple lundi, mercredi, samedi)</li>
+            <li>Augmentez toutes les 2 à 3 semaines si la peau reste confortable</li>
+            <li>Passez à un soir sur deux, puis tous les soirs seulement si tout va bien</li>
+            <li>Chaque matin, un SPF 50+</li>
+          </ol>
+          <h4>Trois façons de l'appliquer</h4>
+          <div class="ways">
+            <div><span class="ways__lvl" style="--n:1"><i></i><i></i><i></i></span><b>Mélangé à la crème</b><p>Quelques gouttes dans votre crème, dans le creux de la main. Le plus doux.</p><small>Débutantes, peaux sensibles ou sèches</small></div>
+            <div><span class="ways__lvl" style="--n:2"><i></i><i></i><i></i></span><b>Crème, puis rétinol</b><p>La crème fait tampon : c'est plus confortable.</p><small>Quand la peau commence à bien le tolérer</small></div>
+            <div><span class="ways__lvl" style="--n:3"><i></i><i></i><i></i></span><b>Rétinol, puis crème</b><p>Potentiellement plus actif, mais plus irritant.</p><small>Peaux déjà habituées</small></div>
+          </div>
+          <h4>Exemple de routine</h4>
+          <div class="ampm">
+            <section class="ampm__card ampm__card--pm">
+              <div class="ampm__ico"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M40 10a22 22 0 1 0 14 34A18 18 0 0 1 40 10z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg></div>
+              <h3>Le soir</h3>
+              <ol class="rlist"><li>Double nettoyage doux</li><li>Tonique ou essence hydratante, si vous en utilisez</li><li>Sérum hydratant : acide hyaluronique, glycérine ou panthénol</li><li><strong>Rétinol</strong>, en petite quantité (mélangé à la crème si vous débutez)</li><li>Crème hydratante riche</li><li>Baume à lèvres si besoin</li></ol>
+            </section>
+            <section class="ampm__card ampm__card--am">
+              <div class="ampm__ico"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="11" fill="none" stroke="currentColor" stroke-width="2.4"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M32 7v7M32 50v7M7 32h7M50 32h7M14.3 14.3l5 5M44.7 44.7l5 5M14.3 49.7l5-5M44.7 19.3l5-5"/></g></svg></div>
+              <h3>Le matin</h3>
+              <ol class="rlist"><li>Nettoyage doux ou simple rinçage à l'eau</li><li>Vitamine C, si votre peau la tolère</li><li>Hydratant léger</li><li><strong>SPF 50+</strong>, toujours en dernier</li></ol>
+            </section>
+          </div>
+
+          <h3 class="ph" id="r-debut"><span>5</span>Les premières semaines</h3>
+          <p>Une période d'adaptation est normale. Elle peut durer <strong>jusqu'à deux mois</strong>, parfois plus.</p>
+          <div class="two two--status">
+            <div class="is-ok"><h4>C'est normal</h4><ul class="dots"><li>Une peau un peu plus sèche</li><li>De légères desquamations (la peau pèle un peu)</li><li>Une peau plus sensible</li><li>Parfois de légères rougeurs</li><li>Une sensation de tiraillement</li></ul></div>
+            <div class="is-stop"><h4>Il faut ralentir</h4><ul class="dots"><li>Une brûlure importante</li><li>Des rougeurs fortes ou qui durent</li><li>La peau pèle beaucoup</li><li>Démangeaisons, plaques, cou irrité</li><li>La peau tire fortement malgré la crème</li></ul></div>
+          </div>
+          <p class="pnote">Dans ce cas : arrêtez le rétinol environ une semaine, chouchoutez votre peau avec des soins simples et hydratants, puis reprenez à un rythme plus lent. Mieux vaut réduire la fréquence que continuer malgré une irritation.</p>
+
+          <h3 class="ph" id="r-asso"><span>6</span>Avec quoi l'associer ?</h3>
+          <div class="assoc">
+            <div class="assoc__g is-ok"><p>Excellentes associations</p><ul><li>Niacinamide</li><li>Acide hyaluronique</li><li>Glycérine</li><li>Céramides</li><li>Squalane</li><li>Panthénol</li></ul></div>
+            <div class="assoc__g is-g"><p>Bonnes associations</p><ul><li>Peptides</li><li>Acide tranexamique</li></ul></div>
+            <div class="assoc__g is-y"><p>À introduire plus tard</p><ul><li>Vitamine C</li><li>AHA / BHA</li><li>Acide azélaïque</li></ul></div>
+            <div class="assoc__g is-r"><p>À éviter au début</p><ul><li>Peroxyde de benzoyle</li></ul></div>
+          </div>
+          <p class="pnote">Pendant la phase d'adaptation, n'introduisez ni vitamine C, ni exfoliant, ni niacinamide très dosée. Misez tout sur l'hydratation.</p>
+          <div class="ixs">
+            <section><h4>Rétinol + AHA ou BHA</h4><p>Glycolique, lactique, mandélique, salicylique : ils fragilisent une peau déjà en adaptation.</p><ul class="dots"><li>Pas d'acide les 4 à 8 premières semaines</li><li>Ensuite, alternez les soirées</li><li>Jamais les deux le même soir au début</li></ul></section>
+            <section><h4>Rétinol + vitamine C</h4><p>Pas incompatibles, mais pas en même temps quand on débute.</p><ul class="dots"><li>Vitamine C le matin, rétinol le soir</li><li>Peau sensible : vitamine C 2 à 3 matins par semaine</li><li>Picotements ou rougeurs : on espace</li></ul></section>
+            <section><h4>Rétinol + peroxyde de benzoyle</h4><p>Très desséchant et irritant, surtout pour une peau sensible.</p><ul class="dots"><li>Ne pas débuter les deux ensemble</li><li>Si besoin des deux : alternance stricte</li><li>Hydrater fortement, arrêter si la peau se fragilise</li></ul></section>
+          </div>
+
+          <h3 class="ph" id="r-types"><span>7</span>Rétinol, rétinal… lequel choisir ?</h3>
+          <p>Tous les rétinoïdes ne se valent pas. Plus une forme est proche de l'acide rétinoïque, plus elle agit vite… mais plus elle peut irriter.</p>
+          <div class="scale" aria-hidden="true"><span>Plus doux</span><i></i><span>Plus puissant</span></div>
+          <div class="rtypes">
+            <div><b>Esters de rétinol</b><small>Retinyl Palmitate, Acetate, Propionate</small><dl><dt>Puissance</dt><dd><span class="m" style="--v:1"></span></dd><dt>Tolérance</dt><dd><span class="m" style="--v:3"></span></dd></dl><p>Une porte d'entrée très douce, pour les peaux très sensibles. Moins efficace que le rétinol.</p></div>
+            <div><b>Rétinyl rétinoate (HPR)</b><small>Hydroxypinacolone Retinoate</small><dl><dt>Puissance</dt><dd><span class="m" style="--v:1.5"></span></dd><dt>Tolérance</dt><dd><span class="m" style="--v:2.5"></span></dd></dl><p>Une option douce pour les peaux sensibles, mais pas identique au rétinol.</p></div>
+            <div><b>Rétinol encapsulé</b><small>Retinol encapsulé, liposomal</small><dl><dt>Puissance</dt><dd><span class="m" style="--v:2"></span></dd><dt>Tolérance</dt><dd><span class="m" style="--v:2.5"></span></dd></dl><p>Libéré progressivement : une excellente option pour débuter ou pour les peaux sensibles.</p></div>
+            <div class="is-ref"><b>Rétinol</b><small>Retinol · la référence</small><dl><dt>Puissance</dt><dd><span class="m" style="--v:2"></span></dd><dt>Tolérance</dt><dd><span class="m" style="--v:2"></span></dd></dl><p>Le plus étudié, pour la majorité des adultes. Débutant 0,1–0,3 %, intermédiaire 0,3–0,5 %, avancé 0,5–1 %.</p></div>
+            <div><b>Rétinal</b><small>Rétinaldéhyde</small><dl><dt>Puissance</dt><dd><span class="m" style="--v:2.5"></span></dd><dt>Tolérance</dt><dd><span class="m" style="--v:1.5"></span></dd></dl><p>Une seule transformation, donc plus rapide. Pour les peaux déjà habituées : commencer à 0,05 %.</p></div>
+          <aside class="rmed">
+            <h4>Les rétinoïdes médicaux</h4>
+            <p><b>Trétinoïne</b> (acide rétinoïque), <b>tazarotène</b> et <b>trifarotène</b> sont des médicaments, sur prescription en France. L'<b>adapalène</b> a un statut qui varie selon le pays et la concentration. Ce ne sont pas des « rétinols plus forts » : <strong>à utiliser uniquement selon les indications et les consignes d'un professionnel de santé.</strong></p>
+          </aside>
+          </div>
+          <h4>Notre conseil selon votre objectif</h4>
+          <ul class="prof prof--obj">
+            <li><b>Première fois</b><span>Rétinol 0,2–0,3 % ou rétinol encapsulé, 2 à 3 soirs par semaine</span></li>
+            <li><b>Peau sensible</b><span>Rétinol encapsulé, HPR ou esters, avec une progression très lente</span></li>
+            <li><b>Anti-âge</b><span>Rétinol, en augmentant selon la tolérance</span></li>
+            <li><b>Anti-âge avancé</b><span>Rétinal 0,05–0,1 %, seulement si le rétinol est bien toléré</span></li>
+            <li><b>Taches et éclat</b><span>Rétinol ou rétinal + un actif anti-taches + SPF 50+</span></li>
+            <li><b>Acné légère à modérée</b><span>Rétinol ou adapalène, selon l'avis d'un professionnel</span></li>
+            <li><b>Acné sévère</b><span>Uniquement avec un médecin</span></li>
+          </ul>
+
+          <h3 class="ph" id="r-prog"><span>8</span>Le programme SkinMi sur 8 semaines</h3>
+          <ol class="prog">
+            <li><b>Semaines 1 et 2</b><em>2 soirs par semaine</em><span>Rétinol 0,2–0,3 % mélangé à la crème hydratante</span></li>
+            <li><b>Semaines 3 et 4</b><em>3 soirs par semaine</em><span>Même routine, en surveillant votre peau</span></li>
+            <li><b>Semaines 5 et 6</b><em>1 soir sur 2</em><span>Rétinol puis crème, ou toujours mélangé</span></li>
+            <li><b>Semaines 7 et 8</b><em>Selon tolérance</em><span>Jusqu'à tous les soirs si la peau reste confortable</span></li>
+            <li><b>Après 8 semaines</b><em>Selon votre objectif</em><span>Introduisez doucement la vitamine C le matin <u>ou</u> un exfoliant doux, jamais les deux en même temps</span></li>
+          </ol>
+          <p class="pnote">Si la peau pique, rougit fortement ou pèle : revenez à la fréquence précédente. La régularité douce est plus efficace qu'une progression trop rapide.</p>
+
+          <h3 class="ph" id="r-err"><span>9</span>Les 10 erreurs à éviter</h3>
+          <ol class="errs">
+            <li>Commencer directement à 1 %</li>
+            <li>L'utiliser tous les soirs dès le premier jour</li>
+            <li>Oublier la crème hydratante</li>
+            <li>Le cumuler avec un acide exfoliant dès le début</li>
+            <li>Oublier le SPF</li>
+            <li>En mettre beaucoup trop</li>
+            <li>L'appliquer trop près des yeux au début</li>
+            <li>Continuer malgré une forte irritation</li>
+            <li>Choisir un produit sans concentration indiquée</li>
+            <li>Croire que le bakuchiol, c'est la même chose</li>
+          </ol>
+
+          <h3 class="ph" id="r-faq"><span>10</span>Vos questions</h3>
+          <div class="pfaq">
+            <details><summary>Le rétinol fait-il sortir des boutons ?<i aria-hidden="true"></i></summary><p>Certaines personnes ont un peu plus d'imperfections pendant l'adaptation. Mais ce n'est pas forcément une « purge » : si les boutons sont nombreux, douloureux ou durent, ralentissez et demandez l'avis d'un professionnel.</p></details>
+            <details><summary>Peut-on en mettre sous les yeux ?<i aria-hidden="true"></i></summary><p>Oui, mais avec beaucoup de prudence, et seulement une fois que votre peau le tolère bien. Le contour de l'œil est fin et réactif : au début, restez loin de la paupière mobile.</p></details>
+            <details><summary>Peut-on le mélanger à sa crème ?<i aria-hidden="true"></i></summary><p>Oui, et c'est même idéal pour débuter : quelques gouttes de rétinol dans votre crème, dans le creux de la main. C'est plus doux et plus confortable.</p></details>
+            <details><summary>Peut-on en utiliser l'été ?<i aria-hidden="true"></i></summary><p>Oui, avec un SPF 50+ chaque matin. Espacez les applications si votre peau est exposée, irritée ou déshydratée.</p></details>
+            <details><summary>Est-ce réservé aux peaux matures ?<i aria-hidden="true"></i></summary><p>Non. Il peut être intéressant dès l'âge adulte pour la texture, l'éclat, les pores, les imperfections et la prévention. Le but n'est pas la concentration la plus forte, mais celle que votre peau tolère sur la durée.</p></details>
+          </div>
+
+          <blockquote class="psum"><span>En résumé</span>Le rétinol est un actif puissant, qui ne s'utilise jamais dans l'urgence : faible concentration, faible fréquence, hydratation renforcée et SPF chaque matin. Un rétinol à 0,3 % bien toléré donnera souvent de meilleurs résultats qu'un rétinol à 1 % qui irrite.</blockquote>
+          <p class="pdisc">Cet article est informatif et ne remplace pas un avis dermatologique. Grossesse, allaitement, maladie de peau, peau très réactive ou traitement en cours : demandez conseil à un professionnel de santé.</p>
+
+          <div class="post__cta">
+            <p>Vous voulez savoir si le rétinol est fait pour votre peau, et comment l'intégrer à votre routine ?</p>
+            <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur le rétinol et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
+          </div>
+        </div>
+      </article>
       <article class="post" id="post-nettoyage" role="dialog" aria-modal="true" aria-labelledby="post-nettoyage-t">
         <header class="post__hero">
           <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 4 min</span></div>
@@ -2103,5 +2450,8 @@ addEventListener("scroll",onScroll,{passive:true}); onScroll();
   M.addEventListener("click",e=>{if(e.target.closest("[data-close]")) close()});
   document.addEventListener("keydown",e=>{if(M.hidden) return; if(e.key==="Escape") close(); else if(e.key==="ArrowRight") step(1); else if(e.key==="ArrowLeft") step(-1)});
 })();
+
+/* Blog : sommaire cliquable dans le lecteur */
+document.addEventListener("click",e=>{const a=e.target.closest(".toc a");if(!a)return;e.preventDefault();const t=document.getElementById(a.getAttribute("href").slice(1));if(t)t.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})});
 </script>
 </html>
