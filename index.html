@@ -1366,6 +1366,8 @@ html.reading,html.reading body{overflow:hidden}
   .uvalogo{grid-template-columns:minmax(0,1fr)}.uvalogo__ico{justify-self:start}
   .renew{grid-template-columns:repeat(2,minmax(0,1fr))}.renew li:last-child{grid-column:1/-1}
 }
+.jcard__visual--spfimg img{object-position:50% 48%}
+.post__cover--spf img{object-position:50% 50%;aspect-ratio:3/2}
 </style>
 
 <header class="nav" id="top">
@@ -1913,12 +1915,7 @@ html.reading,html.reading body{overflow:hidden}
       </div>
     </a>
     <a class="jcard" href="#article-spf" data-post="post-spf">
-      <div class="jcard__visual jcard__visual--spf" aria-hidden="true">
-        <div class="jspf">
-          <div class="jspf__sun"><i></i><b>SPF<br>50+</b></div>
-          <em>Tous les jours, toute l'année</em>
-        </div>
-      </div>
+      <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--spfimg"><img src="img/protection-solaire.webp" width="588" height="393" loading="lazy" decoding="async" alt="Soleil dessiné avec de la crème solaire sur le dos d'une femme, à la plage"></div>
       <div class="jcard__body">
         <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 7 min</span><span class="jnew">Nouveau</span></div>
         <h3>Protection solaire&nbsp;: l'actif anti-âge n°1</h3>
@@ -2682,6 +2679,7 @@ html.reading,html.reading body{overflow:hidden}
           <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 7 min</span></div>
           <h2 id="post-spf-t">Protection solaire&nbsp;: l'actif anti-âge n°1</h2>
           <p class="post__lede">Rides, taches, perte de fermeté… Une grande partie du vieillissement de la peau vient des UV. La protection solaire n'est donc pas une option : c'est la base de toute routine efficace.</p>
+          <figure class="post__cover post__cover--wide post__cover--spf"><img src="img/protection-solaire.webp" width="588" height="393" decoding="async" alt="Soleil dessiné avec de la crème solaire sur le dos d'une femme, à la plage"></figure>
         </header>
 
         <div class="post__body">
