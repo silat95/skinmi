@@ -1423,6 +1423,19 @@ html.reading,html.reading body{overflow:hidden}
 }
 .jcard__visual--mskimg img{object-position:50% 30%}
 .post__cover--msk img{object-position:50% 32%;aspect-ratio:4/3}
+/* Blog : article pads */
+.jcard__visual--pad{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;background:radial-gradient(circle at 50% 30%,var(--milk),var(--blush) 75%)}
+.jpad{display:grid;justify-items:center;gap:16px;padding:22px}
+.jpad__stack{position:relative;width:110px;height:76px}
+.jpad__stack i{position:absolute;left:5px;width:100px;height:34px;border-radius:50%;background:radial-gradient(ellipse at 50% 40%,#fff,#F3E6DF);border:1.5px solid rgba(122,40,57,.35);box-shadow:0 4px 8px -4px rgba(76,19,34,.3);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.jpad__stack i:nth-child(1){bottom:0}.jpad__stack i:nth-child(2){bottom:10px}.jpad__stack i:nth-child(3){bottom:20px}
+.jpad__stack i:nth-child(4){bottom:34px;background:radial-gradient(ellipse at 50% 40%,#fff,var(--powder));transform:rotate(-6deg)}
+.jcard:hover .jpad__stack i:nth-child(4){transform:translateY(-12px) rotate(-10deg)}
+.jpad em{font-style:normal;color:var(--wine);font-size:.92rem}
+.proto--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.mtypes section:nth-child(5):last-child{grid-column:span 2}
+.post .fold .fold__warn{margin-top:4px;font-size:.92rem}
+@media (max-width:760px){.proto--2{grid-template-columns:minmax(0,1fr)}.mtypes section:nth-child(5):last-child{grid-column:1/-1}}
 </style>
 
 <header class="nav" id="top">
@@ -1937,6 +1950,20 @@ html.reading,html.reading body{overflow:hidden}
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </a>
+    <a class="jcard" href="#article-pads" data-post="post-pads">
+      <div class="jcard__visual jcard__visual--pad" aria-hidden="true"><span class="jstep"><b>2</b>Préparer · en pad</span>
+        <div class="jpad">
+          <div class="jpad__stack"><i></i><i></i><i></i><i></i></div>
+          <em>Le toner, en version express</em>
+        </div>
+      </div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span><span class="jnew">Nouveau</span></div>
+        <h3>Toner pads&nbsp;: hydratation, exfoliation douce et praticité</h3>
+        <p>Hydratants, apaisants, exfoliants… Ce que font les pads, lequel choisir selon votre peau, comment les utiliser et à quelle fréquence.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
     <a class="jcard" href="#article-acides" data-post="post-acides">
       <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--acx2"><span class="jstep"><b>3</b>Exfolier</span><img src="img/acides-exfoliants.webp" width="1000" height="650" loading="lazy" decoding="async" alt="Jeune femme souriante, mains sur le visage, entourée de bulles et du mot AHA-BHA-PHA"></div>
       <div class="jcard__body">
@@ -1967,7 +1994,7 @@ html.reading,html.reading body{overflow:hidden}
     <a class="jcard" href="#article-masques" data-post="post-masques">
       <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--mskimg"><span class="jstep"><b>6</b>Masque</span><img src="img/masques.webp" width="640" height="640" loading="lazy" decoding="async" alt="Femme les yeux fermés portant un masque en tissu, les mains sur le visage"></div>
       <div class="jcard__body">
-        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 7 min</span><span class="jnew">Nouveau</span></div>
+        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 7 min</span></div>
         <h3>Masques&nbsp;: lequel choisir, et comment bien l'utiliser</h3>
         <p>Tissu, argile, crème, gel, sleeping pack… Ce que fait chaque masque, pour quelle peau, combien de temps le laisser poser et à quelle fréquence.</p>
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -3167,6 +3194,118 @@ html.reading,html.reading body{overflow:hidden}
           <div class="post__cta">
             <p>Pendant l'atelier, un masque vous est offert et appliqué pendant votre soin du visage. L'occasion de découvrir celui qui convient à votre peau.</p>
             <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les masques et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="post-pads" role="dialog" aria-modal="true" aria-labelledby="post-pads-t" hidden>
+        <header class="post__hero">
+          <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span></div>
+          <h2 id="post-pads-t">Toner pads&nbsp;: hydratation, exfoliation douce et praticité</h2>
+          <p class="post__lede">Les toner pads sont des disques de coton ou de tissu imbibés de tonique. Très populaires en K-Beauty, ils hydratent en un geste, et certains exfolient en douceur. Une alternative pratique au toner classique, surtout le matin ou en voyage.</p>
+        </header>
+
+        <div class="post__body">
+          <div class="tldr">
+            <p class="tldr__k">L'essentiel en 30 secondes</p>
+            <ul>
+              <li><b>Facultatif</b><span>un toner en version pratique</span></li>
+              <li><b>Hydratant</b><span>parfait le matin, sans rinçage</span></li>
+              <li><b>Exfoliant</b><span>jamais tous les jours</span></li>
+              <li><b>+ une crème</b><span>il ne la remplace pas</span></li>
+            </ul>
+            <p class="tldr__no">On passe le pad délicatement, sans frotter, et loin du contour des yeux.</p>
+          </div>
+
+          <nav class="toc" aria-label="Sommaire de l'article">
+            <p class="toc__k">Au sommaire</p>
+            <ol>
+              <li><a href="#d-quoi">C'est quoi, un toner pad ?</a></li>
+              <li><a href="#d-pourquoi">Pourquoi en utiliser</a></li>
+              <li><a href="#d-detail">Chaque pad en détail</a></li>
+              <li><a href="#d-comment">Comment les utiliser</a></li>
+              <li><a href="#d-peau">Lequel pour votre peau ?</a></li>
+              <li><a href="#d-err">Les erreurs à éviter</a></li>
+              <li><a href="#d-faq">Vos questions</a></li>
+            </ol>
+          </nav>
+
+          <h3 class="ph" id="d-quoi"><span>1</span>C'est quoi, un toner pad ?</h3>
+          <p>Un disque de coton ou de tissu <strong>déjà imbibé de tonique</strong>, rangé dans un pot. Selon la formule, il hydrate, apaise, exfolie ou purifie. Il remplit le même rôle que <a class="plink" href="#article-toners" data-post="post-toners">le toner</a>, en plus pratique.</p>
+          <div class="mtypes">
+            <section><b>Hydratant</b><p>Hydratation, confort</p><span class="mt__who">Toutes les peaux</span><em>Le plus courant</em></section>
+            <section><b>Apaisant</b><p>Rougeurs, inconfort, barrière</p><span class="mt__who">Peaux sensibles</span><em>Sans parfum</em></section>
+            <section class="is-care"><b>Exfoliant</b><p>Texture, pores, éclat</p><span class="mt__who">Peaux normales à mixtes</span><em>Avec prudence</em></section>
+            <section><b>Purifiant</b><p>Sébum, pores, imperfections</p><span class="mt__who">Peaux grasses, mixtes</span><em>Zones ciblées</em></section>
+            <section><b>Aux ferments</b><p>Hydratation, éclat, barrière</p><span class="mt__who">Peaux sèches, déshydratées</span><em>Éclat</em></section>
+          </div>
+
+          <h3 class="ph" id="d-pourquoi"><span>2</span>Pourquoi en utiliser ?</h3>
+          <p>Ils ne sont <strong>pas obligatoires</strong>, mais bien pratiques au quotidien.</p>
+          <ul class="bgrid">
+            <li><b>Hydrater</b>en quelques secondes</li>
+            <li><b>Apaiser</b>rougeurs et irritations</li>
+            <li><b>Exfolier</b>en douceur, certaines zones</li>
+            <li><b>Cibler</b>front, nez, menton</li>
+            <li><b>Sans rinçage</b>idéal le matin</li>
+            <li><b>Voyager</b>léger, sans flacon</li>
+          </ul>
+
+          <h3 class="ph" id="d-detail"><span>3</span>Chaque pad en détail</h3>
+          <p>Cliquez sur un pad pour voir ses avantages, ses limites et les ingrédients à chercher.</p>
+          <div class="folds folds--post">
+            <details class="fold" name="pads"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c3.5 5 6 8.5 6 11.5a6 6 0 0 1-12 0C6 11.5 8.5 8 12 3z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></svg></span><span class="fold__t">Pad hydratant<small>Le boost d'hydratation · toutes les peaux</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Hydratation immédiate</li><li>Effet repulpant</li><li>Très facile à utiliser</li><li>Idéal le matin, ou en voyage</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Effet souvent temporaire</li><li>Ne remplace pas la routine du quotidien</li><li>Certains contiennent parfum ou huiles essentielles</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Acide hyaluronique</li><li>Glycérine</li><li>Niacinamide</li><li>Centella asiatica</li><li>Panthénol</li><li>Ferments (galactomyces, bifida)</li></ul></div></details>
+            <details class="fold" name="pads"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.3a4.2 4.2 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z"/></svg></span><span class="fold__t">Pad apaisant<small>Pour calmer les rougeurs · peaux sensibles</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Apaise les rougeurs</li><li>Soutient la barrière cutanée</li><li>Apporte du confort aux peaux sensibles</li><li>Utile après le soleil ou une irritation</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Effet souvent temporaire</li><li>Attention au parfum et aux huiles essentielles</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Centella asiatica</li><li>Panthénol</li><li>Allantoïne</li><li>Acide hyaluronique</li><li>Niacinamide</li><li>Avoine colloïdale</li></ul></div></details>
+            <details class="fold" name="pads"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8 9.5h.01M12 8h.01M15.5 10h.01M9.5 13.5h.01M14 14h.01M11.5 16.5h.01"/></svg></span><span class="fold__t">Pad exfoliant<small>Pour la texture et les pores · avec prudence</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Exfoliation douce et localisée</li><li>Affine la texture, donne de l'éclat</li><li>Aide à désincruster les pores</li><li>Pratique pour cibler le front, le nez, le menton</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Irritant s'il est utilisé trop souvent</li><li>Ne convient pas à toutes les peaux</li><li>À utiliser avec modération</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Acide glycolique</li><li>Acide lactique</li><li>Acide salicylique</li><li>PHA (gluconolactone)</li><li>Niacinamide</li><li>Panthénol</li></ul><p class="fold__warn"><span aria-hidden="true">!</span>Il contient des acides : mêmes règles que dans <a class="plink" href="#article-acides" data-post="post-acides">notre guide des acides</a>, jamais le même soir que le rétinol ou un autre exfoliant.</p></div></details>
+          </div>
+
+          <h3 class="ph" id="d-comment"><span>4</span>Comment les utiliser ?</h3>
+          <p>Suivez toujours les indications du produit. Voici les repères :</p>
+          <div class="proto proto--2">
+            <section><p class="proto__k">Pad hydratant ou apaisant</p><em class="proto__t">Matin et/ou soir</em><ol><li>Nettoyez doucement votre visage (ou rincez simplement à l'eau le matin)</li><li>Prenez un pad avec la pince ou du bout des doigts</li><li>Passez-le délicatement, en évitant le contour des yeux</li><li>Laissez absorber quelques secondes</li><li>Enchaînez avec sérum, crème ou solaire</li></ol></section>
+            <section class="is-night"><p class="proto__k">Pad exfoliant</p><em class="proto__t">Le soir, pas tous les jours</em><ol><li>Nettoyez doucement votre visage</li><li>Prenez un pad exfoliant</li><li>Passez-le sur les zones à traiter seulement : front, nez, menton</li><li>Laissez absorber quelques secondes</li><li>Appliquez votre sérum ou votre crème</li><li>Le lendemain matin : SPF 50+</li></ol></section>
+          </div>
+
+          <h3 class="ph" id="d-peau"><span>5</span>Lequel pour votre peau ?</h3>
+          <ul class="pick pick--3">
+            <li class="pick__head" aria-hidden="true"><span>Votre peau</span><span>Le pad</span><span>Rythme</span></li>
+            <li><b>Normale</b><span data-l="Pad">Hydratant</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Sèche</b><span data-l="Pad">Hydratant ou apaisant</span><span data-l="Rythme">2 à 3 fois / sem.</span></li>
+            <li><b>Grasse</b><span data-l="Pad">Exfoliant ou purifiant</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Mixte</b><span data-l="Pad">Hydratant, ou exfoliant sur la zone T seulement</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Sensible</b><span data-l="Pad">Apaisant, sans parfum</span><span data-l="Rythme">1 fois / sem.</span></li>
+            <li><b>Mature</b><span data-l="Pad">Hydratant ou aux ferments</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+          </ul>
+          <p class="pnote">Ces rythmes concernent les pads utilisés comme un soin « boost ». Un pad hydratant doux peut aussi remplacer votre toner au quotidien.</p>
+
+          <h3 class="ph" id="d-err"><span>6</span>Les 10 erreurs à éviter</h3>
+          <ol class="errs">
+            <li>Croire que les pads sont obligatoires</li>
+            <li>Utiliser un pad exfoliant tous les jours</li>
+            <li>Cumuler trop d'actifs en même temps</li>
+            <li>Oublier la crème après</li>
+            <li>Choisir un pad très parfumé</li>
+            <li>Ne pas adapter la quantité</li>
+            <li>Oublier le SPF</li>
+            <li>Attendre des miracles en quelques jours</li>
+            <li>S'en servir comme d'un traitement médical</li>
+            <li>Passer un pad exfoliant sur une peau irritée</li>
+          </ol>
+
+          <h3 class="ph" id="d-faq"><span>7</span>Vos questions</h3>
+          <div class="pfaq">
+            <details><summary>Les pads hydratants sont-ils efficaces ?<i aria-hidden="true"></i></summary><p>Oui, pour un boost d'hydratation immédiat. Ils sont pratiques et très faciles à utiliser.</p></details>
+            <details><summary>Les pads exfoliants conviennent-ils à toutes les peaux ?<i aria-hidden="true"></i></summary><p>Non. Ils s'utilisent avec prudence, surtout sur les peaux sensibles. Et jamais sur une peau irritée.</p></details>
+            <details><summary>Un pad peut-il remplacer mon toner ?<i aria-hidden="true"></i></summary><p>Oui, dans bien des cas : c'est une alternative pratique au toner classique, surtout le matin ou en voyage.</p></details>
+            <details><summary>Un pad peut-il remplacer ma crème ?<i aria-hidden="true"></i></summary><p>Non. Il complète la routine, mais ne remplace pas une crème hydratante au quotidien.</p></details>
+            <details><summary>Les pads exfoliants peuvent-ils irriter ?<i aria-hidden="true"></i></summary><p>Oui, surtout s'ils sont utilisés trop souvent ou sur une peau sensible. Espacez-les et ne frottez pas.</p></details>
+          </div>
+
+          <blockquote class="psum"><span>En résumé</span>Pad hydratant pour le confort, apaisant pour les rougeurs, exfoliant pour la texture et les pores, aux ferments pour l'éclat. On le passe délicatement, sans frotter, et on garde sa crème et son SPF.</blockquote>
+          <p class="pdisc">Cet article est informatif et ne remplace pas un avis dermatologique. Problème de peau, grossesse, allaitement ou traitement médical : demandez conseil à un professionnel de santé.</p>
+
+          <div class="post__cta">
+            <p>Pad, toner ou essence : on vous aide à choisir le geste qui convient à votre peau pendant l'atelier.</p>
+            <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les toner pads et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
           </div>
         </div>
       </article>
