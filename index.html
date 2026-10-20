@@ -1438,6 +1438,15 @@ html.reading,html.reading body{overflow:hidden}
 @media (max-width:760px){.proto--2{grid-template-columns:minmax(0,1fr)}.mtypes section:nth-child(5):last-child{grid-column:1/-1}}
 .jcard__visual--padimg img{object-position:50% 66%}
 .post__cover--pad img{object-position:50% 45%;aspect-ratio:5/4}
+/* Blog : article patchs yeux */
+.jcard__visual--eye{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;background:radial-gradient(circle at 50% 35%,var(--milk),var(--blush) 75%)}
+.jeye{display:grid;justify-items:center;gap:18px;padding:22px}
+.jeye__pair{display:flex;gap:34px}
+.jeye__pair i{width:92px;height:44px;border-radius:0 0 60px 60px/0 0 44px 44px;background:linear-gradient(170deg,rgba(255,255,255,.9) 0%,#F0C6CF 55%,#D98FA0 100%);border:1.5px solid rgba(122,40,57,.35);box-shadow:inset 0 -6px 10px rgba(122,40,57,.08),0 8px 16px -10px rgba(76,19,34,.5);transform:rotate(-8deg);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.jeye__pair i:last-child{transform:rotate(8deg)}
+.jcard:hover .jeye__pair i:first-child{transform:rotate(-14deg) translateY(-4px)}.jcard:hover .jeye__pair i:last-child{transform:rotate(14deg) translateY(-4px)}
+.jeye em{font-style:normal;color:var(--wine);font-size:.92rem}
+.mtypes--4{grid-template-columns:repeat(2,minmax(0,1fr))}
 </style>
 
 <header class="nav" id="top">
@@ -1955,7 +1964,7 @@ html.reading,html.reading body{overflow:hidden}
     <a class="jcard" href="#article-pads" data-post="post-pads">
       <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--padimg"><span class="jstep"><b>2</b>Préparer · en pad</span><img src="img/toner-pads.webp" width="1000" height="1000" loading="lazy" decoding="async" alt="Main qui sort un toner pad de son pot à l'aide d'une pince"></div>
       <div class="jcard__body">
-        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span><span class="jnew">Nouveau</span></div>
+        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span></div>
         <h3>Toner pads&nbsp;: hydratation, exfoliation douce et praticité</h3>
         <p>Hydratants, apaisants, exfoliants… Ce que font les pads, lequel choisir selon votre peau, comment les utiliser et à quelle fréquence.</p>
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -2008,6 +2017,20 @@ html.reading,html.reading body{overflow:hidden}
         <div class="jcard__meta"><span class="jtag">Les problématiques</span><span>Lecture 7 min</span></div>
         <h3>Cernes&nbsp;: trouver leur origine pour choisir la bonne solution</h3>
         <p>Bruns, bleus ou creux : chaque cerne a sa cause, et sa solution. Apprenez à reconnaître le vôtre avant d'acheter un énième soin contour des yeux.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+    <a class="jcard" href="#article-patchs" data-post="post-patchs">
+      <div class="jcard__visual jcard__visual--eye" aria-hidden="true"><span class="jstep"><b>7</b>Contour des yeux · patchs</span>
+        <div class="jeye">
+          <div class="jeye__pair"><i></i><i></i></div>
+          <em>Un regard défatigué en 15 minutes</em>
+        </div>
+      </div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span><span class="jnew">Nouveau</span></div>
+        <h3>Patchs yeux&nbsp;: hydrater, défatiguer, lisser le regard</h3>
+        <p>Hydrogel, tissu, micro-cônes, patchs de nuit… Ce que font les patchs contour des yeux, ce qu'ils ne font pas, et comment bien les utiliser.</p>
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </a>
@@ -3304,6 +3327,118 @@ html.reading,html.reading body{overflow:hidden}
           <div class="post__cta">
             <p>Pad, toner ou essence : on vous aide à choisir le geste qui convient à votre peau pendant l'atelier.</p>
             <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les toner pads et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="post-patchs" role="dialog" aria-modal="true" aria-labelledby="post-patchs-t" hidden>
+        <header class="post__hero">
+          <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span></div>
+          <h2 id="post-patchs-t">Patchs yeux&nbsp;: hydrater, défatiguer, lisser le regard</h2>
+          <p class="post__lede">Hydrogel, tissu, micro-cônes… Les patchs contour des yeux sont les stars de la K-Beauty. Ils apportent hydratation, fraîcheur et un coup d'éclat au regard. Voici ce qu'ils font vraiment, et comment bien les choisir.</p>
+        </header>
+
+        <div class="post__body">
+          <div class="tldr">
+            <p class="tldr__k">L'essentiel en 30 secondes</p>
+            <ul>
+              <li><b>Un bonus</b><span>pas une étape obligatoire</span></li>
+              <li><b>10 à 20 min</b><span>de pose pour l'hydrogel et le tissu</span></li>
+              <li><b>Temporaire</b><span>un effet défatigant, pas un traitement</span></li>
+              <li><b>+ une crème</b><span>le contour des yeux, toujours après</span></li>
+            </ul>
+            <p class="tldr__no">Les patchs ne remplacent pas votre crème contour des yeux.</p>
+          </div>
+
+          <nav class="toc" aria-label="Sommaire de l'article">
+            <p class="toc__k">Au sommaire</p>
+            <ol>
+              <li><a href="#y-quoi">C'est quoi, un patch yeux ?</a></li>
+              <li><a href="#y-pourquoi">Pourquoi en utiliser</a></li>
+              <li><a href="#y-detail">Chaque patch en détail</a></li>
+              <li><a href="#y-comment">Comment les utiliser</a></li>
+              <li><a href="#y-peau">Lequel pour votre peau ?</a></li>
+              <li><a href="#y-err">Les erreurs à éviter</a></li>
+              <li><a href="#y-faq">Vos questions</a></li>
+            </ol>
+          </nav>
+
+          <h3 class="ph" id="y-quoi"><span>1</span>C'est quoi, un patch yeux ?</h3>
+          <p>Un soin ciblé, le plus souvent en <strong>hydrogel</strong> ou en <strong>tissu</strong>, qu'on pose sous les yeux ou sur la paupière mobile. Selon la formule, il hydrate, défatigue, lisse ou agit sur l'aspect des cernes.</p>
+          <div class="mtypes mtypes--4">
+            <section><b>Hydrogel</b><small>Gel souple</small><p>Hydratation, fraîcheur, décongestion</p><span class="mt__who">Toutes les peaux</span><em>10 à 20 min</em></section>
+            <section><b>Tissu</b><small>Tissu imbibé de sérum</small><p>Hydratation, apaisement, éclat</p><span class="mt__who">Toutes les peaux</span><em>10 à 20 min</em></section>
+            <section class="is-care"><b>Micro-cônes</b><small>Patch à micro-pointes</small><p>Pénétration des actifs, effet tenseur</p><span class="mt__who">Peaux matures, ridules</span><em>Selon le produit</em></section>
+            <section><b>Nuit</b><small>Gel ou crème légère</small><p>Hydratation de nuit, défatigant renforcé</p><span class="mt__who">Peaux sèches, déshydratées</span><em>Toute la nuit</em></section>
+          </div>
+
+          <h3 class="ph" id="y-pourquoi"><span>2</span>Pourquoi en utiliser ?</h3>
+          <p>Pas obligatoires, mais très pratiques pour un regard plus frais. Ils apportent aussi une <strong>première couche d'hydratation</strong> qui prépare la peau aux soins suivants.</p>
+          <ul class="bgrid">
+            <li><b>Hydrater</b>le contour des yeux</li>
+            <li><b>Défatiguer</b>le regard</li>
+            <li><b>Lisser</b>les ridules de déshydratation</li>
+            <li><b>Apaiser</b>rougeurs et irritations</li>
+            <li><b>Rafraîchir</b>une sensation de fraîcheur</li>
+            <li><b>Cernes, poches</b>un mieux temporaire</li>
+          </ul>
+          <p class="pnote">Les patchs défatiguent surtout les <strong>cernes bleus</strong>, de façon temporaire. Ils ne corrigent pas durablement un cerne brun ou creux : voir <a class="plink" href="#article-cernes" data-post="post-cernes">notre guide des cernes</a>.</p>
+
+          <h3 class="ph" id="y-detail"><span>3</span>Chaque patch en détail</h3>
+          <p>Cliquez sur un patch pour voir ses avantages, ses limites et les ingrédients à chercher.</p>
+          <div class="folds folds--post">
+            <details class="fold" name="patchs"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10c3 6 15 6 18 0-4 3-14 3-18 0z"/><path d="M8 12.5v.01M12 13.3v.01M16 12.5v.01"/></svg></span><span class="fold__t">Patch hydrogel<small>Fraîcheur et hydratation · toutes les peaux</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Hydratation intense</li><li>Effet défatigant immédiat</li><li>Agréable sensation de fraîcheur</li><li>Très facile à utiliser</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Effet souvent temporaire</li><li>Ne remplace pas une crème contour des yeux</li><li>Attention au parfum et aux huiles essentielles</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Acide hyaluronique</li><li>Glycérine</li><li>Niacinamide</li><li>Centella asiatica</li><li>Panthénol</li><li>Céramides</li><li>Peptides</li></ul></div></details>
+            <details class="fold" name="patchs"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10c3 6 15 6 18 0-4 3-14 3-18 0z"/><path d="M6 11.5l2 1.5M10 13l1.5.3M14 13l1.5-.3M18 11.5l-2 1.5"/></svg></span><span class="fold__t">Patch en tissu<small>Hydratation et lissage · toutes les peaux</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Hydratation intense</li><li>Effet lissant temporaire</li><li>Facile à utiliser</li><li>Un vrai moment de détente</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Effet souvent temporaire</li><li>Ne remplace pas la routine du quotidien</li><li>Attention au parfum et aux huiles essentielles</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Acide hyaluronique</li><li>Glycérine</li><li>Niacinamide</li><li>Centella asiatica</li><li>Panthénol</li><li>Céramides</li><li>Extrait de riz</li></ul></div></details>
+            <details class="fold" name="patchs"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10c3 6 15 6 18 0-4 3-14 3-18 0z"/><path d="M7 8l.5 2M10 7.5l.3 2.5M14 7.5l-.3 2.5M17 8l-.5 2"/></svg></span><span class="fold__t">Patch à micro-cônes<small>Effet tenseur sur les ridules · avec prudence</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Aide les actifs à mieux pénétrer</li><li>Effet tenseur temporaire</li><li>Intéressant pour les ridules et rides fines</li><li>Utilisable aussi sur le front ou les sillons du nez à la bouche</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Irritant s'il est utilisé trop souvent</li><li>Ne convient pas à toutes les peaux</li><li>À utiliser avec modération</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Peptides</li><li>Acide hyaluronique</li><li>Niacinamide</li><li>Céramides</li><li>Acide tranexamique</li><li>Dérivés de vitamine C</li></ul><p class="fold__warn"><span aria-hidden="true">!</span>Jamais sur une peau irritée, et avec prudence sur les peaux sensibles.</p></div></details>
+            <details class="fold" name="patchs"><summary><span class="fold__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 4a8 8 0 1 0 5 13A6.5 6.5 0 0 1 15 4z"/><path d="M18 4.5h2.5L18 7h2.5"/></svg></span><span class="fold__t">Patch de nuit<small>Toute la nuit · peaux sèches et déshydratées</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">Les +</p><ul class="dots"><li>Hydratation intense pendant la nuit</li><li>Effet défatigant renforcé</li><li>Améliore l'aspect des cernes et des poches au réveil</li><li>Idéal pour les peaux sèches ou déshydratées</li></ul></div><div><p class="mpl__k is-no">Les limites</p><ul class="dots"><li>Peut être trop riche pour certaines peaux grasses</li><li>À utiliser avec modération</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Céramides</li><li>Glycérine</li><li>Acide hyaluronique</li><li>Squalane</li><li>Panthénol</li><li>Niacinamide</li><li>Peptides</li></ul></div></details>
+          </div>
+
+          <h3 class="ph" id="y-comment"><span>4</span>Comment les utiliser ?</h3>
+          <p>Suivez toujours les indications du produit. Voici les repères :</p>
+          <div class="proto proto--2">
+            <section><p class="proto__k">Patch hydrogel ou tissu</p><em class="proto__t">10 à 20 min</em><ol><li>Nettoyez doucement votre visage</li><li>Posez le patch sous les yeux ou sur la paupière mobile</li><li>Laissez poser 10 à 20 minutes</li><li>Retirez le patch</li><li>Faites pénétrer l'excédent de sérum en tapotant</li><li>Appliquez votre crème contour des yeux</li></ol></section>
+            <section class="is-night"><p class="proto__k">Patch à micro-cônes</p><em class="proto__t">Selon le produit</em><ol><li>Nettoyez doucement votre visage</li><li>Posez le patch sur la zone à traiter</li><li>Laissez poser selon les indications du produit</li><li>Retirez le patch</li><li>Faites pénétrer l'excédent en tapotant</li><li>Appliquez votre crème contour des yeux</li></ol></section>
+          </div>
+
+          <h3 class="ph" id="y-peau"><span>5</span>Lequel pour votre peau ?</h3>
+          <ul class="pick pick--3">
+            <li class="pick__head" aria-hidden="true"><span>Votre peau</span><span>Le patch</span><span>Rythme</span></li>
+            <li><b>Normale</b><span data-l="Patch">Hydrogel hydratant</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Sèche</b><span data-l="Patch">Hydrogel ou tissu</span><span data-l="Rythme">2 à 3 fois / sem.</span></li>
+            <li><b>Grasse</b><span data-l="Patch">Hydrogel défatigant</span><span data-l="Rythme">1 fois / sem.</span></li>
+            <li><b>Mixte</b><span data-l="Patch">Hydrogel ou tissu</span><span data-l="Rythme">1 à 2 fois / sem.</span></li>
+            <li><b>Sensible</b><span data-l="Patch">Hydrogel apaisant, sans parfum</span><span data-l="Rythme">1 fois / sem.</span></li>
+            <li><b>Mature</b><span data-l="Patch">Micro-cônes ou patch de nuit</span><span data-l="Rythme">2 à 3 fois / sem.</span></li>
+          </ul>
+
+          <h3 class="ph" id="y-err"><span>6</span>Les 10 erreurs à éviter</h3>
+          <ol class="errs">
+            <li>Croire que les patchs sont obligatoires</li>
+            <li>En utiliser trop souvent</li>
+            <li>Cumuler trop d'actifs en même temps</li>
+            <li>Oublier la crème contour des yeux après</li>
+            <li>Choisir des patchs très parfumés</li>
+            <li>Ne pas adapter la quantité</li>
+            <li>Oublier le SPF</li>
+            <li>Attendre des miracles en quelques jours</li>
+            <li>S'en servir comme d'un traitement médical</li>
+            <li>Poser des micro-cônes sur une peau irritée</li>
+          </ol>
+
+          <h3 class="ph" id="y-faq"><span>7</span>Vos questions</h3>
+          <div class="pfaq">
+            <details><summary>Les patchs hydrogel sont-ils efficaces ?<i aria-hidden="true"></i></summary><p>Oui, pour un boost d'hydratation et un effet défatigant immédiat. L'effet reste temporaire.</p></details>
+            <details><summary>Les patchs en tissu conviennent-ils à toutes les peaux ?<i aria-hidden="true"></i></summary><p>Oui, mais vérifiez la composition : certains contiennent du parfum ou des huiles essentielles qui peuvent irriter.</p></details>
+            <details><summary>Et les patchs à micro-cônes ?<i aria-hidden="true"></i></summary><p>Ils ne conviennent pas à toutes les peaux. À utiliser avec prudence, surtout sur les peaux sensibles, et jamais sur une peau irritée.</p></details>
+            <details><summary>Un patch peut-il remplacer ma crème contour des yeux ?<i aria-hidden="true"></i></summary><p>Non. Il complète la routine, mais ne remplace pas un soin quotidien.</p></details>
+            <details><summary>Les patchs de nuit sont-ils efficaces ?<i aria-hidden="true"></i></summary><p>Oui, pour une hydratation intense et un effet défatigant renforcé au réveil.</p></details>
+          </div>
+
+          <blockquote class="psum"><span>En résumé</span>Hydrogel pour la fraîcheur, tissu pour hydrater et lisser, micro-cônes pour l'effet tenseur, patch de nuit pour un réveil défatigué. Un joli complément, qui ne remplace ni votre crème contour des yeux ni votre SPF.</blockquote>
+          <p class="pdisc">Cet article est informatif et ne remplace pas un avis dermatologique. Problème de peau, grossesse, allaitement ou traitement médical : demandez conseil à un professionnel de santé.</p>
+
+          <div class="post__cta">
+            <p>Cernes, poches, ridules : on regarde ensemble ce dont votre contour des yeux a vraiment besoin, pendant l'atelier.</p>
+            <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les patchs yeux et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
           </div>
         </div>
       </article>
