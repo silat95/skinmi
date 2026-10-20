@@ -1235,6 +1235,72 @@ html.reading,html.reading body{overflow:hidden}
 .post__cover--pep .pepl b{font-size:clamp(1.9rem,4.4vw,3rem)}
 .post__cover--pep .pepl small{font-size:.76rem}
 .jcard:hover .pepl{transform:translateY(-50%)}
+/* Blog : article cernes */
+:root{--c-pig:#8A5A44;--c-vas:#6F6A9E;--c-cx:#B9A9A0}
+.jlist > .jcard:last-child:nth-child(odd){grid-column:1/-1}
+@media (min-width:760px){
+  .jlist > .jcard:last-child:nth-child(odd){grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto}
+  .jlist > .jcard:last-child:nth-child(odd) .jcard__visual{min-height:100%;height:auto}
+}
+.jcard__visual--cer{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;background:radial-gradient(circle at 70% 30%,var(--milk),var(--blush) 70%)}
+.jcer{display:grid;justify-items:center;gap:16px;padding:22px}
+.jcer__sw{display:flex;gap:18px}
+.jcer__sw span{display:grid;justify-items:center;gap:8px;font-size:.8rem;font-weight:600;color:var(--wine)}
+.jcer__sw i{width:58px;height:58px;border-radius:50%;box-shadow:0 10px 24px -14px rgba(76,19,34,.6);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.jcer__sw .s1 i{background:radial-gradient(circle at 35% 30%,#B78A72,var(--c-pig))}
+.jcer__sw .s2 i{background:radial-gradient(circle at 35% 30%,#A7A2CF,var(--c-vas))}
+.jcer__sw .s3 i{background:radial-gradient(circle at 50% 80%,#fff 0,#E9DDD6 35%,#9E8C83 100%)}
+.jcard:hover .jcer__sw .s1 i{transform:translateY(-6px)}.jcard:hover .jcer__sw .s2 i{transform:translateY(4px)}.jcard:hover .jcer__sw .s3 i{transform:translateY(-3px)}
+.jcer em{font-style:normal;color:var(--wine);font-size:.92rem}
+.ctypes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:1.2em 0}
+.ct{background:var(--ivory-bg);border-radius:var(--r-tile);padding:16px;display:grid;gap:6px;align-content:start}
+.ct__sw{width:46px;height:46px;border-radius:50%}
+.ct--pig .ct__sw{background:radial-gradient(circle at 35% 30%,#B78A72,var(--c-pig))}
+.ct--vas .ct__sw{background:radial-gradient(circle at 35% 30%,#A7A2CF,var(--c-vas))}
+.ct--cx .ct__sw{background:radial-gradient(circle at 50% 80%,#fff 0,#E9DDD6 35%,#9E8C83 100%)}
+.ct__k{margin:4px 0 0!important;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ct h4{margin:0!important}
+.ct p{margin:0;font-size:.93rem;line-height:1.45}
+.ct__lvl{display:grid;gap:4px;margin-top:6px;padding-top:10px;border-top:1px solid rgba(122,40,57,.12)}
+.ct__lvl small{font-size:.72rem;color:var(--muted)}
+.ct__lvl b{font-size:.86rem;color:var(--wine);font-weight:600}
+.ct__lvl .m{display:block;height:6px;border-radius:3px;background:rgba(122,40,57,.12);position:relative;overflow:hidden}
+.ct__lvl .m::after{content:"";position:absolute;inset:0;width:calc(var(--v) / 3 * 100%);background:var(--wine);border-radius:3px}
+.tg{display:inline-block;font-style:normal;font-size:.72rem;font-weight:600;letter-spacing:.04em;padding:.3em .7em;border-radius:999px;color:#fff;white-space:nowrap}
+.tg--pig{background:var(--c-pig)}.tg--vas{background:var(--c-vas)}.tg--cx{background:#8E7B72}.tg--mix{background:var(--wine)}
+.ph__tag{margin-left:auto;font-family:var(--f-body)}
+.pick--test li{grid-template-columns:150px minmax(0,1fr) 120px}
+.pick--test li span:nth-of-type(1){color:var(--ink)}
+.pick--2 li{grid-template-columns:150px minmax(0,1fr)}
+.pick--2 li span:nth-of-type(1){color:var(--ink);font-weight:500}
+.chips{list-style:none;margin:.6em 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.chips li{font-size:.86rem;padding:.35em .8em;border-radius:999px;background:var(--milk);border:1px solid rgba(122,40,57,.14)}
+.chips--light li{background:rgba(255,255,255,.12);border-color:rgba(245,237,225,.3);color:var(--ivory)}
+.sol{list-style:none;margin:.6em 0 1.2em;padding:0;display:grid;gap:6px}
+.sol li{display:grid;grid-template-columns:170px minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:center;background:var(--ivory-bg);border-radius:12px;padding:11px 14px;font-size:.92rem;line-height:1.4}
+.sol b{color:var(--wine);font-weight:600}
+.sol em{font-style:normal;color:var(--muted);font-size:.88rem}
+.sol li.is-key{background:var(--wine);color:var(--ivory)}
+.sol li.is-key b,.sol li.is-key em{color:var(--ivory)}
+.honest{background:var(--wine);color:var(--ivory);border-radius:var(--r-tile);padding:18px 20px;margin:1em 0 1.2em;display:grid;gap:10px}
+.honest__k{margin:0!important;font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--powder)}
+.honest p{margin:0;font-size:.97rem;line-height:1.55;color:var(--ivory)}
+.honest strong{color:var(--ivory)}
+.crout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:1em 0}
+.crout section{background:var(--ivory-bg);border-radius:var(--r-tile);padding:16px;display:grid;gap:6px;align-content:start;border-top:4px solid var(--wine)}
+.crout .ct--pig{border-top-color:var(--c-pig)}.crout .ct--vas{border-top-color:var(--c-vas)}.crout .ct--cx{border-top-color:#8E7B72}
+.crout .tg{justify-self:start}
+.crout h4{margin:0!important}
+.crout p{margin:4px 0 0;font-size:.88rem;color:var(--muted)}
+.crout p b{color:var(--wine);font-weight:600}
+@media (max-width:760px){
+  .ctypes,.crout{grid-template-columns:minmax(0,1fr)}
+  .ct{grid-template-columns:auto minmax(0,1fr);column-gap:14px}.ct__sw{grid-row:span 3}.ct__lvl{grid-column:1/-1}
+  .pick--test li,.pick--2 li{grid-template-columns:minmax(0,1fr)}
+  .pick--test li span:nth-of-type(2)::before{content:none}
+  .sol li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .ph__tag{display:none}
+}
 </style>
 
 <header class="nav" id="top">
@@ -1761,9 +1827,23 @@ html.reading,html.reading body{overflow:hidden}
     <a class="jcard" href="#article-peptides" data-post="post-peptides">
       <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--pepimg"><img src="img/peptide-cuivre.webp" width="894" height="894" loading="lazy" decoding="async" alt="Sérum bleu aux peptides de cuivre, texture gel avec des bulles"><span class="pepl" aria-hidden="true"><small>Le peptide star</small><b>Peptide<br>de cuivre</b><em>GHK-Cu</em></span></div>
       <div class="jcard__body">
-        <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span><span class="jnew">Nouveau</span></div>
+        <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span></div>
         <h3>Peptides&nbsp;: le guide pour une peau plus ferme</h3>
         <p>Ce qu'ils font vraiment, lesquels choisir parmi des dizaines de noms, comment les associer au rétinol… et ce qu'il ne faut pas en attendre.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+    <a class="jcard" href="#article-cernes" data-post="post-cernes">
+      <div class="jcard__visual jcard__visual--cer" aria-hidden="true">
+        <div class="jcer">
+          <div class="jcer__sw"><span class="s1"><i></i>Bruns</span><span class="s2"><i></i>Bleus</span><span class="s3"><i></i>Creux</span></div>
+          <em>Quel est votre cerne ?</em>
+        </div>
+      </div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">Les problématiques</span><span>Lecture 7 min</span><span class="jnew">Nouveau</span></div>
+        <h3>Cernes&nbsp;: trouver leur origine pour choisir la bonne solution</h3>
+        <p>Bruns, bleus ou creux : chaque cerne a sa cause, et sa solution. Apprenez à reconnaître le vôtre avant d'acheter un énième soin contour des yeux.</p>
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </a>
@@ -2349,6 +2429,172 @@ html.reading,html.reading body{overflow:hidden}
           <div class="post__cta">
             <p>Vous voulez savoir quels peptides conviennent à votre peau, et comment les intégrer à votre routine ?</p>
             <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les peptides et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="post-cernes" role="dialog" aria-modal="true" aria-labelledby="post-cernes-t" hidden>
+        <header class="post__hero">
+          <div class="jcard__meta"><span class="jtag">Les problématiques</span><span>Lecture 7 min</span></div>
+          <h2 id="post-cernes-t">Cernes&nbsp;: trouver leur origine pour choisir la bonne solution</h2>
+          <p class="post__lede">Bruns, bleus ou creux… Tous les cernes ne se ressemblent pas, et ils ne se traitent pas de la même façon. Reconnaître le vôtre, c'est la première étape pour arrêter d'acheter au hasard.</p>
+        </header>
+
+        <div class="post__body">
+          <div class="tldr">
+            <p class="tldr__k">L'essentiel en 30 secondes</p>
+            <ul>
+              <li><b>3 types</b><span>bruns, bleus ou creux, parfois mélangés</span></li>
+              <li><b>Bruns</b><span>les plus faciles à atténuer</span></li>
+              <li><b>Bleus</b><span>plus difficiles, souvent liés à l'anatomie</span></li>
+              <li><b>Creux</b><span>aucun soin ne peut les combler</span></li>
+            </ul>
+            <p class="tldr__no">La règle d'or : identifier votre type de cerne avant d'acheter un produit.</p>
+          </div>
+
+          <nav class="toc" aria-label="Sommaire de l'article">
+            <p class="toc__k">Au sommaire</p>
+            <ol>
+              <li><a href="#c-types">Les 3 types de cernes</a></li>
+              <li><a href="#c-test">Quel est votre cerne ?</a></li>
+              <li><a href="#c-pig">Les cernes bruns</a></li>
+              <li><a href="#c-vas">Les cernes bleus</a></li>
+              <li><a href="#c-creux">Les cernes creux</a></li>
+              <li><a href="#c-mix">Les cernes mixtes</a></li>
+              <li><a href="#c-routine">La routine selon votre cerne</a></li>
+              <li><a href="#c-err">Les erreurs à éviter</a></li>
+              <li><a href="#c-faq">Vos questions</a></li>
+            </ol>
+          </nav>
+
+          <h3 class="ph" id="c-types"><span>1</span>Les 3 types de cernes</h3>
+          <p>Un cerne n'est pas toujours un excès de pigment. Il peut aussi venir d'une <strong>peau très fine</strong> qui laisse voir les vaisseaux, de la fatigue, ou d'un <strong>manque de volume</strong> sous l'œil qui crée une ombre.</p>
+          <div class="ctypes">
+            <section class="ct ct--pig">
+              <span class="ct__sw" aria-hidden="true"></span>
+              <p class="ct__k">Pigmentaire</p>
+              <h4>Le cerne brun</h4>
+              <p>Trop de mélanine (pigment) sous l'œil.</p>
+              <div class="ct__lvl"><small>Facile à atténuer ?</small><span class="m" style="--v:3"></span><b>Oui, avec des soins</b></div>
+            </section>
+            <section class="ct ct--vas">
+              <span class="ct__sw" aria-hidden="true"></span>
+              <p class="ct__k">Vasculaire</p>
+              <h4>Le cerne bleu</h4>
+              <p>Une peau fine qui laisse voir les vaisseaux.</p>
+              <div class="ct__lvl"><small>Facile à atténuer ?</small><span class="m" style="--v:1.5"></span><b>Difficile</b></div>
+            </section>
+            <section class="ct ct--cx">
+              <span class="ct__sw" aria-hidden="true"></span>
+              <p class="ct__k">Creux</p>
+              <h4>Le cerne ombre</h4>
+              <p>Un creux sous l'œil qui crée une ombre.</p>
+              <div class="ct__lvl"><small>Facile à atténuer ?</small><span class="m" style="--v:.3"></span><b>Pas avec un soin</b></div>
+            </section>
+          </div>
+          <p class="pnote">On peut aussi avoir un <strong>mélange</strong> : par exemple une peau fine qui laisse voir les vaisseaux, avec en plus une pigmentation brune.</p>
+
+          <h3 class="ph" id="c-test"><span>2</span>Quel est votre cerne ?</h3>
+          <p>Placez-vous devant un miroir, à la lumière du jour, et observez.</p>
+          <ul class="pick pick--3 pick--test">
+            <li class="pick__head" aria-hidden="true"><span>Ce que vous voyez</span><span>Indice</span><span>Votre cerne</span></li>
+            <li><b>Brun, gris ou noir</b><span data-l="Indice">La zone semble « bronzée ». En tirant doucement la peau, le brun reste visible</span><span data-l="Votre cerne"><em class="tg tg--pig">Pigmentaire</em></span></li>
+            <li><b>Bleu ou violet</b><span data-l="Indice">Plus marqué quand vous êtes fatiguée, mieux après une bonne nuit. Peau très fine</span><span data-l="Votre cerne"><em class="tg tg--vas">Vasculaire</em></span></li>
+            <li><b>Une ombre, un creux</b><span data-l="Indice">Creux entre la pommette et l'œil, plus visible avec une lumière venant du dessus</span><span data-l="Votre cerne"><em class="tg tg--cx">Creux</em></span></li>
+            <li><b>Un peu de tout</b><span data-l="Indice">Brun et bleuté, ou creux et pigmenté</span><span data-l="Votre cerne"><em class="tg tg--mix">Mixte</em></span></li>
+          </ul>
+
+          <h3 class="ph" id="c-pig"><span>3</span>Les cernes bruns</h3>
+          <p>Ce sont les cernes pour lesquels les soins donnent les <strong>meilleurs résultats</strong>. Le but : limiter la production de pigment, protéger du soleil et aider la peau à se renouveler.</p>
+          <div class="two">
+            <div><h4>Comment les reconnaître</h4><ul class="dots"><li>Couleur brune, noire ou grisâtre</li><li>Zone qui semble « bronzée »</li><li>Sur la paupière du haut et/ou du bas</li><li>Le brun reste visible quand on tire la peau</li></ul></div>
+            <div><h4>Pourquoi ils apparaissent</h4><ul class="chips"><li>Excès de mélanine</li><li>Soleil</li><li>Eczéma ou inflammations répétées</li><li>Génétique</li><li>Peaux mates ou foncées</li></ul></div>
+          </div>
+          <h4>Ce qui aide</h4>
+          <ul class="sol">
+            <li class="is-key"><b>Protection solaire</b><span>Indispensable pour éviter que la pigmentation s'accentue</span><em>SPF 50+ tous les jours + lunettes de soleil</em></li>
+            <li><b>Dérivés de vitamine C</b><span>Unifient le teint et limitent la pigmentation</span><em>Plus doux que la vitamine C pure pour les yeux, comme l'ascorbyl tétraisopalmitate</em></li>
+            <li><b>Niacinamide</b><span>Régule la pigmentation et renforce la barrière</span><em>Entre 2 et 5 %</em></li>
+            <li><b>Acide azélaïque</b><span>Atténue les taches et apaise</span><em>À introduire progressivement</em></li>
+            <li><b>Exfoliant très doux</b><span>Aide la peau à se renouveler en surface</span><em>Avec prudence, jamais sur une peau irritée</em></li>
+          </ul>
+
+          <h3 class="ph" id="c-vas"><span>4</span>Les cernes bleus</h3>
+          <p>Ils sont plus difficiles à corriger, car ils dépendent en partie de l'<strong>anatomie</strong>. Certains soins aident toutefois à défatiguer la zone, de façon temporaire.</p>
+          <div class="two">
+            <div><h4>Comment les reconnaître</h4><ul class="dots"><li>Couleur bleutée, violette ou violacée</li><li>Plus visibles quand on est fatiguée</li><li>Moins marqués après une bonne nuit</li><li>Peau du contour de l'œil très fine</li></ul></div>
+            <div><h4>Pourquoi ils apparaissent</h4><ul class="chips"><li>Peau fine et transparente</li><li>Forme du contour de l'œil</li><li>Manque de sommeil</li><li>Circulation locale</li><li>Génétique</li></ul></div>
+          </div>
+          <h4>Ce qui aide</h4>
+          <ul class="sol">
+            <li><b>Massage doux</b><span>Draine et défatigue</span><em>5 minutes, mouvements très légers</em></li>
+            <li><b>Caféine</b><span>Aide à décongestionner</span><em>En sérum ou en patch yeux</em></li>
+            <li><b>Extrait de ficus</b><span>Peut soutenir la microcirculation</span><em>Selon la formule</em></li>
+            <li><b>Le froid</b><span>Décongestionne, de façon temporaire</span><em>Patch froid ou soin cryo</em></li>
+            <li><b>Microcourants</b><span>Défatiguent et ouvrent le regard</span><em>Séances courtes et régulières</em></li>
+            <li><b>Anticerne</b><span>Camoufle le temps de la journée</span><em>Du maquillage, pas un traitement</em></li>
+          </ul>
+          <p class="pnote">Peptides, niacinamide et dérivés de vitamine C peuvent aussi améliorer la qualité de la peau du contour de l'œil. Mais soyons honnêtes : les résultats sont <strong>rarement spectaculaires</strong>.</p>
+
+          <h3 class="ph" id="c-creux"><span>5</span>Les cernes creux</h3>
+          <p>Ici, ni pigment ni vaisseaux : c'est la <strong>structure du visage</strong> (os, répartition des volumes) qui crée un creux, et donc une ombre.</p>
+          <div class="two">
+            <div><h4>Comment les reconnaître</h4><ul class="dots"><li>Un creux entre la pommette et l'œil</li><li>Ombre plus forte avec une lumière du dessus</li><li>Parfois présent dès le plus jeune âge</li><li>S'accentue souvent avec les années</li></ul></div>
+            <div><h4>Pourquoi ils apparaissent</h4><ul class="chips"><li>Structure osseuse</li><li>Répartition des volumes</li><li>Perte de volume avec l'âge</li><li>Génétique</li></ul></div>
+          </div>
+          <aside class="honest">
+            <p class="honest__k">Notre avis honnête</p>
+            <p><strong>Aucun soin et aucun appareil ne peut combler un cerne creux.</strong> Les vraies solutions relèvent de la médecine esthétique (injections, quand l'indication est adaptée) ou, dans certains cas, de la chirurgie. Consultez un médecin qualifié si le creux vous gêne.</p>
+            <ul class="chips chips--light"><li>Soin contour des yeux : du confort, pas du volume</li><li>Microcourants : défatiguent, ne comblent pas</li><li>Anticerne : camoufle</li></ul>
+          </aside>
+
+          <h3 class="ph" id="c-mix"><span>6</span>Les cernes mixtes</h3>
+          <p>Couleur brune et bleutée, peau fine et pigmentée, creux et taches… Beaucoup de cernes combinent plusieurs causes. On associe alors les solutions.</p>
+          <ul class="pick pick--2">
+            <li class="pick__head" aria-hidden="true"><span>Votre mélange</span><span>Ce qu'on privilégie</span></li>
+            <li><b>Brun + bleu</b><span data-l="On privilégie">SPF + dérivés de vitamine C + massage doux</span></li>
+            <li><b>Brun + creux</b><span data-l="On privilégie">SPF + soin anti-taches + avis esthétique si besoin</span></li>
+            <li><b>Bleu + creux</b><span data-l="On privilégie">Massage doux + avis esthétique si besoin</span></li>
+            <li><b>Les trois</b><span data-l="On privilégie">SPF + soins ciblés + avis esthétique si besoin</span></li>
+          </ul>
+
+          <h3 class="ph" id="c-routine"><span>7</span>La routine selon votre cerne</h3>
+          <div class="crout">
+            <section class="ct--pig"><span class="tg tg--pig">Brun</span><h4>Pigmentaire</h4><ul class="dots"><li>SPF 50+ chaque matin</li><li>Dérivé de vitamine C</li><li>Niacinamide ou acide azélaïque</li></ul><p><b>À éviter :</b> les exfoliants trop forts</p></section>
+            <section class="ct--vas"><span class="tg tg--vas">Bleu</span><h4>Vasculaire</h4><ul class="dots"><li>Massage doux</li><li>Caféine</li><li>Soin défatigant</li></ul><p><b>À éviter :</b> les actifs irritants</p></section>
+            <section class="ct--cx"><span class="tg tg--cx">Creux</span><h4>Creux</h4><ul class="dots"><li>Avis d'un médecin esthétique si la gêne est importante</li><li>Anticerne pour camoufler</li></ul><p><b>À éviter :</b> les promesses de « repulpage » par un soin</p></section>
+            <section class="ct--mix"><span class="tg tg--mix">Mixte</span><h4>Mixte</h4><ul class="dots"><li>SPF 50+ chaque matin</li><li>Actifs ciblés selon le mélange</li><li>Massage doux</li></ul><p><b>À éviter :</b> cumuler les actifs irritants</p></section>
+          </div>
+          <p class="pnote">Les résultats sont <strong>progressifs</strong>. Et n'oubliez pas les bases : le sommeil et l'hydratation jouent aussi sur l'aspect des cernes bleus.</p>
+
+          <h3 class="ph" id="c-err"><span>8</span>Les 10 erreurs à éviter</h3>
+          <ol class="errs">
+            <li>Croire que tous les cernes sont pigmentaires</li>
+            <li>Utiliser des produits trop irritants autour des yeux</li>
+            <li>Oublier la protection solaire</li>
+            <li>Croire qu'un soin peut combler un creux</li>
+            <li>Cumuler trop d'actifs autour des yeux</li>
+            <li>Choisir des patchs ou sérums très parfumés</li>
+            <li>Attendre des résultats en quelques jours</li>
+            <li>Utiliser un appareil sans connaître ses limites</li>
+            <li>Remplacer un avis médical par des soins</li>
+            <li>Négliger le sommeil et l'hydratation</li>
+          </ol>
+
+          <h3 class="ph" id="c-faq"><span>9</span>Vos questions</h3>
+          <div class="pfaq">
+            <details><summary>Les cernes bruns peuvent-ils disparaître complètement ?<i aria-hidden="true"></i></summary><p>Ils peuvent s'atténuer progressivement avec une routine adaptée, mais ne disparaissent pas toujours complètement. La protection solaire est essentielle pour garder les résultats.</p></details>
+            <details><summary>Le sommeil suffit-il pour les cernes bleus ?<i aria-hidden="true"></i></summary><p>Une bonne nuit peut les atténuer temporairement. Mais si leur origine est anatomique, ils restent présents.</p></details>
+            <details><summary>Les patchs yeux sont-ils efficaces ?<i aria-hidden="true"></i></summary><p>Ils peuvent défatiguer temporairement, surtout les cernes bleus. Ils ne corrigent pas durablement un cerne brun ou creux.</p></details>
+            <details><summary>Les microcourants peuvent-ils combler un creux ?<i aria-hidden="true"></i></summary><p>Non. Ils peuvent défatiguer et ouvrir le regard, mais ils ne comblent pas un creux.</p></details>
+            <details><summary>Un soin peut-il corriger un cerne creux ?<i aria-hidden="true"></i></summary><p>Non. Les cernes creux relèvent de la médecine esthétique. Un soin peut apporter du confort à la zone, pas du volume.</p></details>
+          </div>
+
+          <blockquote class="psum"><span>En résumé</span>Bruns : SPF, dérivés de vitamine C, niacinamide ou azélaïque. Bleus : massage doux, caféine, soin défatigant. Creux : un avis esthétique si la gêne est importante. Mixtes : on combine. Et surtout, on identifie son cerne avant d'acheter.</blockquote>
+          <p class="pdisc">Cet article est informatif et ne remplace pas un avis dermatologique. Cerne apparu soudainement, douloureux, avec un gonflement important, une rougeur ou une gêne visuelle : consultez un professionnel de santé.</p>
+
+          <div class="post__cta">
+            <p>Vous ne savez pas quel type de cerne vous avez ? On regarde ensemble pendant l'atelier.</p>
+            <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les cernes et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
           </div>
         </div>
       </article>
