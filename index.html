@@ -1056,8 +1056,9 @@ html.reading,html.reading body{overflow:hidden}
   .prog li{grid-template-columns:minmax(0,1fr);gap:2px}
 }
 /* Blog : 3 cartes + article acides */
-@media (min-width:1000px){.jlist{grid-template-columns:repeat(3,minmax(0,1fr))}.jlist .jcard__visual{min-height:210px}}
-@media (max-width:999px){.jlist{grid-template-columns:minmax(0,1fr)}}
+@media (min-width:760px){.jlist{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){.jlist .jcard__visual{min-height:250px}.jcard__visual--photo{height:250px!important}}
+@media (max-width:759px){.jlist{grid-template-columns:minmax(0,1fr)}}
 .jcard__visual--acx{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;background:radial-gradient(circle at 70% 25%,var(--milk),var(--powder) 70%)}
 .jacx{display:grid;justify-items:center;gap:14px;padding:20px}
 .jacx__mol{display:flex;align-items:center;gap:12px}
@@ -1207,6 +1208,22 @@ html.reading,html.reading body{overflow:hidden}
   .foldrow > .btn{margin-top:0}
   .foldrow--wine{padding:8px}.foldrow--wine > .btn{margin:0 6px 8px;width:calc(100% - 12px);justify-content:center}
 }
+/* Blog : article peptides */
+.jcard__visual--pep{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;background:radial-gradient(circle at 30% 25%,var(--milk),var(--ivory) 75%)}
+.jpep{display:grid;justify-items:center;gap:16px;padding:20px}
+.jpep__chain{display:flex;align-items:center}
+.jpep__chain i{width:30px;height:30px;border-radius:50%;background:var(--wine);position:relative;margin:0 6px;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.jpep__chain i:nth-child(even){background:var(--powder);transform:translateY(12px)}
+.jpep__chain i:nth-child(3n){background:var(--ivory-card);border:2px solid var(--wine)}
+.jpep__chain i+i::before{content:"";position:absolute;right:100%;top:50%;width:14px;height:2px;background:rgba(122,40,57,.4)}
+.jcard:hover .jpep__chain i:nth-child(even){transform:translateY(-6px)}
+.jcard:hover .jpep__chain i:nth-child(odd){transform:translateY(6px)}
+.jpep em{font-style:normal;color:var(--wine);font-size:.92rem}
+.pick--3 li{grid-template-columns:170px 1.3fr 1fr}
+.axf>div.is-wide{grid-column:1/-1}
+.plink{color:var(--wine);font-weight:500;text-decoration:underline;text-underline-offset:2px}
+.post .axf + .ph,.post .pwarn + .axf{margin-top:12px}
+@media (max-width:760px){.pick--3 li{grid-template-columns:minmax(0,1fr)}}
 </style>
 
 <header class="nav" id="top">
@@ -1725,9 +1742,23 @@ html.reading,html.reading body{overflow:hidden}
     <a class="jcard" href="#article-acides" data-post="post-acides">
       <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--acx2"><img src="img/acides-exfoliants.webp" width="1000" height="650" loading="lazy" decoding="async" alt="Jeune femme souriante, mains sur le visage, entourée de bulles et du mot AHA-BHA-PHA"></div>
       <div class="jcard__body">
-        <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span><span class="jnew">Nouveau</span></div>
+        <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span></div>
         <h3>Acides exfoliants&nbsp;: bien les choisir, bien les utiliser</h3>
         <p>AHA, BHA, PHA… Ce que fait chaque acide, lequel choisir selon votre peau, comment débuter et ce qu'il ne faut jamais associer.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+    <a class="jcard" href="#article-peptides" data-post="post-peptides">
+      <div class="jcard__visual jcard__visual--pep" aria-hidden="true">
+        <div class="jpep">
+          <div class="jpep__chain"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <em>Les messagers de votre peau</em>
+        </div>
+      </div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span><span class="jnew">Nouveau</span></div>
+        <h3>Peptides&nbsp;: le guide pour une peau plus ferme</h3>
+        <p>Ce qu'ils font vraiment, lesquels choisir parmi des dizaines de noms, comment les associer au rétinol… et ce qu'il ne faut pas en attendre.</p>
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
     </a>
@@ -2135,6 +2166,183 @@ html.reading,html.reading body{overflow:hidden}
           <div class="post__cta">
             <p>Vous ne savez pas quel acide choisir pour votre peau ? On en parle ensemble pendant l'atelier.</p>
             <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les acides exfoliants et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="post-peptides" role="dialog" aria-modal="true" aria-labelledby="post-peptides-t" hidden>
+        <header class="post__hero">
+          <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 8 min</span></div>
+          <h2 id="post-peptides-t">Peptides&nbsp;: le guide pour une peau plus ferme</h2>
+          <p class="post__lede">Fermeté, rides, rougeurs, barrière fragile… Les peptides sont des actifs doux et bien tolérés. Mais ils ne se valent pas tous, et ils ne remplacent pas le rétinol. Voici comment bien les choisir.</p>
+        </header>
+
+        <div class="post__body">
+          <div class="tldr">
+            <p class="tldr__k">L'essentiel en 30 secondes</p>
+            <ul>
+              <li><b>Complément</b><span>du rétinol, pas un remplaçant</span></li>
+              <li><b>Cuivre</b><span>le peptide le plus étudié (GHK-Cu)</span></li>
+              <li><b>Doux</b><span>adaptés aux peaux sensibles</span></li>
+              <li><b>SPF 50+</b><span>chaque matin, toujours</span></li>
+            </ul>
+            <p class="tldr__no">Le duo à retenir : peptide de cuivre + Matrixyl 3000.</p>
+          </div>
+
+          <nav class="toc" aria-label="Sommaire de l'article">
+            <p class="toc__k">Au sommaire</p>
+            <ol>
+              <li><a href="#p-quoi">C'est quoi, un peptide ?</a></li>
+              <li><a href="#p-familles">Les 3 familles</a></li>
+              <li><a href="#p-top">Les 6 peptides à connaître</a></li>
+              <li><a href="#p-objectif">Lequel pour votre objectif ?</a></li>
+              <li><a href="#p-comment">Comment les utiliser</a></li>
+              <li><a href="#p-asso">Avec quoi les associer</a></li>
+              <li><a href="#p-prog">Le programme 8 semaines</a></li>
+              <li><a href="#p-err">Les erreurs à éviter</a></li>
+              <li><a href="#p-faq">Vos questions</a></li>
+            </ol>
+          </nav>
+
+          <h3 class="ph" id="p-quoi"><span>1</span>C'est quoi, un peptide ?</h3>
+          <p>Un peptide est une <strong>petite chaîne d'acides aminés</strong>. Les acides aminés sont les briques qui forment les protéines de la peau : collagène, élastine, kératine…</p>
+          <div class="chain" aria-label="Des acides aminés aux protéines de la peau">
+            <div><i>1</i><b>Acides aminés</b><span>les briques</span></div>
+            <em aria-hidden="true">→</em>
+            <div class="is-on"><i>2</i><b>Peptides</b><span>de petites chaînes</span></div>
+            <em aria-hidden="true">→</em>
+            <div><i>3</i><b>Protéines</b><span>collagène, élastine, kératine</span></div>
+          </div>
+          <p>Dans un soin, les peptides jouent le rôle de <strong>messagers</strong> : ils envoient un signal aux cellules de la peau pour soutenir la production de collagène, la réparation ou l'apaisement.</p>
+          <div class="two">
+            <div><h4>Avec l'âge</h4><p>La peau fabrique moins de collagène, d'élastine et d'acide hyaluronique. Elle perd en densité, en élasticité et se répare moins bien.</p></div>
+            <div><h4>Le rôle des peptides</h4><p>Ils ne remplacent pas ces éléments. Ils « encouragent » les cellules du derme à soutenir leurs mécanismes naturels.</p></div>
+          </div>
+
+          <h3 class="ph" id="p-familles"><span>2</span>Les 3 familles de peptides</h3>
+          <p>Tous les peptides n'agissent pas de la même façon. On les classe en trois grandes familles.</p>
+          <div class="fams">
+            <section>
+              <p class="fams__k">Matricines</p>
+              <h4>Les peptides « signal »</h4>
+              <dl><dt>Ce qu'ils font</dt><dd>demandent aux cellules du derme de soutenir collagène et élastine</dd><dt>Pour</dt><dd>fermeté, rides</dd></dl>
+              <p class="fams__ex">Matrixyl 3000, palmitoyl tripeptide-1</p>
+            </section>
+            <section>
+              <p class="fams__k">Transporteurs</p>
+              <h4>Les peptides « livreurs »</h4>
+              <dl><dt>Ce qu'ils font</dt><dd>captent un minéral, souvent le cuivre, et l'apportent aux cellules</dd><dt>Pour</dt><dd>collagène, réparation</dd></dl>
+              <p class="fams__ex">Peptide de cuivre (GHK-Cu)</p>
+            </section>
+            <section>
+              <p class="fams__k">Mimétiques</p>
+              <h4>Les peptides « imitateurs »</h4>
+              <dl><dt>Ce qu'ils font</dt><dd>imitent des molécules naturelles, par exemple pour détendre la contraction des muscles</dd><dt>Pour</dt><dd>rides d'expression</dd></dl>
+              <p class="fams__ex">Argireline, SYN-AKE</p>
+            </section>
+          </div>
+
+          <h3 class="ph" id="p-top"><span>3</span>Les 6 peptides à connaître</h3>
+          <aside class="pwarn"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3l8 14H2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8v4M10 14.5v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><div><b>Méfiez-vous des promesses.</b> Il existe des dizaines de peptides, mais la plupart ont très peu d'études sérieuses derrière eux. Voici ceux qui ressortent vraiment.</div></aside>
+          <div class="axf">
+            <div class="is-star"><b>Peptide de cuivre</b><small>Copper Tripeptide-1 · GHK-Cu</small><p>Le plus étudié des peptides cosmétiques. Il soutient le collagène, aide la peau à se réparer, apaise et protège des agressions.</p><dl><dt>Pour</dt><dd>toutes les peaux, y compris sensibles, matures, à rougeurs ou qui ne tolèrent pas le rétinol</dd><dt>Dose</dt><dd>souvent autour de 1 à 2 %</dd><dt>Quand</dt><dd>matin et/ou soir</dd></dl><em class="y">Très intéressant, mais moins puissant que le rétinol</em></div>
+            <div><b>Matrixyl 3000</b><small>Palmitoyl Tripeptide-1 + Palmitoyl Tetrapeptide-7</small><p>Un duo de peptides « signal » pour la fermeté et l'élasticité.</p><dl><dt>Pour</dt><dd>toutes les peaux</dd><dt>Objectif</dt><dd>collagène, rides, fermeté</dd><dt>Quand</dt><dd>matin et/ou soir</dd></dl><em class="y">Résultats modérés</em></div>
+            <div><b>Palmitoyl tripeptide-1</b><small>aussi appelé Pal-GHK ou Matrixyl</small><p>Un fragment issu du collagène. Il complète très bien le peptide de cuivre.</p><dl><dt>Pour</dt><dd>toutes les peaux</dd><dt>Objectif</dt><dd>collagène, texture, fermeté</dd></dl></div>
+            <div><b>Argireline</b><small>Acetyl Hexapeptide-8</small><p>Le peptide dit « effet botox » : il vise à détendre les rides d'expression (front, entre les sourcils, contour des yeux).</p><dl><dt>Pour</dt><dd>toutes les peaux</dd><dt>Dose</dt><dd>étudiée autour de 10 %</dd></dl><em class="r">La plupart des produits en contiennent bien moins : effet souvent modeste</em></div>
+            <div><b>SYN-AKE</b><small>Dipeptide Diaminobutyroyl Benzylamide Diacetate</small><p>Inspiré d'un composé du venin de vipère, il agit lui aussi sur la contraction des muscles.</p><dl><dt>Pour</dt><dd>toutes les peaux</dd><dt>Dose</dt><dd>étudiée autour de 4 %, sur 28 jours</dd></dl><em class="r">À plus faible dose, des résultats plus modestes</em></div>
+            <div class="is-wide"><b>Carnosine</b><small>Carnosine</small><p>Un petit peptide apaisant et antioxydant, qui aide à réduire les rougeurs.</p><dl><dt>Pour</dt><dd>peaux sensibles, réactives, à rougeurs</dd><dt>Dose</dt><dd>entre 3 et 7 % dans les études</dd></dl></div>
+          </div>
+
+          <h3 class="ph" id="p-objectif"><span>4</span>Lequel pour votre objectif ?</h3>
+          <ul class="pick pick--3">
+            <li class="pick__head" aria-hidden="true"><span>Votre objectif</span><span>Peptides à privilégier</span><span>Pourquoi</span></li>
+            <li><b>Fermeté</b><span data-l="Peptides">Cuivre, Matrixyl 3000, palmitoyl tripeptide-1</span><span data-l="Pourquoi">Ils soutiennent le collagène</span></li>
+            <li><b>Rides d'expression</b><span data-l="Peptides">Argireline, SYN-AKE</span><span data-l="Pourquoi">Ils agissent sur la contraction des muscles</span></li>
+            <li><b>Rougeurs, peau sensible</b><span data-l="Peptides">Cuivre, carnosine</span><span data-l="Pourquoi">Ils apaisent et apportent du confort</span></li>
+            <li><b>Barrière fragilisée</b><span data-l="Peptides">Cuivre, carnosine</span><span data-l="Pourquoi">Ils soutiennent la réparation</span></li>
+            <li><b>Anti-âge en douceur</b><span data-l="Peptides">Cuivre + Matrixyl 3000</span><span data-l="Pourquoi">Efficace, sans irriter</span></li>
+            <li class="is-stop"><b>Si le rétinol ne passe pas</b><span data-l="Peptides">Cuivre + Matrixyl 3000</span><span data-l="Pourquoi">La meilleure alternative douce</span></li>
+          </ul>
+
+          <h3 class="ph" id="p-comment"><span>5</span>Comment les utiliser ?</h3>
+          <p class="pbig">Bonne nouvelle : les peptides sont <strong>très bien tolérés</strong>. Pas besoin d'une introduction aussi lente que pour le rétinol, mais on reste progressive si la peau est sensible.</p>
+          <h4>Pas à pas</h4>
+          <ol class="howto">
+            <li>Choisissez un sérum ou une crème avec un peptide reconnu : cuivre, Matrixyl 3000 ou palmitoyl tripeptide-1</li>
+            <li>Appliquez-le matin et/ou soir, selon la formule</li>
+            <li>Une petite quantité suffit, comme pour un sérum classique</li>
+            <li>Appliquez-le avant la crème hydratante</li>
+            <li>Vous utilisez du rétinol ? Ajoutez les peptides progressivement</li>
+            <li>Vous utilisez des acides ? Espacez les applications au début</li>
+            <li>Chaque matin, un SPF 50+</li>
+          </ol>
+          <h4>Exemple de routine</h4>
+          <div class="ampm">
+            <section class="ampm__card ampm__card--pm">
+              <div class="ampm__ico"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M40 10a22 22 0 1 0 14 34A18 18 0 0 1 40 10z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg></div>
+              <h3>Le soir</h3>
+              <ol class="rlist"><li>Double nettoyage doux</li><li>Essence ou tonique hydratant</li><li><strong>Sérum aux peptides</strong> : cuivre + Matrixyl 3000</li><li>Niacinamide, si votre peau la tolère</li><li>Rétinol, s'il est déjà bien toléré</li><li>Crème hydratante</li></ol>
+            </section>
+            <section class="ampm__card ampm__card--am">
+              <div class="ampm__ico"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="11" fill="none" stroke="currentColor" stroke-width="2.4"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M32 7v7M32 50v7M7 32h7M50 32h7M14.3 14.3l5 5M44.7 44.7l5 5M14.3 49.7l5-5M44.7 19.3l5-5"/></g></svg></div>
+              <h3>Le matin</h3>
+              <ol class="rlist"><li>Nettoyage doux ou simple rinçage</li><li>Sérum aux peptides, si la formule le permet</li><li>Vitamine C, si votre peau la tolère</li><li>Hydratant léger</li><li><strong>SPF 50+</strong></li></ol>
+            </section>
+          </div>
+
+          <h3 class="ph" id="p-asso"><span>6</span>Avec quoi les associer ?</h3>
+          <div class="assoc">
+            <div class="assoc__g is-ok"><p>Excellentes associations</p><ul><li>Niacinamide</li><li>Acide hyaluronique</li><li>Glycérine</li><li>Céramides</li><li>Squalane</li><li>Panthénol</li></ul></div>
+            <div class="assoc__g is-g"><p>Bonne association</p><ul><li>Rétinol, progressivement</li></ul></div>
+            <div class="assoc__g is-y"><p>À espacer selon la formule</p><ul><li>Vitamine C</li><li>AHA / BHA</li><li>Peroxyde de benzoyle</li></ul></div>
+            <div class="assoc__g is-r"><p>À surveiller</p><ul><li>Parfums</li><li>Huiles essentielles</li><li>Alcool dénaturé</li></ul></div>
+          </div>
+          <div class="ixs">
+            <section><h4>Peptides + rétinol</h4><p>Un très bon duo : le rétinol agit sur le renouvellement, le peptide de cuivre soutient la réparation et le confort.</p><ul class="dots"><li>Commencez d'abord par le rétinol et le SPF</li><li>Une fois le rétinol bien toléré, ajoutez les peptides</li><li>Peau sensible : 3 fois par semaine au début, puis augmentez</li></ul></section>
+            <section><h4>Peptides + acides exfoliants</h4><p>Certains acides peuvent rendre certains peptides moins actifs, selon la formule.</p><ul class="dots"><li>Le bon acide pour votre peau : <a class="plink" href="#article-acides" data-post="post-acides">notre guide des acides</a></li><li>Peptides un soir, acides un autre soir</li><li>Ou peptides le matin, acides le soir</li><li>Jamais plusieurs acides forts avec les peptides</li></ul></section>
+            <section><h4>Peptides + vitamine C</h4><p>Possible, mais cela dépend de la formule.</p><ul class="dots"><li>Le plus simple : vitamine C le matin, peptides le soir</li><li>Peau sensible : espacez</li></ul></section>
+          </div>
+
+          <h3 class="ph" id="p-prog"><span>7</span>Le programme SkinMi sur 8 semaines</h3>
+          <p>Pour celles qui commencent par les peptides, avant d'ajouter le rétinol.</p>
+          <ol class="prog">
+            <li><b>Semaines 1 et 2</b><em>1 fois par jour</em><span>Sérum aux peptides + hydratant</span></li>
+            <li><b>Semaines 3 et 4</b><em>1 à 2 fois par jour</em><span>Sérum aux peptides + niacinamide + hydratant</span></li>
+            <li><b>Semaines 5 et 6</b><em>Selon tolérance</em><span>Ajoutez progressivement le rétinol le soir, en suivant <a class="plink" href="#article-retinol" data-post="post-retinol">notre guide du rétinol</a></span></li>
+            <li><b>Semaines 7 et 8</b><em>Selon tolérance</em><span>Peptides matin et/ou soir + rétinol le soir</span></li>
+            <li><b>Après 8 semaines</b><em>Selon votre objectif</em><span>Gardez la routine et ajustez selon vos besoins</span></li>
+          </ol>
+          <p class="pnote">Les résultats des peptides sont <strong>progressifs</strong> : comptez plusieurs semaines avant de juger. Une routine simple, hydratante et protégée par un SPF fait toute la différence.</p>
+
+          <h3 class="ph" id="p-err"><span>8</span>Les 10 erreurs à éviter</h3>
+          <ol class="errs">
+            <li>Croire que tous les peptides se valent</li>
+            <li>Remplacer le rétinol par des peptides</li>
+            <li>Cumuler trop d'actifs en même temps</li>
+            <li>Oublier l'hydratation</li>
+            <li>Oublier le SPF</li>
+            <li>Croire à un « effet botox » immédiat</li>
+            <li>Choisir une formule sans concentration affichée</li>
+            <li>Les cumuler avec plusieurs acides forts</li>
+            <li>S'en servir comme d'un traitement médical</li>
+            <li>Attendre des résultats spectaculaires en quelques jours</li>
+          </ol>
+          <aside class="pwarn"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3l8 14H2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8v4M10 14.5v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><div><b>Les promesses qui doivent vous alerter :</b> « effet botox », « régénération cellulaire », « collagène boosté à 100 % ». Méfiez-vous aussi des formules qui affichent beaucoup de peptides différents sans aucune concentration.</div></aside>
+
+          <h3 class="ph" id="p-faq"><span>9</span>Vos questions</h3>
+          <div class="pfaq">
+            <details><summary>Les peptides remplacent-ils le rétinol ?<i aria-hidden="true"></i></summary><p>Non. Le rétinol reste l'actif de référence pour le renouvellement de la peau et le collagène. Les peptides sont un très bon complément, surtout pour les peaux sensibles ou celles qui ne tolèrent pas le rétinol.</p></details>
+            <details><summary>Peut-on en utiliser pendant la grossesse ?<i aria-hidden="true"></i></summary><p>Les peptides, notamment le peptide de cuivre, sont souvent considérés comme une alternative intéressante quand les rétinoïdes sont déconseillés. Mais faites-le toujours valider par un professionnel de santé.</p></details>
+            <details><summary>Peut-on les associer à la vitamine C ?<i aria-hidden="true"></i></summary><p>Oui, selon la formule. Le plus simple : la vitamine C le matin, les peptides le soir. Si votre peau est sensible, espacez-les.</p></details>
+            <details><summary>Et avec les acides exfoliants ?<i aria-hidden="true"></i></summary><p>Mieux vaut ne pas les cumuler sans connaître la stabilité de la formule, car certains acides peuvent rendre certains peptides moins actifs. Utilisez-les des soirs différents.</p></details>
+            <details><summary>Les peptides font-ils pousser les poils ?<i aria-hidden="true"></i></summary><p>Le peptide de cuivre a été étudié pour la repousse des cheveux, mais les données sur les poils du visage restent limitées. En cas de doute, testez-le d'abord sur une moitié du visage.</p></details>
+          </div>
+
+          <blockquote class="psum"><span>En résumé</span>Les peptides sont doux, bien tolérés, mais pas tous équivalents. La stratégie SkinMi : peptide de cuivre + Matrixyl 3000 + niacinamide, une bonne hydratation et un SPF chaque matin. Un complément idéal du rétinol, pas un remplaçant.</blockquote>
+          <p class="pdisc">Cet article est informatif et ne remplace pas un avis dermatologique. Problème de peau, grossesse, allaitement ou traitement médical : demandez conseil à un professionnel de santé.</p>
+
+          <div class="post__cta">
+            <p>Vous voulez savoir quels peptides conviennent à votre peau, et comment les intégrer à votre routine ?</p>
+            <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu votre article sur les peptides et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
           </div>
         </div>
       </article>
