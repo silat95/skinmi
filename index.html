@@ -823,6 +823,109 @@ p{margin:0}
 @media (max-width:640px){.ampm{grid-template-columns:minmax(0,1fr)}.pstep{grid-template-columns:minmax(0,1fr)}.pstep__num{position:static;width:44px;height:44px;font-size:1.25rem}.emul{padding:14px 8px}.emul i{width:38px;height:38px}.reader__brand{width:80px}}
 html.reading,html.reading body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.reader{animation:none}.jcard,.jcard__half svg{transition:none}}
+/* Quel acide pour ma peau ? */
+.acids{background:var(--powder)}
+.acx,.acchk{background:var(--ivory-card);border-radius:var(--r-panel);padding:clamp(22px,3.5vw,40px);box-shadow:0 40px 80px -56px rgba(76,19,34,.55)}
+.acx{display:grid;gap:22px}
+.acx__lab{margin:0 0 10px;display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:600;font-size:1.12rem;color:var(--wine)}
+.acx__lab b{width:28px;height:28px;border-radius:50%;background:var(--wine);color:var(--ivory);display:grid;place-items:center;font-size:.9rem}
+.acx__lab span{font-family:var(--f-body);font-weight:400;font-size:.88rem;color:var(--muted)}
+.acx__chips{display:flex;flex-wrap:wrap;gap:8px}
+.acx__chips .bf{background:var(--ivory-card);font-size:.92rem;padding:.66em 1em}
+.acx__chips .bf.is-on{background:var(--wine);color:var(--ivory);border-color:var(--wine)}
+.acx__res{border-top:1px solid rgba(122,40,57,.12);padding-top:22px;min-height:120px}
+.acx__empty{display:flex;align-items:center;gap:14px;color:var(--muted);font-size:1rem;margin:0}
+.acx__empty svg{flex:none;width:40px;height:40px;color:rgba(122,40,57,.35)}
+.acr__h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:0 0 14px}
+.acr__h h3{font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem,2.2vw,1.6rem);color:var(--wine);margin:0}
+.acr__h span{font-size:.92rem;color:var(--muted)}
+.acr__cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.acc{appearance:none;text-align:left;font:inherit;color:inherit;cursor:pointer;background:#fff;border:1px solid rgba(122,40,57,.14);border-radius:var(--r-tile);padding:18px 18px 16px;display:grid;gap:8px;align-content:start;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s;animation:bin .4s cubic-bezier(.2,.8,.2,1) both}
+.acc:hover,.acc:focus-visible{transform:translateY(-3px);border-color:rgba(122,40,57,.4);box-shadow:0 22px 40px -28px rgba(76,19,34,.55);outline:none}
+.acc:first-child{background:var(--wine);color:var(--ivory);border-color:var(--wine)}
+.acc:first-child .acc__name,.acc:first-child .acc__more{color:var(--ivory)}
+.acc:first-child .acc__why,.acc:first-child .acc__meta{color:rgba(245,237,225,.85)}
+.acc:first-child .actag{background:var(--ivory);color:var(--wine)}
+.acc:first-child .proof i{background:rgba(245,237,225,.25)}
+.acc:first-child .proof i::after{background:var(--ivory)}
+.acc__top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.acc__rank{font-size:.76rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;opacity:.8}
+.acc__name{font-family:var(--f-display);font-weight:600;font-size:1.25rem;line-height:1.2;color:var(--wine)}
+.acc__why{font-size:.93rem;line-height:1.45;color:var(--ink)}
+.acc__meta{display:grid;gap:3px;font-size:.84rem;color:var(--muted)}
+.acc__meta b{font-weight:500}
+.acc__more{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:var(--wine);margin-top:4px}
+.actag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.06em;padding:.3em .7em;border-radius:999px;background:var(--powder);color:var(--wine);white-space:nowrap}
+.actag--BHA{background:#E7D3C6}.actag--PHA{background:#EADFEA}.actag--Complémentaire{background:var(--ivory-bg);box-shadow:inset 0 0 0 1px rgba(122,40,57,.2)}
+.acr__plus{margin:14px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:.92rem;color:var(--muted)}
+.acr__plus button{appearance:none;border:1px solid rgba(122,40,57,.3);background:transparent;color:var(--wine);font:500 .88rem/1 var(--f-body);padding:.55em .9em;border-radius:999px;cursor:pointer}
+.acr__plus button:hover{background:var(--wine);color:var(--ivory)}
+.acr__note{margin:12px 0 0;font-size:.92rem;color:var(--muted);border-left:2px solid var(--wine);padding-left:12px}
+.acr__info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.acr__info div{background:var(--ivory-bg);border-radius:14px;padding:12px 14px}
+.acr__info dt{font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.acr__info dd{margin:4px 0 0;font-size:.95rem;font-weight:500;color:var(--ink);line-height:1.35}
+.acr__info .is-warn{background:rgba(122,40,57,.07)}
+.acr__info .is-warn dd{color:var(--wine)}
+.acr__stop{display:flex;gap:16px;align-items:flex-start;background:var(--wine);color:var(--ivory);border-radius:var(--r-tile);padding:22px}
+.acr__stop svg{flex:none;width:30px;height:30px;color:var(--powder)}
+.acr__stop h3{font-family:var(--f-display);font-weight:600;font-size:1.3rem;margin:0 0 6px;color:var(--ivory)}
+.acr__stop p{margin:0;line-height:1.55;color:rgba(245,237,225,.9)}
+/* Vérificateur */
+.acchk{margin-top:16px;display:grid;gap:16px}
+.acchk__head h3{font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem,2.2vw,1.6rem);color:var(--wine);margin:0 0 4px}
+.acchk__head p{margin:0;color:var(--muted);font-size:.95rem}
+.acchk__row{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px;align-items:center}
+.acchk__lab{font-size:.88rem;font-weight:500;color:var(--muted)}
+.acchk__seg{display:flex;flex-wrap:wrap;gap:4px;background:var(--ivory-bg);border-radius:999px;padding:4px;justify-self:start}
+.acchk__seg button{appearance:none;border:0;background:transparent;font:500 .92rem/1 var(--f-body);color:var(--wine);padding:.72em 1.05em;border-radius:999px;cursor:pointer}
+.acchk__seg button.is-on{background:var(--wine);color:var(--ivory)}
+.acchk__out{min-height:64px}
+.acv{display:flex;gap:14px;align-items:center;border-radius:var(--r-tile);padding:16px 18px;animation:bin .35s ease both}
+.acv__ico{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:1.1rem}
+.acv b{display:block;font-size:1.02rem;margin-bottom:2px}
+.acv span{font-size:.95rem;line-height:1.45}
+.acv--ok{background:#E4EDE2;color:#2F5238}.acv--ok .acv__ico{background:#3F6247;color:#fff}
+.acv--g{background:#EEF2E8;color:#3F5532}.acv--g .acv__ico{background:#6E8A5A;color:#fff}
+.acv--y{background:#F6EAD2;color:#6B4A12}.acv--y .acv__ico{background:#B07C2E;color:#fff}
+.acv--r{background:rgba(122,40,57,.1);color:var(--wine)}.acv--r .acv__ico{background:var(--wine);color:var(--ivory)}
+.acv--spf{background:var(--wine);color:var(--ivory)}.acv--spf .acv__ico{background:var(--ivory);color:var(--wine)}
+.acv--idle{background:var(--ivory-bg);color:var(--muted)}.acv--idle .acv__ico{background:rgba(122,40,57,.12);color:var(--wine)}
+/* Familles */
+.acfam{margin-top:clamp(36px,5vw,56px)}
+.acfam h3{font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem,2.2vw,1.6rem);color:var(--wine);margin:0 0 16px}
+.acfam__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.acf{background:var(--ivory-card);border-radius:var(--r-tile);padding:20px 18px;display:grid;gap:8px;align-content:start}
+.acf__name{font-family:var(--f-display);font-weight:600;font-size:1.4rem;color:var(--wine);line-height:1}
+.acf__tag{font-size:.9rem;font-weight:500;color:var(--ink)}
+.acf__depth{display:grid;gap:6px;margin:6px 0}
+.acf__depth small{font-size:.76rem;color:var(--muted)}
+.acf__bar{height:6px;border-radius:3px;background:rgba(122,40,57,.12);overflow:hidden}
+.acf__bar i{display:block;height:100%;background:linear-gradient(90deg,var(--powder),var(--wine));border-radius:3px;width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.acf.in .acf__bar i{width:var(--w)}
+.acf p{margin:0;font-size:.9rem;line-height:1.45;color:var(--muted)}
+.acf__list{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.acf__list button{appearance:none;border:1px solid rgba(122,40,57,.25);background:transparent;color:var(--wine);font:500 .82rem/1 var(--f-body);padding:.5em .75em;border-radius:999px;cursor:pointer}
+.acf__list button:hover{background:var(--wine);color:var(--ivory);border-color:var(--wine)}
+/* Règles */
+.acrules{margin-top:16px;background:var(--ivory-card);border-radius:var(--r-tile);padding:0 22px}
+.acrules summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-family:var(--f-display);font-weight:600;font-size:1.1rem;color:var(--wine)}
+.acrules summary::-webkit-details-marker{display:none}
+.acrules summary i{flex:none;width:28px;height:28px;border-radius:50%;background:var(--powder);position:relative;transition:transform .25s}
+.acrules summary i::before,.acrules summary i::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--wine);transform:translate(-50%,-50%)}
+.acrules summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.acrules[open] summary i{transform:rotate(45deg)}
+.acrules ol{margin:0;padding:0 0 20px 1.3em;display:grid;gap:8px;font-size:.96rem;line-height:1.5;color:var(--ink)}
+.acrules ol b{color:var(--wine);font-weight:600}
+.acm__b{margin-top:16px}
+@media (max-width:980px){.acfam__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .acr__cards,.acr__info{grid-template-columns:minmax(0,1fr)}
+  .acx__chips .bf{font-size:.88rem;padding:.6em .85em}
+  .acchk__row{grid-template-columns:minmax(0,1fr);gap:8px}
+}
+@media (max-width:520px){.acfam__grid{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.acc,.acv{animation:none}.acf__bar i{transition:none;width:var(--w)}}
 </style>
 
 <header class="nav" id="top">
@@ -853,6 +956,7 @@ html.reading,html.reading body{overflow:hidden}
       <a href="#marques">Les marques</a>
       <a href="#actifs">Les actifs tendance 2026</a>
       <a href="#incontournables">Le guide des actifs</a>
+      <a href="#acides">Quel acide choisir ?</a>
       <a href="#blog">Le blog</a>
       <a href="#equipe">L'équipe</a>
       <a href="#questions">Questions</a>
@@ -1253,6 +1357,79 @@ html.reading,html.reading body{overflow:hidden}
 
 
 <!-- EQUIPE -->
+<section class="sec acids" id="acides" aria-labelledby="h-acides">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 id="h-acides">Quel acide exfoliant pour ma peau ?</h2>
+      <p class="lede">Deux clics suffisent : votre type de peau, puis votre priorité. On vous dit quel acide privilégier, à quel rythme, et ce qu'il ne faut pas associer.</p>
+    </div>
+
+    <div class="acx">
+      <div class="acx__q">
+        <p class="acx__lab"><b>1</b> Ma peau est…</p>
+        <div class="acx__chips" id="acSkin" role="group" aria-label="Mon type de peau"></div>
+      </div>
+      <div class="acx__q">
+        <p class="acx__lab"><b>2</b> Ma priorité <span>(facultatif)</span></p>
+        <div class="acx__chips" id="acPrio" role="group" aria-label="Ma priorité"></div>
+      </div>
+      <div class="acx__res" id="acRes" aria-live="polite"></div>
+    </div>
+
+    <div class="acchk">
+      <div class="acchk__head">
+        <h3>Puis-je l'associer ?</h3>
+        <p>Choisissez votre acide, puis le soin que vous voulez utiliser avec.</p>
+      </div>
+      <div class="acchk__row"><span class="acchk__lab">Mon acide</span><div class="acchk__seg" id="acFam" role="group" aria-label="Famille d'acide"></div></div>
+      <div class="acchk__row"><span class="acchk__lab">Avec</span><div class="acx__chips" id="acWith" role="group" aria-label="Soin associé"></div></div>
+      <div class="acchk__out" id="acVerdict" aria-live="polite"></div>
+    </div>
+
+    <div class="acfam">
+      <h3>Les 4 familles en un coup d'œil</h3>
+      <div class="acfam__grid" id="acFamGrid"></div>
+    </div>
+
+    <details class="acrules">
+      <summary>Les 10 règles SkinMi pour les acides <i aria-hidden="true"></i></summary>
+      <ol>
+        <li><b>Un seul exfoliant à la fois au début.</b></li>
+        <li><b>Commencer à faible fréquence</b> : 1 fois par semaine pendant 2 à 4 semaines.</li>
+        <li><b>Ne pas cumuler les familles</b> : pas d'AHA + BHA + PHA le même soir au début.</li>
+        <li><b>Hydrater avant et après</b> : glycérine, acide hyaluronique, céramides, squalane ou panthénol.</li>
+        <li><b>Alterner avec le rétinol</b> : par exemple l'acide le mardi, le rétinol le vendredi.</li>
+        <li><b>Protéger impérativement le lendemain</b> : SPF 30 minimum, idéalement SPF 50+.</li>
+        <li><b>Arrêter si la barrière est abîmée</b> : picotements qui durent, brûlure, rougeur, desquamation ou peau qui tire.</li>
+        <li><b>Adapter à la zone</b> : un acide peut convenir à la zone T mais irriter les joues sèches.</li>
+        <li><b>Ne pas exfolier une peau irritée</b> : attendre le retour à une barrière stable.</li>
+        <li><b>Privilégier la régularité douce</b> : une exfoliation légère et régulière vaut mieux qu'un produit très fort utilisé rarement.</li>
+      </ol>
+    </details>
+    <p class="kb__disc">« Acide » ne veut pas dire « agressif » : tout dépend de la famille, de la concentration, du pH et de l'état de votre peau. Rosacée, eczéma, peau très réactive, grossesse, allaitement ou traitement dermatologique : demandez l'avis d'un médecin avant d'utiliser un exfoliant.</p>
+  </div>
+
+  <div class="bm kbm" id="acModal" hidden>
+    <div class="bm__back" data-close></div>
+    <div class="bm__card" role="dialog" aria-modal="true" aria-labelledby="acName">
+      <button type="button" class="bm__close" data-close aria-label="Fermer">×</button>
+      <div class="kbm__tags"><span class="kbg" id="acFamTag"></span></div>
+      <h3 id="acName"></h3>
+      <div class="kbm__meta"><span id="acProof"></span><span>INCI <code id="acInci"></code></span></div>
+      <ul class="dots acm__b" id="acBen"></ul>
+      <p class="kbm__avis" id="acNote"></p>
+      <dl class="kbm__facts" id="acFacts"></dl>
+      <h4>Pour quelles peaux ?</h4>
+      <ul class="kbm__pr" id="acPc"></ul>
+      <h4>Se marie bien avec</h4>
+      <ul class="kbm__ok" id="acOk"></ul>
+      <h4>À éviter ou espacer</h4>
+      <ul class="kbm__pr" id="acAv"></ul>
+      <div class="kbm__nav"><button type="button" id="acPrev" aria-label="Acide précédent">← Précédent</button><span id="acPos"></span><button type="button" id="acNext" aria-label="Acide suivant">Suivant →</button></div>
+    </div>
+  </div>
+</section>
+
 <section class="sec journal" id="blog" aria-labelledby="h-journal">
   <div class="wrap">
     <div class="journal__head">
@@ -1826,6 +2003,85 @@ addEventListener("scroll",onScroll,{passive:true}); onScroll();
   function fromHash(){const h=location.hash; if(h.startsWith("#article-")) open("post-"+h.slice(9),false); else shut(true)}
   addEventListener("popstate",fromHash);
   fromHash();
+})();
+
+/* Quel acide pour ma peau ? */
+(function(){
+  const D={"A":{"glycolique":{"n":"Acide glycolique","f":"AHA","i":"Glycolic Acid","p":5,"cc":"5 à 10 %","ph":"Environ 3 à 4","m":"Le soir","fr":"1 soir par semaine","sk":"Normales, grasses, mixtes, épaisses","w":"Teint terne, texture, taches, pores, signes de l'âge","b":["Exfoliation efficace de la surface de la peau","Améliore l'éclat et la régularité du teint","Atténue progressivement les taches superficielles","Affine la texture et l'aspect des pores"],"pc":[["g","Peaux normales, mixtes, grasses ou épaisses"],["g","Peaux ternes ou à la texture irrégulière"],["y","Peaux sensibles : commencer très bas, ou préférer le lactique ou le mandélique"],["r","Peaux très réactives, eczéma actif, rosacée sévère ou barrière très abîmée"]],"ok":["Niacinamide","Céramides, squalane, glycérine","Acide hyaluronique","Écran solaire le lendemain"],"av":[["r","Rétinol ou rétinal le même soir quand on débute : irritation, barrière fragilisée"],["r","Un autre AHA ou BHA fort le même soir : sur-exfoliation"],["r","Peroxyde de benzoyle le même soir : sécheresse et irritation"],["y","Vitamine C pure très acide : à espacer sur peau sensible"]],"why":"La plus petite molécule AHA, donc la plus efficace en surface"},"lactique":{"n":"Acide lactique","f":"AHA","i":"Lactic Acid","p":4.5,"cc":"5 à 10 %","ph":"Environ 3 à 4","m":"Le soir","fr":"1 à 2 soirs par semaine","sk":"Sèches, normales, sensibles modérées","w":"Texture, teint terne, sécheresse, rugosité légère","b":["Exfolie tout en hydratant","Améliore la souplesse et le confort des peaux sèches","Adoucit les zones rugueuses","Ravive progressivement l'éclat"],"pc":[["g","Peaux sèches, déshydratées ou normales"],["g","Peaux sensibles modérées, en commençant doucement"],["y","Peaux acnéiques : utile pour la texture, moins ciblé sur les pores que le salicylique"]],"ok":["Glycérine, acide hyaluronique, céramides","Niacinamide","Squalane","Panthénol"],"av":[["r","Rétinol le même soir au début"],["r","BHA fort ou peroxyde de benzoyle le même soir"],["y","Autres AHA : ne pas cumuler sans protocole"]],"why":"Exfolie en douceur tout en hydratant"},"mandelique":{"n":"Acide mandélique","f":"AHA","i":"Mandelic Acid","p":3.5,"cc":"5 à 10 %","ph":"Environ 3 à 4","m":"Le soir","fr":"1 à 2 soirs par semaine","sk":"Sensibles, mixtes, sujettes aux taches","w":"Texture, marques d'imperfections, pores, rougeurs légères","b":["Exfoliation plus progressive grâce à sa grande molécule","Souvent mieux toléré par les peaux sensibles","Aide à estomper les marques laissées par les imperfections","Idéal pour les peaux mixtes ou grasses qui tolèrent mal le glycolique"],"pc":[["g","Peaux sensibles ou réactives"],["g","Peaux mixtes et grasses"],["g","Peaux sujettes aux marques d'acné"],["y","Peaux très sèches : renforcer l'hydratation"]],"ok":["Niacinamide","Acide azélaïque","Céramides et panthénol","Acide hyaluronique"],"av":[["r","Rétinol le même soir au début"],["r","Autres exfoliants puissants le même soir"],["y","Peroxyde de benzoyle : sécheresse cumulée"]],"why":"Grande molécule, exfoliation progressive et bien tolérée"},"malique":{"n":"Acide malique","f":"AHA","i":"Malic Acid","p":3,"cc":"Variable, souvent en association","ph":null,"m":"Le soir","fr":null,"sk":"Normales, mixtes, ternes","w":"Texture, éclat, hydratation légère","b":["Exfoliation douce à modérée","Souvent utilisé en complément d'autres AHA","Participe à l'hydratation superficielle"],"pc":[["g","Peaux normales ou mixtes"],["g","Peaux ternes"],["y","Peaux sensibles : dépend beaucoup de la formule"]],"ok":["Lactique, glycolique ou mandélique dans une formule équilibrée","Niacinamide et hydratants"],"av":[["r","Ne pas l'ajouter à un autre exfoliant fort sans connaître les concentrations totales"]],"why":"Exfoliant d'appoint, souvent dans les formules multi-acides"},"tartrique":{"n":"Acide tartrique","f":"AHA","i":"Tartaric Acid","p":3,"cc":"Variable, souvent en association","ph":null,"m":"Le soir","fr":null,"sk":"Normales, mixtes","w":"Texture, éclat","b":["Exfoliant d'appoint","Complète ou stabilise une formule multi-acides","Améliore la texture et l'éclat"],"pc":[["g","Peaux normales ou mixtes"],["y","Peaux sensibles : avec prudence"]],"ok":["Hydratants","Niacinamide"],"av":[["r","Cumul avec plusieurs autres AHA ou BHA à fortes concentrations"],["y","Rétinol le même soir quand on débute"]],"why":"Exfoliant d'appoint, en complément d'autres acides"},"citrique":{"n":"Acide citrique","f":"AHA","i":"Citric Acid","p":3,"cc":"Faible, souvent régulateur de pH","ph":null,"m":"Selon la formule","fr":null,"sk":"Selon la concentration et la formule","w":"Éclat, texture","b":["À faible dose : ajuste le pH et stabilise la formule","À dose exfoliante : améliore l'éclat et la texture","Légère action antioxydante"],"pc":[["y","Peaux normales à mixtes"],["r","Peaux sensibles : peut être irritant à certaines concentrations"]],"ok":["Hydratants"],"av":[["r","Produits parfumés ou contenant des huiles essentielles d'agrumes"],["r","Cumul avec d'autres acides puissants"]],"why":"Le plus souvent présent à faible dose pour ajuster le pH"},"salicylique":{"n":"Acide salicylique","f":"BHA","i":"Salicylic Acid","p":5,"cc":"0,5 à 2 %","ph":"Environ 3 à 4","m":"Le soir, ou selon la formule","fr":"1 à 2 fois par semaine","sk":"Grasses, mixtes, acnéiques","w":"Points noirs, pores, imperfections, sébum, texture","b":["Désincruste les pores en agissant dans le sébum","Réduit les points noirs et les microkystes","Action apaisante sur les imperfections","Affine la texture et l'aspect des pores"],"pc":[["g","Peaux grasses et mixtes"],["g","Peaux acnéiques avec points noirs ou imperfections"],["y","Peaux sèches : possible, avec une hydratation renforcée"],["r","Peaux très sensibles ou barrière sévèrement abîmée"]],"ok":["Niacinamide","Zinc PCA","Céramides, glycérine, squalane","Acide azélaïque"],"av":[["r","Rétinol le même soir quand on débute"],["r","AHA fort le même soir : sur-exfoliation"],["r","Peroxyde de benzoyle le même soir : sécheresse et irritation"],["y","Vitamine C pure très acide : à espacer sur peau sensible"]],"why":"Le seul qui agit à l'intérieur des pores, dans le sébum"},"gluconolactone":{"n":"Gluconolactone","f":"PHA","i":"Gluconolactone","p":3.5,"cc":"4 à 10 %","ph":null,"m":"Matin ou soir","fr":"2 à 3 fois par semaine","sk":"Sensibles, sèches, déshydratées, barrière fragile","w":"Texture, éclat, déshydratation, pores","b":["Exfoliation très douce","Hydrate et retient l'eau","Affine texture et éclat sans agresser","Idéal pour celles qui ne tolèrent pas le glycolique ou le salicylique"],"pc":[["g","Peaux sensibles"],["g","Peaux sèches ou déshydratées"],["g","Barrière fragilisée"],["g","Débutantes en exfoliation"]],"ok":["Acide hyaluronique et glycérine","Céramides","Niacinamide","Rétinol, à fréquence adaptée"],"av":[["r","AHA ou BHA très concentrés le même jour"],["y","Vitamine C pure très acide : à espacer si la peau réagit"]],"why":"L'exfoliation la plus douce, qui hydrate en même temps"},"lactobionique":{"n":"Acide lactobionique","f":"PHA","i":"Lactobionic Acid","p":3,"cc":"Variable","ph":null,"m":"Matin ou soir","fr":null,"sk":"Sensibles, sèches, matures","w":"Déshydratation, texture, confort, antioxydation","b":["Exfoliation très douce","Hydrate et retient l'eau","Action antioxydante","Redonne du confort aux peaux fragilisées"],"pc":[["g","Peaux sensibles"],["g","Peaux sèches ou matures"],["g","Peaux qui ne tolèrent pas les AHA classiques"]],"ok":["Céramides et squalane","Niacinamide","Panthénol","Rétinol, à fréquence adaptée"],"av":[["r","AHA ou BHA forts le même jour"],["y","Vitamine C pure très acide, selon la formule"]],"why":"Très doux, hydratant et antioxydant"},"maltobionique":{"n":"Acide maltobionique","f":"PHA","i":"Maltobionic Acid","p":2.5,"cc":"Variable","ph":null,"m":"Matin ou soir","fr":null,"sk":"Sensibles, sèches","w":"Texture, hydratation, confort","b":["Exfoliation douce","Hydrate et retient l'eau","Améliore la souplesse et le confort"],"pc":[["g","Peaux sensibles"],["g","Peaux sèches"],["g","Peaux qui ne tolèrent pas les AHA"]],"ok":["Glycérine et acide hyaluronique","Céramides","Niacinamide"],"av":[["r","Autres exfoliants puissants le même jour"],["y","Rétinol sur peau très réactive"]],"why":"Exfoliation douce et confortable"},"azelaique":{"n":"Acide azélaïque","f":"Complémentaire","i":"Azelaic Acid","p":4.5,"cc":"10 % en cosmétique","ph":null,"m":"Matin et/ou soir","fr":null,"sk":"Toutes, surtout sensibles et acnéiques","w":"Imperfections, taches, rougeurs, texture","b":["Réduit les imperfections","Estompe les marques laissées par les boutons","Apaise les rougeurs","Légère action lissante, sans être un exfoliant classique"],"pc":[["g","Peaux sensibles"],["g","Peaux acnéiques"],["g","Peaux à rougeurs ou à rosacée"],["g","Taches post-imperfections"]],"ok":["Niacinamide","Acide salicylique","Rétinol, progressivement","Céramides et hydratants"],"av":[["y","Picotements possibles au début"],["g","Un bon choix pour les peaux sensibles ou réactives"]],"why":"Imperfections, taches et rougeurs, avec une bonne tolérance"},"tranexamique":{"n":"Acide tranexamique","f":"Complémentaire","i":"Tranexamic Acid","p":4,"cc":"2 à 5 %","ph":null,"m":"Matin et/ou soir","fr":null,"sk":"Toutes, surtout sujettes aux taches","w":"Taches, mélasma, hyperpigmentation","b":["Réduit l'apparence des taches pigmentaires","Unifie le teint","Complète une routine anti-taches"],"pc":[["g","Toutes les peaux sujettes aux taches"],["g","Peaux sensibles qui cherchent une alternative douce aux exfoliants"]],"ok":["Niacinamide","Vitamine C","Acide azélaïque","Écran solaire"],"av":[["g","Généralement bien toléré"],["r","Sans écran solaire, les résultats sur les taches restent limités"]],"why":"Cible les taches sans exfolier"},"kojique":{"n":"Acide kojique","f":"Complémentaire","i":"Kojic Acid","p":3.5,"cc":"1 à 2 %","ph":"Environ 4 à 5","m":"Matin et/ou soir","fr":null,"sk":"Toutes, surtout sujettes aux taches","w":"Taches pigmentaires, mélasma, marques d'imperfections, teint irrégulier","b":["Freine la production de mélanine","Atténue progressivement les taches","Unifie le teint","Action antioxydante"],"pc":[["g","Marques laissées par les imperfections"],["g","Hyperpigmentation ou mélasma"],["g","Teint terne ou irrégulier"],["y","Peaux sensibles : commencer lentement, il peut irriter"]],"ok":["Niacinamide","Vitamine C","Arbutine","Acide tranexamique","Acide azélaïque","Écran solaire SPF 50+"],"av":[["y","AHA/BHA : peut irriter une peau sensible selon les concentrations"],["y","Rétinol : possible, à introduire progressivement"],["y","Vitamine C pure très acide : à espacer si picotements"],["r","Dépigmentants non identifiés, corticoïdes ou hydroquinone sans avis médical : ne pas cumuler"]],"why":"Anti-taches, ce n'est pas un exfoliant","note":"Ce n'est ni un AHA, ni un BHA, ni un PHA : il ne désincruste pas les pores et ne lisse pas la texture. Routine anti-taches complète : écran solaire + niacinamide ou vitamine C + kojique, arbutine ou tranexamique, puis éventuellement un exfoliant doux 1 à 2 fois par semaine."},"ferulique":{"n":"Acide férulique","f":"Complémentaire","i":"Ferulic Acid","p":4,"cc":"0,5 à 1 %","ph":null,"m":"Le matin","fr":null,"sk":"Toutes","w":"Antioxydation, vieillissement lié au soleil, taches","b":["Antioxydant","Stabilise et renforce la vitamine C","Soutient une routine anti-âge et anti-taches"],"pc":[["g","Toutes les peaux"],["g","Peaux exposées à la pollution"]],"ok":["Vitamine C","Vitamine E","Écran solaire"],"av":[["g","Bien toléré"],["y","Ce n'est pas un exfoliant"]],"why":"Antioxydant, le meilleur allié de la vitamine C"},"phytique":{"n":"Acide phytique","f":"Complémentaire","i":"Phytic Acid","p":2.5,"cc":"Variable","ph":null,"m":"Selon la formule","fr":null,"sk":"Sensibles, ternes","w":"Éclat, antioxydation, exfoliation douce","b":["Exfoliation très douce","Action antioxydante","Soutient l'éclat et l'uniformité du teint"],"pc":[["g","Peaux sensibles"],["g","Peaux ternes"],["y","Peaux acnéiques : effet modeste"]],"ok":["Niacinamide","Vitamine C","Hydratants barrière"],"av":[["y","Son efficacité dépend beaucoup de la formule"],["y","Ne remplace pas un AHA ou un BHA pour les pores obstrués"]],"why":"Éclat tout en douceur, antioxydant"}},"S":{"normale":["Normale",["glycolique","lactique"],"Le cumul de plusieurs acides","1 à 2 fois par semaine",null],"seche":["Sèche",["lactique","lactobionique","gluconolactone"],"Un glycolique fort","1 à 2 fois par semaine",null],"deshydratee":["Déshydratée",["gluconolactone","lactique"],"Un BHA fort","1 à 2 fois par semaine",null],"grasse":["Grasse",["salicylique","mandelique","glycolique"],"Le cumul AHA + BHA","1 à 3 fois par semaine",null],"mixte":["Mixte",["mandelique","lactique","salicylique"],"Un glycolique fort sur les zones sèches","1 à 2 fois par semaine","Le salicylique, plutôt en ciblé sur la zone T."],"acneique":["Acnéique",["salicylique","azelaique","mandelique"],"Peroxyde de benzoyle + acide le même soir","1 à 3 fois par semaine",null],"sensible":["Sensible",["gluconolactone","lactobionique","mandelique"],"Le glycolique et un salicylique fort","1 fois par semaine",null],"mature":["Mature",["glycolique","lactique","mandelique"],"La sur-exfoliation","1 à 2 fois par semaine",null],"barriere":["Barrière abîmée",[],"Tous les exfoliants","Reprendre seulement après apaisement",null]},"P":{"eclat":["Teint terne",["glycolique","lactique","malique","gluconolactone","phytique","ferulique"]],"texture":["Texture irrégulière",["glycolique","lactique","mandelique","salicylique","gluconolactone","lactobionique","maltobionique","azelaique"]],"taches":["Taches",["mandelique","glycolique","azelaique","tranexamique","kojique","ferulique"]],"pores":["Pores & points noirs",["salicylique","glycolique","mandelique","gluconolactone"]],"imperf":["Imperfections",["salicylique","azelaique","mandelique"]],"rougeurs":["Rougeurs",["azelaique","mandelique"]],"age":["Signes de l'âge",["glycolique","lactique","lactobionique","ferulique"]],"confort":["Sécheresse & confort",["lactique","gluconolactone","lactobionique","maltobionique"]]},"I":{"retinol":["Rétinol",{"AHA":["y","Alterner les soirées, ne pas débuter les deux ensemble."],"BHA":["y","Alterner les soirées, ne pas débuter les deux ensemble."],"PHA":["g","Le PHA est plus doux, mais espacez au début."],"Complémentaire":["y","Possible, à introduire progressivement."]}],"vitc":["Vitamine C pure",{"AHA":["y","À espacer sur peau sensible ou en cas de picotements."],"BHA":["y","À espacer sur peau sensible ou en cas de picotements."],"PHA":["g","Vitamine C le matin, PHA le soir ou un jour sur deux."],"Complémentaire":["g","Souvent un très bon duo, à espacer seulement si picotements."]}],"bpo":["Peroxyde de benzoyle",{"AHA":["r","Pas le même soir : risque élevé de sécheresse et d'irritation."],"BHA":["r","Pas le même soir : risque élevé de sécheresse et d'irritation."],"PHA":["y","À espacer, ou à utiliser des jours différents."],"Complémentaire":["y","À espacer si la peau tiraille."]}],"autre":["Un autre AHA ou BHA",{"AHA":["y","Pas le même soir pour débuter : risque de sur-exfoliation. Réservé aux routines expertes."],"BHA":["y","Pas le même soir pour débuter : risque de sur-exfoliation. Réservé aux routines expertes."],"PHA":["y","Pas le même jour, ne jamais cumuler à fortes concentrations."],"Complémentaire":["y","Possible, mais peut irriter une peau sensible : espacer au début."]}],"niacinamide":["Niacinamide",{"*":["ok","Excellente association : améliore la tolérance et soutient la barrière."]}],"ceramides":["Céramides",{"*":["ok","Excellente association : réduit la sécheresse et soutient la barrière."]}],"ha":["Acide hyaluronique",{"*":["ok","Excellente association : plus de confort et d'hydratation."]}],"squalane":["Squalane",{"*":["ok","Excellente association : limite la sensation de tiraillement."]}],"panthenol":["Panthénol",{"*":["ok","Excellente association : apaise et réconforte."]}],"spf":["Écran solaire",{"*":["spf","Indispensable : chaque matin, même sans exposition directe."]}]}}; const $=id=>document.getElementById(id);
+  const skinEl=$("acSkin"), prioEl=$("acPrio"), res=$("acRes"); if(!skinEl) return;
+  const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+  const bars=p=>Array.from({length:5},(_,k)=>'<i style="--f:'+Math.max(0,Math.min(1,p-k))+'"></i>').join("");
+  const pTxt=p=>(p%1? Math.floor(p)+"–"+Math.ceil(p): p)+"/5";
+  const famLabel={AHA:"AHA",BHA:"BHA",PHA:"PHA","Complémentaire":"Complémentaire"};
+  let sk=null, pr=null;
+  skinEl.innerHTML=Object.entries(D.S).map(([k,v])=>'<button type="button" class="bf" data-k="'+k+'" aria-pressed="false">'+v[0]+'</button>').join("");
+  prioEl.innerHTML=Object.entries(D.P).map(([k,v])=>'<button type="button" class="bf" data-k="'+k+'" aria-pressed="false">'+v[0]+'</button>').join("");
+  function press(el,k){[...el.children].forEach(b=>{const on=b.dataset.k===k;b.classList.toggle("is-on",on);b.setAttribute("aria-pressed",on)})}
+  skinEl.addEventListener("click",e=>{const b=e.target.closest(".bf");if(!b)return;sk=b.dataset.k;press(skinEl,sk);render()});
+  prioEl.addEventListener("click",e=>{const b=e.target.closest(".bf");if(!b)return;pr=pr===b.dataset.k?null:b.dataset.k;press(prioEl,pr);render()});
+  const arrow='<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  function card(id,i,freq){const a=D.A[id];return '<button type="button" class="acc" data-id="'+id+'" style="animation-delay:'+(i*70)+'ms"><span class="acc__top"><span class="acc__rank">'+(i===0?"Notre choix n°1":"Option "+(i+1))+'</span><span class="actag actag--'+a.f+'">'+famLabel[a.f]+'</span></span><span class="acc__name">'+a.n+'</span><span class="acc__why">'+esc(a.why)+'</span><span class="acc__meta"><span><b>Au début :</b> '+esc(a.fr||freq)+'</span><span><b>Quand :</b> '+esc(a.m)+'</span></span><span class="proof" role="img" aria-label="Niveau de preuve '+pTxt(a.p)+'">'+bars(a.p)+'</span><span class="acc__more">Voir la fiche '+arrow+'</span></button>'}
+  function render(){
+    if(!sk){res.innerHTML='<p class="acx__empty"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6c6 8 10 13 10 18a10 10 0 0 1-20 0c0-5 4-10 10-18z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Choisissez votre type de peau pour voir notre conseil.</p>';return}
+    const S=D.S[sk];
+    if(sk==="barriere"){res.innerHTML='<div class="acr__stop"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3l8 14H2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8v4M10 14.5v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><div><h3>Pas d\'exfoliant pour l\'instant</h3><p>Votre peau a d\'abord besoin d\'être réparée : nettoyage doux, céramides, panthénol, squalane. Reprenez un acide très doux (un PHA comme la gluconolactone) seulement quand elle ne tiraille plus et ne picote plus.</p></div></div>';syncChk("PHA");return}
+    let list=S[1], note=S[4], plus=[];
+    if(pr){const P=D.P[pr][1]; const m=list.filter(x=>P.includes(x)); plus=P.filter(x=>D.A[x].f==="Complémentaire"&&!m.includes(x)&&!list.includes(x));
+      if(m.length) list=m.concat(list.filter(x=>!m.includes(x))).slice(0,3);
+      else note=(note?note+" ":"")+"Pour votre priorité, l'acide le plus adapté à votre peau reste celui-ci ; complétez avec les actifs ci-dessous.";}
+    const avoid=S[2]+(pr==="taches"?" · le cumul d'exfoliants":"");
+    res.innerHTML='<div class="acr__h"><h3>Notre conseil</h3><span>Peau '+S[0].toLowerCase()+(pr?" · "+D.P[pr][0].toLowerCase():"")+'</span></div>'
+      +'<div class="acr__cards">'+list.slice(0,3).map((id,i)=>card(id,i,S[3])).join("")+'</div>'
+      +(plus.length?'<p class="acr__plus">Pour aller plus loin : '+plus.map(id=>'<button type="button" data-id="'+id+'">'+D.A[id].n+'</button>').join("")+'</p>':"")
+      +(note?'<p class="acr__note">'+esc(note)+'</p>':"")
+      +'<dl class="acr__info"><div><dt>Rythme conseillé</dt><dd>'+esc(S[3])+'</dd></div><div class="is-warn"><dt>À éviter au début</dt><dd>'+esc(avoid)+'</dd></div><div><dt>Le lendemain matin</dt><dd>Écran solaire SPF 50+</dd></div></dl>';
+    syncChk(D.A[list[0]].f);
+  }
+  render();
+  /* Vérificateur d'associations */
+  const famEl=$("acFam"), withEl=$("acWith"), out=$("acVerdict"); let fam="AHA", act=null;
+  const fams=[["AHA","AHA"],["BHA","BHA"],["PHA","PHA"],["Complémentaire","Azélaïque, kojique…"]];
+  famEl.innerHTML=fams.map(([k,l])=>'<button type="button" data-k="'+k+'">'+l+'</button>').join("");
+  withEl.innerHTML=Object.entries(D.I).map(([k,v])=>'<button type="button" class="bf" data-k="'+k+'" aria-pressed="false">'+v[0]+'</button>').join("");
+  function setFam(k){fam=k;[...famEl.children].forEach(b=>{b.classList.toggle("is-on",b.dataset.k===k);b.setAttribute("aria-pressed",b.dataset.k===k)});verdict()}
+  function syncChk(k){if(k) setFam(k)}
+  famEl.addEventListener("click",e=>{const b=e.target.closest("button");if(b)setFam(b.dataset.k)});
+  withEl.addEventListener("click",e=>{const b=e.target.closest(".bf");if(!b)return;act=b.dataset.k;press(withEl,act);verdict()});
+  const LBL={ok:["✓","Excellente association"],g:["✓","Bonne association, avec précaution"],y:["!","Avec prudence"],r:["×","À éviter le même soir"],spf:["☀","Indispensable"]};
+  function verdict(){
+    if(!act){out.innerHTML='<div class="acv acv--idle"><span class="acv__ico">?</span><span>Choisissez un soin ci-dessus pour voir s\'il se marie avec votre acide.</span></div>';return}
+    const I=D.I[act], v=I[1]["*"]||I[1][fam], L=LBL[v[0]];
+    out.innerHTML='<div class="acv acv--'+v[0]+'"><span class="acv__ico" aria-hidden="true">'+L[0]+'</span><span><b>'+L[1]+'</b>'+esc(v[1])+'</span></div>';
+  }
+  setFam("AHA");
+  /* Familles */
+  const FAM=[["AHA","Agissent en surface","95%","Surface de la peau","Hydrosolubles. Pour les peaux normales, sèches, ternes ou à la texture irrégulière : éclat, texture, taches, signes de l'âge."],
+             ["BHA","Plongent dans les pores","100%","Surface et intérieur des pores","Liposoluble. Pour les peaux grasses, mixtes et acnéiques : pores obstrués, points noirs, imperfections."],
+             ["PHA","La douceur","45%","Très superficielle et progressive","Grosses molécules. Pour les peaux sensibles, déshydratées ou fragilisées : exfoliation douce et hydratation."],
+             ["Complémentaire","Pas des exfoliants classiques","25%","Action variable","Anti-taches, apaisement, antioxydation. À associer à une routine, pas à utiliser pour désincruster les pores."]];
+  const grid=$("acFamGrid");
+  grid.innerHTML=FAM.map(f=>{const ids=Object.keys(D.A).filter(id=>D.A[id].f===f[0]);return '<div class="acf"><span class="acf__name">'+(f[0]==="Complémentaire"?"Complémentaires":f[0])+'</span><span class="acf__tag">'+f[1]+'</span><div class="acf__depth"><small>Profondeur d\'action : '+f[3]+'</small><div class="acf__bar"><i style="--w:'+f[2]+'"></i></div></div><p>'+f[4]+'</p><div class="acf__list">'+ids.map(id=>'<button type="button" data-id="'+id+'">'+(t=>t.charAt(0).toUpperCase()+t.slice(1))(D.A[id].n.replace(/^Acide /,""))+'</button>').join("")+'</div></div>'}).join("");
+  if("IntersectionObserver" in window){new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){[...grid.children].forEach((c,i)=>setTimeout(()=>c.classList.add("in"),i*120));o.disconnect()}},{threshold:.3}).observe(grid)} else [...grid.children].forEach(c=>c.classList.add("in"));
+  /* Fiche */
+  const M=$("acModal"), order=Object.keys(D.A); let cur=0,last=null;
+  const pcl={g:"Idéal",y:"Prudence",r:"À éviter"}, avl={g:"Le +",y:"À espacer",r:"À éviter"};
+  function show(id){cur=order.indexOf(id); const a=D.A[id];
+    $("acFamTag").textContent=a.f==="Complémentaire"?"Acide complémentaire":a.f; $("acName").textContent=a.n; $("acInci").textContent=a.i;
+    $("acProof").innerHTML='<span class="proof" aria-hidden="true">'+bars(a.p)+'</span> Niveau de preuve '+pTxt(a.p); $("acProof").style.cssText="display:inline-flex;align-items:center;gap:8px";
+    $("acBen").innerHTML=a.b.map(x=>"<li>"+esc(x)+"</li>").join("");
+    const n=$("acNote"); n.hidden=!a.note; if(a.note) n.innerHTML="<b>Précision SkinMi :</b> "+esc(a.note);
+    const f=[["Concentration",a.cc],["pH",a.ph],["Quand",a.m],["Au début",a.fr],["Pour quelles peaux",a.sk],["Pour quoi",a.w]].filter(x=>x[1]);
+    $("acFacts").innerHTML=f.map((x,k)=>'<div class="'+(k===f.length-1&&f.length%2?"wide":"")+'"><dt>'+x[0]+"</dt><dd>"+esc(x[1])+"</dd></div>").join("");
+    $("acPc").innerHTML=a.pc.map(p=>'<li class="'+p[0]+'"><em>'+pcl[p[0]]+"</em><span>"+esc(p[1])+"</span></li>").join("");
+    $("acOk").innerHTML=a.ok.map(x=>"<li>"+esc(x)+"</li>").join("");
+    $("acAv").innerHTML=a.av.map(p=>'<li class="'+p[0]+'"><em>'+avl[p[0]]+"</em><span>"+esc(p[1])+"</span></li>").join("");
+    $("acPos").textContent=(cur+1)+" / "+order.length; M.querySelector(".bm__card").scrollTop=0;}
+  document.getElementById("acides").addEventListener("click",e=>{const b=e.target.closest("[data-id]"); if(!b||!D.A[b.dataset.id]) return; last=b; show(b.dataset.id); M.hidden=false; M.querySelector(".bm__close").focus()});
+  const step=d=>show(order[(cur+d+order.length)%order.length]);
+  $("acPrev").addEventListener("click",()=>step(-1)); $("acNext").addEventListener("click",()=>step(1));
+  function close(){M.hidden=true; if(last) last.focus()}
+  M.addEventListener("click",e=>{if(e.target.closest("[data-close]")) close()});
+  document.addEventListener("keydown",e=>{if(M.hidden) return; if(e.key==="Escape") close(); else if(e.key==="ArrowRight") step(1); else if(e.key==="ArrowLeft") step(-1)});
 })();
 </script>
 </html>
