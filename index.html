@@ -1133,6 +1133,14 @@ html.reading,html.reading body{overflow:hidden}
 .rfig__note{margin:2px 0 0;font-size:.88rem;line-height:1.45;background:#F6EAD2;color:#6B4A12;border-radius:12px;padding:.6em .8em}
 .rfig__note strong{color:inherit}
 @media (max-width:640px){.rfig{grid-template-columns:minmax(0,1fr)}.rfig__img{max-width:320px;width:100%;justify-self:center}}
+.jcard__visual--photo{display:block;background:#fff;overflow:hidden;padding:0;height:230px}
+@media (min-width:1000px){.jcard__visual--photo{height:210px}}
+.jcard__visual--photo img{display:block;width:100%;height:100%;min-height:inherit;object-fit:contain;object-position:50% 50%;transform:scale(1.02);transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.jcard:hover .jcard__visual--photo img{transform:scale(1.08)}
+.post__cover{margin:clamp(18px,3vw,28px) 0 0}
+.post__cover img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;object-position:50% 50%;padding:clamp(8px,2vw,16px);box-sizing:border-box;background:#fff;border-radius:var(--r-panel)}
+.post__cover figcaption{margin-top:8px;font-size:.82rem;color:var(--muted)}
+@media (max-width:640px){.post__cover img{aspect-ratio:1/1}}
 </style>
 
 <header class="nav" id="top">
@@ -1670,13 +1678,7 @@ html.reading,html.reading body{overflow:hidden}
       </div>
     </a>
     <a class="jcard" href="#article-retinol" data-post="post-retinol">
-      <div class="jcard__visual jcard__visual--ret" aria-hidden="true">
-        <div class="jret">
-          <span class="jret__a">A</span>
-          <span class="jret__chain"><i>Rétinol</i><b>→</b><i>Rétinal</i><b>→</b><i>Acide rétinoïque</i></span>
-          <em>La vitamine A, le soir</em>
-        </div>
-      </div>
+      <div class="jcard__visual jcard__visual--photo"><img src="img/retinal-shot-celimax.webp" width="900" height="900" loading="lazy" decoding="async" alt="Tube de soin au rétinal et noisette de crème jaune pâle"></div>
       <div class="jcard__body">
         <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 9 min</span></div>
         <h3>Rétinol&nbsp;: le guide pour bien débuter</h3>
@@ -1714,6 +1716,7 @@ html.reading,html.reading body{overflow:hidden}
           <div class="jcard__meta"><span class="jtag">Les actifs</span><span>Lecture 9 min</span></div>
           <h2 id="post-retinol-t">Rétinol&nbsp;: le guide pour bien débuter</h2>
           <p class="post__lede">C'est l'un des actifs anti-âge les plus étudiés. Il améliore la texture, les rides, les taches, les pores et certaines imperfections… à condition de l'introduire doucement, de bien hydrater et de se protéger du soleil.</p>
+          <figure class="post__cover"><img src="img/retinal-shot-celimax.webp" width="900" height="900" decoding="async" alt="Tube Retinal Shot Tightening Booster de Celimax, avec une noisette de crème jaune pâle"><figcaption>Ici, un soin au rétinal 0,1 % : un dosage pour peaux déjà habituées, pas pour débuter.</figcaption></figure>
         </header>
 
         <div class="post__body">
@@ -1857,19 +1860,6 @@ html.reading,html.reading body{overflow:hidden}
             <p><b>Trétinoïne</b> (acide rétinoïque), <b>tazarotène</b> et <b>trifarotène</b> sont des médicaments, sur prescription en France. L'<b>adapalène</b> a un statut qui varie selon le pays et la concentration. Ce ne sont pas des « rétinols plus forts » : <strong>à utiliser uniquement selon les indications et les consignes d'un professionnel de santé.</strong></p>
           </aside>
           </div>
-          <figure class="rfig">
-            <div class="rfig__img"><img src="img/retinal-shot-celimax.webp" width="900" height="900" loading="lazy" decoding="async" alt="Tube Retinal Shot Tightening Booster de Celimax, avec une noisette de crème jaune pâle"></div>
-            <figcaption>
-              <p class="rfig__k">Apprendre à lire une étiquette</p>
-              <h4>Exemple : un soin au rétinal</h4>
-              <ul>
-                <li><b>Retinal 0,1 %</b><span>La forme de vitamine A et sa concentration sont affichées : bon signe.</span></li>
-                <li><b>Panthenol 1 %</b><span>Un actif apaisant, qui aide la peau à mieux tolérer le rétinal.</span></li>
-                <li><b>Matrixyl 3000, 3 %</b><span>Des peptides, une « bonne association » avec les rétinoïdes.</span></li>
-              </ul>
-              <p class="rfig__note">Avec 0,1 % de rétinal, ce soin s'adresse aux peaux <strong>déjà habituées au rétinol</strong>. Ce n'est pas un premier produit.</p>
-            </figcaption>
-          </figure>
           <h4>Notre conseil selon votre objectif</h4>
           <ul class="prof prof--obj">
             <li><b>Première fois</b><span>Rétinol 0,2–0,3 % ou rétinol encapsulé, 2 à 3 soirs par semaine</span></li>
