@@ -1466,6 +1466,14 @@ html.reading,html.reading body{overflow:hidden}
 .post__cover{overflow:hidden;border-radius:var(--r-panel)}
 .jcard__visual--cerimg img{object-position:50% 60%}
 .post__cover--cer img{object-position:50% 58%;aspect-ratio:4/3}
+/* Blog : 10 conseils */
+.jcard__visual--ten{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;background:radial-gradient(circle at 30% 25%,#9A3A50,var(--wine) 55%,var(--wine-deep))}
+.jten{display:grid;justify-items:center;gap:2px;padding:20px;color:var(--ivory);text-align:center}
+.jten b{font-family:var(--f-display);font-weight:600;font-size:5rem;line-height:1;color:var(--powder);letter-spacing:-.03em;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.jcard:is(:hover,.is-live) .jten b{transform:scale(1.08)}
+.jten em{font-style:normal;font-size:.95rem;opacity:.9}
+.tip__more{margin:2px 0 0!important;font-size:.92rem}
+.ph span:not(:empty){min-width:36px;width:auto;padding:0 6px}
 </style>
 
 <header class="nav" id="top">
@@ -1962,6 +1970,20 @@ html.reading,html.reading body{overflow:hidden}
       </div>
     </div>
     <div class="jlist">
+    <a class="jcard" href="#article-10-conseils" data-post="post-10-conseils">
+      <div class="jcard__visual jcard__visual--ten" aria-hidden="true"><span class="jstep"><b>✦</b>L\'essentiel</span>
+        <div class="jten">
+          <b>10</b>
+          <em>conseils pour une belle peau</em>
+        </div>
+      </div>
+      <div class="jcard__body">
+        <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 6 min</span><span class="jnew">Nouveau</span></div>
+        <h3>10 conseils indispensables pour une belle peau</h3>
+        <p>Pas besoin d'une routine compliquée : nettoyer en douceur, hydrater, se protéger du soleil, être patiente… Les 10 principes qui font vraiment la différence.</p>
+        <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
     <a class="jcard" href="#article-nettoyage" data-post="post-nettoyage">
       <div class="jcard__visual jcard__visual--photo jcard__visual--cover"><span class="jstep"><b>1</b>Nettoyer</span><img src="img/double-nettoyage.webp" width="1000" height="563" loading="lazy" decoding="async" alt="Jeune femme coréenne tenant une mousse nettoyante et une huile démaquillante à la centella"></div>
       <div class="jcard__body">
@@ -2037,7 +2059,7 @@ html.reading,html.reading body{overflow:hidden}
     <a class="jcard" href="#article-patchs" data-post="post-patchs">
       <div class="jcard__visual jcard__visual--photo jcard__visual--cover jcard__visual--eyeimg"><span class="jstep"><b>6</b>Contour des yeux · patchs</span><img src="img/patchs-yeux.webp" width="1000" height="1500" loading="lazy" decoding="async" alt="Gros plan d'un visage avec un patch blanc posé sous l'œil"></div>
       <div class="jcard__body">
-        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span><span class="jnew">Nouveau</span></div>
+        <div class="jcard__meta"><span class="jtag">La K-Beauty</span><span>Lecture 6 min</span></div>
         <h3>Patchs yeux&nbsp;: hydrater, défatiguer, lisser le regard</h3>
         <p>Hydrogel, tissu, micro-cônes, patchs de nuit… Ce que font les patchs contour des yeux, ce qu'ils ne font pas, et comment bien les utiliser.</p>
         <span class="jcard__cta">Lire l'article <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -3453,6 +3475,78 @@ html.reading,html.reading body{overflow:hidden}
           </div>
         </div>
       </article>
+      <article class="post" id="post-10-conseils" role="dialog" aria-modal="true" aria-labelledby="post-10-conseils-t" hidden>
+        <header class="post__hero">
+          <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 6 min</span></div>
+          <h2 id="post-10-conseils-t">10 conseils indispensables pour une belle peau</h2>
+          <p class="post__lede">Une belle peau ne demande pas une routine compliquée ni des dizaines de produits. Elle repose sur quelques principes simples : nettoyer en douceur, bien hydrater, exfolier avec raison, choisir ses actifs… et se protéger du soleil chaque jour.</p>
+        </header>
+
+        <div class="post__body">
+          <div class="tldr">
+            <p class="tldr__k">L'essentiel en 30 secondes</p>
+            <ul>
+              <li><b>Douceur</b><span>nettoyer sans décaper</span></li>
+              <li><b>SPF 50+</b><span>tous les jours, toute l'année</span></li>
+              <li><b>Hydrater</b><span>toutes les peaux en ont besoin</span></li>
+              <li><b>Patience</b><span>garder ses soins dans la durée</span></li>
+            </ul>
+            <p class="tldr__no">La clé de tout : une barrière cutanée en bonne santé.</p>
+          </div>
+
+          <nav class="toc" aria-label="Sommaire de l'article">
+            <p class="toc__k">Les 10 conseils</p>
+            <ol><li><a href="#c10-1">Ne pas trop nettoyer sa peau</a></li><li><a href="#c10-2">Se protéger des UV</a></li><li><a href="#c10-3">Choisir des soins adaptés à sa peau</a></li><li><a href="#c10-4">Ne jamais oublier d'hydrater</a></li><li><a href="#c10-5">Ne pas changer de soins trop souvent</a></li><li><a href="#c10-6">Ajouter un antioxydant</a></li><li><a href="#c10-7">Ne pas arrêter son rétinol l'été</a></li><li><a href="#c10-8">Soigner l'hygiène autour du visage</a></li><li><a href="#c10-9">Ajuster crème et exfoliant à sa peau</a></li><li><a href="#c10-10">Ne pas hésiter à consulter</a></li></ol>
+          </nav>
+
+          <h3 class="ph" id="c10-barriere"><span>✦</span>La clé : la barrière cutanée</h3>
+          <p>La barrière cutanée, c'est la couche protectrice de la peau. Quand elle va bien, la peau est confortable et lumineuse. Quand elle est abîmée, la peau devient <strong>sensible, déshydratée et irritée</strong>. La plupart des problèmes de peau commencent là.</p>
+          <div class="two two--status">
+            <div class="is-stop"><h4>Ce qui l'abîme le plus souvent</h4><ul class="dots"><li>Trop se nettoyer la peau</li><li>Des actifs trop agressifs ou trop nombreux</li><li>Des soins esthétiques trop intenses</li><li>Les frottements</li></ul></div>
+            <div class="is-ok"><h4>Ce qui la protège</h4><ul class="dots"><li>Un nettoyage doux</li><li>Une hydratation adaptée</li><li>Des actifs introduits progressivement</li><li>Le SPF, chaque matin</li></ul></div>
+          </div>
+
+          <h3 class="ph" id="c10-liste"><span>10</span>Les 10 conseils</h3>
+          <p>Cliquez sur un conseil pour voir ce qu'il faut faire, et ce qu'il vaut mieux éviter.</p>
+          <div class="folds folds--post">
+            <details class="fold" id="c10-1"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">1</span><span class="fold__t">Ne pas trop nettoyer sa peau<small>Le sur-nettoyage abîme la barrière cutanée : sécheresse, irritations, inflammation.</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">À faire</p><ul class="dots"><li>Nettoyer avec délicatesse</li><li>Adapter le nettoyage à l'état de sa peau</li><li>Un double nettoyage doux le soir, si nécessaire</li></ul></div><div><p class="mpl__k is-no">À éviter</p><ul class="dots"><li>Les nettoyants qui moussent beaucoup</li><li>Les savons, qui décapent la peau</li><li>Frotter</li></ul></div></div><p class="mpl__k">Les produits à privilégier</p><ul class="chips chips--zones"><li>Gel nettoyant doux</li><li>Crème nettoyante</li><li>Huile démaquillante douce</li><li>Eau micellaire sans alcool</li></ul><p class="tip__more">À lire : <a class="plink" href="#article-nettoyage" data-post="post-nettoyage">Notre guide du nettoyage</a></p></div></details>
+            <details class="fold" id="c10-2"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">2</span><span class="fold__t">Se protéger des UV<small>C'est le geste anti-âge le plus efficace : les UV causent rides, taches et vieillissement, toute l'année.</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">À faire</p><ul class="dots"><li>SPF 50+ tous les jours</li><li>Chapeau, vêtements couvrants, lunettes de soleil</li><li>Adapter sa protection à son exposition</li></ul></div><div><p class="mpl__k is-no">À éviter</p><ul class="dots"><li>Croire que le SPF est une durée de protection</li><li>Oublier les UVA</li><li>Mettre trop peu de produit</li><li>Oublier des zones, ou ne pas en remettre</li></ul></div></div><p class="tip__more">À lire : <a class="plink" href="#article-spf" data-post="post-spf">Notre guide de la protection solaire</a></p></div></details>
+            <details class="fold" id="c10-3"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">3</span><span class="fold__t">Choisir des soins adaptés à sa peau<small>Un produit tendance ne sert à rien s'il ne convient pas à votre peau. Demandez-vous toujours s'il est vraiment nécessaire.</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">À faire</p><ul class="dots"><li>Identifier son type de peau</li><li>Choisir des textures adaptées</li><li>Privilégier la simplicité et la cohérence</li></ul></div><div><p class="mpl__k is-no">À éviter</p><ul class="dots"><li>Une texture trop légère sur une peau sèche</li><li>Une texture trop riche sur une peau grasse</li><li>Suivre les tendances sans réfléchir</li><li>Le « slugging » (une couche de vaseline la nuit) sans en avoir besoin</li></ul></div></div></div></details>
+            <details class="fold" id="c10-4"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">4</span><span class="fold__t">Ne jamais oublier d'hydrater<small>Toutes les peaux en ont besoin, même grasses. Les humectants attirent l'eau, les crèmes la retiennent grâce à leurs lipides.</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">À faire</p><ul class="dots"><li>Une crème adaptée à votre peau</li><li>L'adapter à la saison et au climat</li></ul></div><div><p class="mpl__k is-no">À éviter</p><ul class="dots"><li>Sauter l'hydratation</li><li>Une crème trop légère en hiver</li><li>Une crème trop riche en été</li></ul></div></div><p class="mpl__k">Les ingrédients à chercher</p><ul class="chips chips--zones"><li>Glycérine</li><li>Acide hyaluronique</li><li>Niacinamide</li><li>Panthénol</li><li>Céramides</li><li>Squalane</li></ul><p class="tip__more">À lire : <a class="plink" href="#article-toners" data-post="post-toners">Notre guide des toners et essences</a></p></div></details>
+            <details class="fold" id="c10-5"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">5</span><span class="fold__t">Ne pas changer de soins trop souvent<small>Les actifs agissent sur le long terme : il faut leur laisser le temps.</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">À faire</p><ul class="dots"><li>Garder ses actifs plusieurs semaines</li><li>Laisser la peau s'adapter</li></ul></div><div><p class="mpl__k is-no">À éviter</p><ul class="dots"><li>Changer de produit toutes les semaines</li><li>Arrêter un actif trop vite</li><li>Cumuler trop d'actifs en même temps</li></ul></div></div><p class="mpl__k">Les actifs à garder dans la durée</p><ul class="chips chips--zones"><li>Rétinol</li><li>Vitamine C</li><li>Niacinamide</li><li>Acide azélaïque</li><li>Peptides</li><li>Acides exfoliants</li></ul></div></details>
+            <details class="fold" id="c10-6"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">6</span><span class="fold__t">Ajouter un antioxydant<small>Dès 30 ans environ, un antioxydant le matin aide à protéger la peau. La vitamine C est l'un des plus intéressants.</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">À faire</p><ul class="dots"><li>Vitamine C pure, si votre peau la tolère</li><li>Sinon, un dérivé de vitamine C, plus doux</li><li>Autres options : niacinamide, peptides, extraits antioxydants</li></ul></div><div><p class="mpl__k is-no">À éviter</p><ul class="dots"><li>Une vitamine C trop acide sur une peau sensible</li><li>La cumuler avec des acides forts</li><li>Oublier le SPF</li></ul></div></div><p class="tip__more">À lire : <a class="plink" href="#article-peptides" data-post="post-peptides">Notre guide des peptides</a></p></div></details>
+            <details class="fold" id="c10-7"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">7</span><span class="fold__t">Ne pas arrêter son rétinol l'été<small>Une fois que la peau le tolère bien, le rétinol s'utilise toute l'année, sur le long terme.</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">À faire</p><ul class="dots"><li>L'introduire progressivement</li><li>Le garder l'été si la peau est habituée</li><li>Hydrater beaucoup</li><li>SPF 50+ chaque matin, sans exception</li></ul></div><div><p class="mpl__k is-no">À éviter</p><ul class="dots"><li>Commencer directement à 1 %</li><li>L'arrêter l'été sans raison</li><li>Le cumuler avec des acides forts</li><li>Oublier le SPF</li></ul></div></div><p class="tip__more">À lire : <a class="plink" href="#article-retinol" data-post="post-retinol">Notre guide du rétinol</a></p></div></details>
+            <details class="fold" id="c10-8"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">8</span><span class="fold__t">Soigner l'hygiène autour du visage<small>Les frottements et les irritations fragilisent la barrière cutanée.</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">À faire</p><ul class="dots"><li>Éviter de se toucher le visage</li><li>Changer souvent sa taie d'oreiller</li><li>Choisir une taie douce, en soie par exemple</li></ul></div><div><p class="mpl__k is-no">À éviter</p><ul class="dots"><li>Se toucher le visage toute la journée</li><li>Garder la même taie trop longtemps</li><li>Une matière qui irrite</li><li>Les animaux sur le lit, si vous êtes allergique</li></ul></div></div></div></details>
+            <details class="fold" id="c10-9"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">9</span><span class="fold__t">Ajuster crème et exfoliant à sa peau<small>Votre peau change avec les saisons et son état : votre routine aussi.</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">À faire</p><ul class="dots"><li>Une crème plus légère en été, plus riche en hiver</li><li>Moins d'exfoliant si la barrière est fragilisée</li><li>Plus d'exfoliant du tout si la peau est irritée</li></ul></div><div><p class="mpl__k is-no">À éviter</p><ul class="dots"><li>Exfolier une peau irritée</li><li>Cumuler plusieurs exfoliants</li></ul></div></div><p class="tip__more">À lire : <a class="plink" href="#article-acides" data-post="post-acides">Notre guide des acides exfoliants</a></p></div></details>
+            <details class="fold" id="c10-10"><summary><span class="fold__ic fold__ic--n" aria-hidden="true">10</span><span class="fold__t">Ne pas hésiter à consulter<small>Pour un vrai problème de peau, un dermatologue vaut mieux qu'une recherche sur internet.</small></span><i class="fold__pm" aria-hidden="true"></i></summary><div class="fold__b"><div class="mpl"><div><p class="mpl__k is-ok">À faire</p><ul class="dots"><li>Consulter pour un eczéma ou une dermatite</li><li>Montrer tout grain de beauté ou lésion qui change ou vous inquiète</li><li>Consulter pour tout problème qui dure</li></ul></div><div><p class="mpl__k is-no">À éviter</p><ul class="dots"><li>Chercher la solution sur internet</li><li>Utiliser des produits non adaptés</li><li>Cumuler les actifs sans avis</li><li>Ignorer un problème qui persiste</li></ul></div></div></div></details>
+          </div>
+
+          <h3 class="ph" id="c10-routine"><span>✦</span>La routine SkinMi, en résumé</h3>
+          <div class="day3">
+            <section><p class="day3__k">Le matin</p><ol class="rlist"><li>Nettoyage doux</li><li>Sérum : vitamine C, niacinamide ou peptides</li><li>Hydratant</li><li><strong>SPF 50+</strong></li></ol></section>
+            <section class="is-day"><p class="day3__k">La journée</p><ol class="rlist"><li>On remet du SPF toutes les 2 heures en cas d'exposition au soleil</li></ol></section>
+            <section class="is-night"><p class="day3__k">Le soir</p><ol class="rlist"><li>Double nettoyage</li><li>Soins ciblés : rétinol, peptides</li><li>Hydratation</li></ol></section>
+          </div>
+          <p class="pnote">La règle d'or : <strong>simplicité, régularité et protection solaire</strong> valent mieux qu'une routine compliquée. Pour aller plus loin, nos articles suivent l'ordre de la routine, étape par étape.</p>
+
+          <h3 class="ph" id="c10-faq"><span>?</span>Vos questions</h3>
+          <div class="pfaq">
+            <details><summary>Faut-il se nettoyer le visage matin et soir ?<i aria-hidden="true"></i></summary><p>Cela dépend de votre peau. Le soir, on retire maquillage, SPF et pollution. Le matin, un nettoyage doux, ou un simple rinçage à l'eau, peut suffire selon l'état de votre peau.</p></details>
+            <details><summary>Un SPF 50+ tous les jours, vraiment ?<i aria-hidden="true"></i></summary><p>Oui, dès que vous êtes exposée à la lumière du jour, même en hiver : les UVA sont présents toute l'année.</p></details>
+            <details><summary>Faut-il arrêter le rétinol l'été ?<i aria-hidden="true"></i></summary><p>Non, si votre peau le tolère bien. On le garde sur le long terme, avec un SPF 50+ chaque matin.</p></details>
+            <details><summary>Faut-il changer de crème selon la saison ?<i aria-hidden="true"></i></summary><p>Oui : plus légère quand il fait chaud, plus riche quand il fait froid ou que l'air est sec.</p></details>
+            <details><summary>Quand consulter un dermatologue ?<i aria-hidden="true"></i></summary><p>Dès qu'un problème de peau dure, vous inquiète ou en cas d'eczéma, de dermatite, ou d'un grain de beauté qui change. C'est toujours mieux qu'une recherche sur internet.</p></details>
+          </div>
+
+          <blockquote class="psum"><span>En résumé</span>Un nettoyage doux, un SPF 50+ tous les jours, une hydratation adaptée, une exfoliation raisonnée, des actifs choisis pour votre peau et gardés dans la durée. Et un avis médical en cas de problème. Simple, régulier, efficace.</blockquote>
+          <p class="pdisc">Cet article est informatif et ne remplace pas un avis dermatologique. Problème de peau, grossesse, allaitement ou traitement médical : demandez conseil à un professionnel de santé.</p>
+
+          <div class="post__cta">
+            <p>Vous voulez une routine simple, pensée pour votre peau ? C'est exactement ce qu'on construit ensemble pendant l'atelier.</p>
+            <a class="btn btn--primary js-wa" href="https://wa.me/33759728122" data-msg="Bonjour SkinMi ! J'ai lu vos 10 conseils pour une belle peau et j'aimerais réserver ma place pour le prochain atelier." target="_blank" rel="noopener">Réserver ma place à l'atelier</a>
+          </div>
+        </div>
+      </article>
       <article class="post" id="post-nettoyage" role="dialog" aria-modal="true" aria-labelledby="post-nettoyage-t">
         <header class="post__hero">
           <div class="jcard__meta"><span class="jtag">Les bases</span><span>Lecture 4 min</span></div>
@@ -4088,7 +4182,7 @@ addEventListener("scroll",onScroll,{passive:true}); onScroll();
 })();
 
 /* Blog : sommaire cliquable dans le lecteur */
-document.addEventListener("click",e=>{const a=e.target.closest(".toc a");if(!a)return;e.preventDefault();const t=document.getElementById(a.getAttribute("href").slice(1));if(t)t.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})});
+document.addEventListener("click",e=>{const a=e.target.closest(".toc a");if(!a)return;e.preventDefault();const t=document.getElementById(a.getAttribute("href").slice(1));if(t&&t.tagName==="DETAILS")t.open=true;if(t)t.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})});
 
 /* Blog : liens vers une section du site depuis un article */
 document.addEventListener("click",e=>{const a=e.target.closest("[data-goto]");if(!a)return;e.preventDefault();const c=document.getElementById("readerClose");if(c)c.click();setTimeout(()=>{const t=document.getElementById(a.dataset.goto);if(t)t.scrollIntoView({behavior:"smooth",block:"start"})},120)});
