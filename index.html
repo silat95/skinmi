@@ -573,15 +573,28 @@ p{margin:0}
 @media (max-width:860px){.team{grid-template-columns:1fr;max-width:460px}.member{grid-template-columns:140px 1fr;align-items:center}.member__ph{border-radius:var(--r-tile)}.member__ph small{display:none}}
 
 /* Galerie */
-.gal{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px}
-.gal figure{margin:0;border-radius:var(--r-tile);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:18px}
-.gal figure:nth-child(1){grid-row:span 2;background:linear-gradient(160deg,#E9BFC6,#C98C98)}
-.gal figure:nth-child(2){background:linear-gradient(160deg,#F3DCE0,#E2B3BC)}
-.gal figure:nth-child(3){background:linear-gradient(160deg,#8E3A4C,#5A1A2A)}
-.gal figure:nth-child(4){grid-column:span 2;background:linear-gradient(120deg,#F0D3D8,#DCA7B2)}
-.gal figcaption{background:var(--milk);color:var(--wine);font-size:.88rem;padding:.4em 1em;border-radius:999px}
-.gal figure::before{content:"";position:absolute;width:22px;height:22px;top:18px;right:18px;background:currentColor;color:rgba(245,237,225,.65);clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%)}
-@media (max-width:760px){.gal{grid-template-columns:1fr 1fr;grid-template-rows:200px 160px 160px}.gal figure:nth-child(1){grid-row:span 1;grid-column:span 2}.gal figure:nth-child(4){grid-column:span 2}}
+.gal{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:14px}
+.gal figure{margin:0;border-radius:var(--r-tile);position:relative;overflow:hidden;background:var(--blush)}
+.gal figure:nth-child(1){grid-row:span 2}
+.gal figure:nth-child(4){grid-column:span 2}
+.gal__btn{all:unset;position:absolute;inset:0;cursor:zoom-in;display:block}
+.gal__btn:focus-visible{outline:3px solid var(--wine);outline-offset:-3px;border-radius:inherit}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.gal figure:nth-child(2) img{object-position:50% 55%}
+.gal figure:nth-child(3) img{object-position:50% 70%}
+.gal figure:nth-child(4) img{object-position:50% 62%}
+.gal figure:is(:hover,.is-live) img{transform:scale(1.05)}
+.gal figure::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(59,15,27,.45),transparent 45%)}
+.gal figcaption{position:absolute;left:16px;bottom:16px;white-space:nowrap;max-width:calc(100% - 32px);overflow:hidden;text-overflow:ellipsis;z-index:2;background:var(--milk);color:var(--wine);font-size:.88rem;font-weight:500;padding:.4em 1em;border-radius:999px;pointer-events:none}
+.glb{position:fixed;inset:0;z-index:2000;background:rgba(32,8,15,.97);display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px;padding:56px 12px 24px}
+.glb[hidden]{display:none!important}
+.glb figure{margin:0;display:grid;justify-items:center;gap:12px;max-height:100%}
+.glb img{max-width:100%;max-height:calc(100svh - 140px);border-radius:14px;object-fit:contain;animation:bmin .35s ease both}
+.glb figcaption{color:var(--ivory);font-size:.95rem}
+.glb__x,.glb__nav{appearance:none;border:0;cursor:pointer;color:var(--ivory);background:rgba(245,237,225,.12);border-radius:50%;width:46px;height:46px;font-size:1.6rem;line-height:1;display:grid;place-items:center}
+.glb__x{position:absolute;top:12px;right:12px}
+.glb__x:hover,.glb__nav:hover{background:rgba(245,237,225,.25)}
+@media (max-width:760px){.gal{grid-template-columns:1fr 1fr;grid-template-rows:230px 190px 190px}.gal figure:nth-child(1){grid-row:span 1;grid-column:span 2}.gal figure:nth-child(4){grid-column:span 2}.glb{grid-template-columns:1fr;padding:60px 10px 80px}.gal figcaption{left:10px;bottom:10px;font-size:.8rem;padding:.35em .8em}.glb__nav{position:absolute;bottom:18px}.glb__nav--p{left:calc(50% - 58px)}.glb__nav--n{right:calc(50% - 58px)}}
 
 /* FAQ */
 .faq__grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,96px);align-items:start}
@@ -3669,14 +3682,20 @@ html.reading,html.reading body{overflow:hidden}
   <div class="wrap">
     <div class="sec__head">
       <h2 id="h-gal">L'atelier en images</h2>
-      <p class="lede">Un lieu chaleureux, une ambiance détendue : voici à quoi ressemble une session SkinMi.</p>
+      <p class="lede">Notre premier atelier, en vrai : la table du brunch, le thé, les douceurs… et l'espace où l'on prend soin de vous.</p>
     </div>
     <div class="gal">
-      <figure><figcaption>Le diagnostic</figcaption></figure>
-      <figure><figcaption>Le brunch</figcaption></figure>
-      <figure><figcaption>Les soins</figcaption></figure>
-      <figure><figcaption>Le moment en groupe</figcaption></figure>
+      <figure><button type="button" class="gal__btn" data-i="0" aria-label="Agrandir : le brunch partagé"><img src="img/atelier-brunch.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="Table du brunch SkinMi : nappe bleu nuit, chemin de table framboise, gâteaux, fruits frais, sorbets et fleurs roses"></button><figcaption>Le brunch partagé</figcaption></figure>
+      <figure><button type="button" class="gal__btn" data-i="1" aria-label="Agrandir : la table dressée"><img src="img/atelier-table.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Vue de la table de l'atelier avec gâteau, plateau de fruits, citrons givrés et bouquet de roses"></button><figcaption>La table dressée</figcaption></figure>
+      <figure><button type="button" class="gal__btn" data-i="2" aria-label="Agrandir : l'espace soin"><img src="img/atelier-espace-soin.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="Espace soin SkinMi aux murs rose poudré, table de soin avec plaid et coussin"></button><figcaption>L'espace soin</figcaption></figure>
+      <figure><button type="button" class="gal__btn" data-i="3" aria-label="Agrandir : thé et douceurs"><img src="img/atelier-douceurs.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="Tasses à thé en porcelaine, tarte aux framboises, fondants au chocolat et macarons"></button><figcaption>Thé et douceurs</figcaption></figure>
     </div>
+  </div>
+  <div class="glb" id="galLb" hidden role="dialog" aria-modal="true" aria-label="Photo de l'atelier">
+    <button type="button" class="glb__x" aria-label="Fermer">×</button>
+    <button type="button" class="glb__nav glb__nav--p" aria-label="Photo précédente">‹</button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+    <button type="button" class="glb__nav glb__nav--n" aria-label="Photo suivante">›</button>
   </div>
 </section>
 
@@ -4191,5 +4210,18 @@ document.addEventListener("click",e=>{const a=e.target.closest("[data-goto]");if
 (function(){if(!("IntersectionObserver" in window)||!matchMedia("(hover: none)").matches)return;
   const io=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle("is-live",e.isIntersecting)),{threshold:.55});
   document.querySelectorAll(".jlist .jcard").forEach(c=>io.observe(c));})();
+
+/* Galerie de l'atelier : agrandissement + effet au défilement sur mobile */
+(function(){const L=document.getElementById("galLb");if(!L)return;const btns=[...document.querySelectorAll(".gal__btn")],img=L.querySelector("img"),cap=L.querySelector("figcaption");let i=0,last=null;
+  function show(n){i=(n+btns.length)%btns.length;const b=btns[i],im=b.querySelector("img");img.src=im.currentSrc||im.src;img.alt=im.alt;cap.textContent=b.parentElement.querySelector("figcaption").textContent;img.style.animation="none";img.offsetWidth;img.style.animation=""}
+  function open(n){last=document.activeElement;show(n);L.hidden=false;document.documentElement.style.overflow="hidden";L.querySelector(".glb__x").focus()}
+  function close(){L.hidden=true;document.documentElement.style.overflow="";if(last)last.focus({preventScroll:true})}
+  btns.forEach((b,n)=>b.addEventListener("click",()=>open(n)));
+  L.querySelector(".glb__x").onclick=close;L.querySelector(".glb__nav--p").onclick=()=>show(i-1);L.querySelector(".glb__nav--n").onclick=()=>show(i+1);
+  L.addEventListener("click",e=>{if(e.target===L)close()});
+  document.addEventListener("keydown",e=>{if(L.hidden)return;if(e.key==="Escape")close();if(e.key==="ArrowLeft")show(i-1);if(e.key==="ArrowRight")show(i+1)});
+  let x0=null;L.addEventListener("touchstart",e=>{x0=e.touches[0].clientX},{passive:true});L.addEventListener("touchend",e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>50)show(i+(d<0?1:-1));x0=null});
+  if("IntersectionObserver" in window&&matchMedia("(hover: none)").matches){const io=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle("is-live",e.isIntersecting)),{threshold:.6});document.querySelectorAll(".gal figure").forEach(f=>io.observe(f))}
+})();
 </script>
 </html>
